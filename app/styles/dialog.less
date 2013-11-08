@@ -1,0 +1,74 @@
+@gray-lighter: #f2f2f2;
+
+
+.popover {
+	max-width: 520px;
+	box-shadow: none;
+	border-radius: 3px;
+}
+
+#dialog-box {
+
+	h1 {
+		font-size: 24px;
+		padding-bottom: 10px;
+		color: #888;
+	}
+	label {
+		text-transform: uppercase;
+		display: block;
+	}
+	.title{
+		margin-top: 30px;
+		font-size: 11px;
+	}
+	.upload {
+		background: @gray-lighter;
+		width: 100%;
+		padding: 5px;
+	}
+	.btn-group {
+		font-size: 16px;
+		width: 100%;
+
+		.EP {
+			width: 55%;
+		}
+		.EH {
+			width: 45%;
+		}
+		.PB {
+			width: 27%;
+		}
+		.EC {
+			width: 33%;
+		}
+		.CV {
+			width: 40%;
+		}
+	}
+
+	.ok-cancel {
+		.pull-right;
+		margin-bottom: 20px;
+		margin-top: 40px;
+
+		.btn-ok {
+			.btn;
+			.btn-primary;
+			margin-right: 10px;
+		}
+
+		.btn-cancel {
+			.btn;
+			.btn-default;
+		}
+	}
+
+	.active {
+		background-color: @primary-color;
+		color: white;
+		border-bottom: 1px solid @gray;
+	}
+}	
+
