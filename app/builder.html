@@ -55,7 +55,7 @@
         <div class="main">
           <h1 class="main-head"><i class="fa fa-user"></i></h1>
           <div id="time-bar"></div>
-          <div class="demo col-md-offset-1 col-md-3">
+          <div class="demo col-md-offset-1 col-md-2">
             <form role="form">
               <div class="form-group">
                 <label for="">PAYER</label>
@@ -69,6 +69,10 @@
                 <label for="">RACE</label>
                 <input type="text" class="form-control" id="" placeholder="">
               </div>
+            </form>
+          </div>
+          <div class="demo col-md-2">
+            <form role="form col-md-2">
               <div class="form-group">
                 <label for="">GENDER</label>
                 <input type="text" class="form-control" id="" placeholder="">
@@ -81,33 +85,39 @@
                 <input type="text" class="form-control" id="" placeholder="">
               </div>
             </form>
-            <dl class="dl-demo dl-horizontal">
-              <dt>RACE</dt>
-              <dd>Hispanic</dd>
-              <dt>ETHNICITY</dt>
-              <dd>Black</dd>
-              <dt>LANGUAGES</dt>
-              <dd>English, Spanish</dd>
-              <dt>PROVIDERS</dt>
-              <dd>Jonathan Cooper MD</dd>
-            </dl>
           </div>
-          <div class="measure-expected col-md-6">
+          <div class="measure-expected col-md-5">
             <h2>MEASURE ASSOCIATED</h2>
-            <div class="col-md-2">HEART FAILURE (HF):</div>
-            <div class="col-md-4">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
-            </div>
-            <ul class="nav nav-tabs col-md-6">
-              <li class="active"><a href="#">Age: 18-25</a></li>
-              <li><a href="#">Age: 26-35</a></li>
-              <li><a href="#">Age: 36-50</a></li>
-            </ul>
-            <form class="col-md-6">
-              <div class="form-group">
-                <label for="fname">EXPECTED VALUE</label>
-                <input type="radio" class="form-control" id="exp">
+            <div class="row">
+              <div class="col-md-4">HEART FAILURE (HF):</div>
+              <div class="col-md-8">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
               </div>
-            </form>
+            </div>
+            <div class="row">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Age: 18-25</a></li>
+                <li><a href="#">26-35</a></li>
+                <li><a href="#">36-50</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h2 for="fname">EXPECTED VALUE</h2>
+              <label class="radio-inline">
+                <input type="radio" id="inlineCheckbox1" value="option1">NUM
+              </label>
+              <label class="checkbox-inline">
+                <input type="radio" id="inlineCheckbox2" value="option2">DEN
+              </label>
+              <label class="checkbox-inline">
+                <input type="radio" id="inlineCheckbox3" value="option3">IPP
+              </label>
+              <label class="checkbox-inline">
+                <input type="radio" id="inlineCheckbox3" value="option3">EXCL.
+              </label>
+              <label class="checkbox-inline">
+                <input type="radio" id="inlineCheckbox3" value="option3">EXCEP.
+              </label>
+            </div>
           </div>
           <div class="time-line">
             <div class="timeline-title">Patient History Relative to Measures
