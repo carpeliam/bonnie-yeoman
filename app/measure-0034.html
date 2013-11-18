@@ -25,33 +25,271 @@
             <li><a href="results.html" class="">Results</a></li>
           </ul>
       </div>
-      <div class="col-md-4">
-        <div class="measure-title">0038: Childhood Immunization Status</div>
-        <div class="measures-dsp">Percentage of children 2 years of age who had four diphtheria, tetanus and acellular pertussis (DTaP); three polio (IPV), one measles, mumps and rubella (MMR); three H influenza type B (HiB); three hepatitis B (Hep B); one chicken pox (VZV); four pneumococcal conjugate (PCV); one hepatitis A (Hep A); two or three rotavirus (RV); and two influenza (flu) vaccines by their second birthday.</div>
-        <div class="measure-viz"></div>
-      </div>
-      <div class="col-md-8">
-        <h2>Included</h2>
-        <div class="IPP">
-          <label class="">
-            <input type="checkbox" name="options" id="IPP">IPP
-          </label>
-          <label>
-            <input type="checkbox" name="options" id="EXC">Exceptions
-          </label>
-          <div class="DEN">
-            <label class="">
-              <input type="checkbox" name="options" id="DEN">Denominator
-            </label>
-            <div class="NUM">
-              <label>
-                <input type="checkbox" name="options" id="NUM">Numerator
-              </label>
+
+      <div class="main">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">BMI Recorded</a></li>
+          <li><a href="#">Nutrition Counseling</a></li>
+          <li><a href="#">Physical Activity Counseling</a></li>
+          <li><a href="#">BMI Recorded, RS1: 3-11</a></li>
+          <li><a href="#">BMI Recorded, RS2: 12-17</a></li>
+          <li><a href="#">Nutrition Counseling, RS1: 3-11</a></li>
+          <li><a href="#">Nutrition Counseling, RS2: 12-17</a></li>
+          <li><a href="#">Physical Activity Counseling, RS1: 3-11</a></li>
+          <li><a href="#">Physical Activity Counseling, RS2: 12-17</a></li>
+        </ul>
+
+        <div class="measure-title">
+          <div class="short-title"><i class="fa fa-tasks"></i> 0024:</div> 
+          Weight Assessment and Counseling for Nutrition and Physical Activity for Children and Adolescents
+        </div>
+        <div class="measures-dsp">Percentage of patients 3-17 years of age who had an outpatient visit with a Primary Care Physician (PCP) or Obstetrician/Gynecologist (OB/GYN) and who had evidence of the following during the measurement period. Three rates are reported. - Percentage of patients with height, weight, and body mass index (BMI) percentile documentation - Percentage of patients with counseling for nutrition - Percentage of patients with counseling for physical activity</div>
+        <div class="measure-viz">
+          <div id="measure_logic" class="rationale">
+            <div data-view-cid="view5739">
+              <div class="IPP_children">
+                <div><span class="IPP rationale_target"><b>Initial Patient Population: </b></span></div>
+                <div>
+                  <div data-view-cid="view5744">
+                    <ul id="precondition_23">
+                      <li>
+                        <span class="precondition_43 rationale_target">AND: </span>
+                        <span data-view-cid="view5748">
+                          <span class="PatientCharacteristicBirthdateBirthDate_precondition_23 rationale_target">
+                            Patient Characteristic Birthdate: birth date
+                            <span data-view-cid="view5750">
+                              <span data-view-cid="view5752"> 
+                                <span data-view-cid="view5754">&gt;= 3 years </span>
+                              </span>
+                              starts before start of "Measurement Period"
+                            </span>
+                          </span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div data-view-cid="view5745"><ul id="precondition_25">
+                    <li>
+                      <span class="precondition_43 rationale_target">AND : </span>
+                      <span data-view-cid="view5757">
+                        <span class="PatientCharacteristicBirthdateBirthDate_precondition_25 rationale_target">
+                          Patient Characteristic Birthdate: birth date
+                          <span data-view-cid="view5759">
+                            <span data-view-cid="view5761"> 
+                              <span data-view-cid="view5763"> &lt; 17 years </span>
+                            </span>
+                            starts before start of "Measurement Period"
+                          </span>
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div data-view-cid="view5746"><ul id="precondition_41">
+                  <li>
+                    <span class="precondition_43 rationale_target"> AND : </span>
+                    <div data-view-cid="view5766">
+                      <ul id="precondition_27">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                          <span data-view-cid="view5774">
+                            <span class="EncounterPerformedFaceToFaceInteraction_precondition_27 rationale_target">
+                              Encounter, Performed: Face-to-Face Interaction
+                              <span data-view-cid="view5776"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-view-cid="view5767">
+                      <ul id="precondition_29">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                            <span data-view-cid="view5779"><span class="EncounterPerformedOfficeVisit_precondition_29 rationale_target">
+                              Encounter, Performed: Office Visit
+                              <span data-view-cid="view5781"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-view-cid="view5768">
+                      <ul id="precondition_31">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                          <span data-view-cid="view5784">
+                            <span class="EncounterPerformedPreventiveCareServicesIndividualCounseling_precondition_31 rationale_target">
+                              Encounter, Performed: Preventive Care Services-Individual Counseling
+                              <span data-view-cid="view5786"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-view-cid="view5769">
+                      <ul id="precondition_33">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                          <span data-view-cid="view5789">
+                            <span class="EncounterPerformedPreventiveCareInitialOfficeVisit0To17_precondition_33 rationale_target">
+                              Encounter, Performed: Preventive Care- Initial Office Visit, 0 to 17
+                              <span data-view-cid="view5791"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-view-cid="view5770">
+                      <ul id="precondition_35">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                          <span data-view-cid="view5794">
+                            <span class="EncounterPerformedPreventiveCareEstablishedOfficeVisit0To17_precondition_35 rationale_target">
+                              Encounter, Performed: Preventive Care - Established Office Visit, 0 to 17
+                              <span data-view-cid="view5796"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-view-cid="view5771">
+                      <ul id="precondition_37">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                          <span data-view-cid="view5799">
+                            <span class="EncounterPerformedPreventiveCareServicesGroupCounseling_precondition_37 rationale_target">
+                              Encounter, Performed: Preventive Care Services - Group Counseling
+                              <span data-view-cid="view5801"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div data-view-cid="view5772">
+                      <ul id="precondition_39">
+                        <li>
+                          <span class="precondition_41 rationale_target"> OR : </span>
+                          <span data-view-cid="view5804">
+                            <span class="EncounterPerformedHomeHealthcareServices_precondition_39 rationale_target">
+                              Encounter, Performed: Home Healthcare Services
+                              <span data-view-cid="view5806"> during "Measurement Period" </span>
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div data-view-cid="view5740">
+            <div class="DENOM_children">
+              <div><span class="DENOM rationale_target"><b>Denominator: </b>None</span></div>
+              <div></div>
+            </div>
+          </div>
+          <div data-view-cid="view5741">
+            <div class="NUMER_children">
+              <div><span class="NUMER rationale_target"><b>Numerator: </b></span></div>
+              <div>
+                <div data-view-cid="view5810">
+                  <ul id="precondition_14">
+                    <li>
+                      <span class="precondition_16 rationale_target"> AND : </span>
+                      <div data-view-cid="view5812">
+                        <ul id="precondition_8">
+                          <li>
+                            <span class="precondition_14 rationale_target"> AND : </span>
+                            <span data-view-cid="view5816">
+                              <span class="PhysicalExamFindingBmiPercentile_precondition_8 rationale_target">
+                                Physical Exam, Finding: BMI percentile
+                                <span data-view-cid="view5818"> during "Measurement Period" </span>
+                              </span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div data-view-cid="view5813">
+                        <ul id="precondition_10">
+                          <li>
+                            <span class="precondition_14 rationale_target"> AND : </span>
+                            <span data-view-cid="view5821">
+                              <span class="PhysicalExamFindingHeight_precondition_10 rationale_target">
+                                Physical Exam, Finding: Height
+                                <span data-view-cid="view5823"> during "Measurement Period" </span>
+                              </span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div data-view-cid="view5814">
+                        <ul id="precondition_12">
+                          <li>
+                            <span class="precondition_14 rationale_target"> AND : </span>
+                            <span data-view-cid="view5826">
+                              <span class="PhysicalExamFindingWeight_precondition_12 rationale_target">
+                                Physical Exam, Finding: Weight
+                                <span data-view-cid="view5828"> during "Measurement Period"</span>
+                              </span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-view-cid="view5742">
+            <div class="DENEX_children">
+              <div><span class="DENEX rationale_target"><b>Denominator Exclusions: </b></span></div>
+              <div>
+                <div data-view-cid="view5831">
+                  <ul id="precondition_4">
+                    <li>
+                      <span class="precondition_7 rationale_target"> AND : </span>
+                      <span data-view-cid="view5834">
+                        <span class="OccurrenceAPregnancy1_precondition_4 rationale_target">
+                          Occurrence A: Diagnosis, Active: Pregnancy
+                          <span data-view-cid="view5836"> starts before or during "Measurement Period"</span>
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div data-view-cid="view5832">
+                  <ul id="precondition_6">
+                    <li>
+                      <span class="precondition_7 rationale_target"> AND : </span>
+                      <div data-view-cid="view5839">
+                        <ul id="precondition_2">
+                          <li>
+                            <span class="precondition_6 rationale_target"> OR NOT: </span>
+                            <span data-view-cid="view5841">
+                              <span class="OccurrenceAPregnancy1_precondition_2 rationale_target">
+                                Occurrence A: Diagnosis, Active: Pregnancy
+                                <span data-view-cid="view5843"> ends before start of "Measurement Period" </span>
+                              </span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="right-sidebar">
+      <div class="title-bar">Test Patients</div>
+      <div>0</div>
+    </div>
+  </div>
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -68,25 +306,23 @@
     </script>
 
 
-        <!-- build:js scripts/main.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/hello.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:js scripts/vendor/bootstrap.js -->
-        <script src="bower_components/bootstrap/js/affix.js"></script>
-        <script src="bower_components/bootstrap/js/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/modal.js"></script>
-        <script src="bower_components/bootstrap/js/transition.js"></script>
-        <script src="bower_components/bootstrap/js/button.js"></script>
-        <script src="bower_components/bootstrap/js/popover.js"></script>
-        <script src="bower_components/bootstrap/js/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js scripts/vendor/bootstrap.js -->
+    <script src="bower_components/bootstrap/js/affix.js"></script>
+    <script src="bower_components/bootstrap/js/alert.js"></script>
+    <script src="bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="bower_components/bootstrap/js/modal.js"></script>
+    <script src="bower_components/bootstrap/js/transition.js"></script>
+    <script src="bower_components/bootstrap/js/button.js"></script>
+    <script src="bower_components/bootstrap/js/popover.js"></script>
+    <script src="bower_components/bootstrap/js/carousel.js"></script>
+    <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="bower_components/bootstrap/js/collapse.js"></script>
+    <script src="bower_components/bootstrap/js/tab.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>

@@ -8840,28 +8840,40 @@ td.visible-print {
   color: #808080;
 }
 
-.left-sidebar {
+.left-sidebar,
+.right-sidebar {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-@media (min-width: 992px) {
-  .left-sidebar {
+@media (min-width: 768px) {
+  .left-sidebar,
+  .right-sidebar {
     float: left;
-    width: 16.666666666666664%;
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .left-sidebar,
+  .right-sidebar {
+    float: left;
+    width: 25%;
   }
 }
 
 @media (min-width: 1200px) {
-  .left-sidebar {
+  .left-sidebar,
+  .right-sidebar {
     float: left;
-    width: 16.666666666666664%;
+    width: 25%;
   }
 }
 
-.left-sidebar h1 {
+.left-sidebar h1,
+.right-sidebar h1 {
   font-size: 1.8em;
   font-weight: 100;
   text-transform: uppercase;
@@ -8874,15 +8886,82 @@ td.visible-print {
   padding-left: 15px;
 }
 
+@media (min-width: 768px) {
+  .main {
+    float: left;
+    width: 75%;
+  }
+}
+
 @media (min-width: 992px) {
   .main {
+    float: left;
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    float: left;
+    width: 75%;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.left-sidebar-builder {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .left-sidebar-builder {
+    float: left;
+    width: 16.666666666666664%;
+  }
+}
+
+@media (min-width: 992px) {
+  .left-sidebar-builder {
+    float: left;
+    width: 16.666666666666664%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .left-sidebar-builder {
+    float: left;
+    width: 16.666666666666664%;
+  }
+}
+
+.main-builder {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .main-builder {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-builder {
     float: left;
     width: 83.33333333333334%;
   }
 }
 
 @media (min-width: 1200px) {
-  .main {
+  .main-builder {
     float: left;
     width: 83.33333333333334%;
   }
@@ -9057,4 +9136,37 @@ h2 {
     float: left;
     width: 8.333333333333332%;
   }
+}
+
+.main .nav-tabs {
+  float: left !important;
+  float: left;
+  background-color: white;
+  border: none;
+}
+
+.main .nav-tabs > li > a {
+  border: 2px solid #dddddd;
+  border-bottom-color: transparent;
+}
+
+.main .nav-tabs .active a {
+  background-color: #f2f2f2;
+}
+
+.main .measure-title {
+  padding-left: 15px;
+  line-height: 3em;
+  background-color: #f2f2f2;
+}
+
+.main .measure-title .short-title {
+  float: left !important;
+  float: left;
+  padding-right: 15px;
+  font-size: 1.8em;
+}
+
+.title-bar {
+  background-color: #f2f2f2;
 }
