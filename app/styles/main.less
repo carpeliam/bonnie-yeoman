@@ -1,5 +1,7 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
-@icon-font-path: "../fonts/glyphicons/";
+@icon-font-path: "../bower_components/fonts";
+@import "../bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path: "../bower_components/font-awesome/fonts";
 
 @brand-primary: #0075C4;
 @header-bar: gray;
@@ -56,11 +58,11 @@
 }
 #time-bar {
   position: absolute;
-  left: 28px;
-  top: 54px;
+  left: 320px;
+  top: 120px;
   width: 8px;
   height: 100%;
-  background-color: @gray-lighter;
+  background-color: @brand-primary;
 }
 
 h2 {
@@ -76,4 +78,16 @@ h2 {
 	.form-control {
 		display: inline-block;
 	}
+}
+
+
+.time-line {
+	background-color: @gray-lighter;
+	margin-left: 15px;
+}
+.timeline-title {
+	font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+	.make-md-column-offset(1);
 }
