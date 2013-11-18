@@ -8867,6 +8867,55 @@ td.visible-print {
   text-transform: uppercase;
 }
 
+.main {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .main {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+
+.main-head i {
+  font-size: 48px;
+}
+
+.demo:before,
+.demo:after {
+  display: table;
+  content: " ";
+}
+
+.demo:after {
+  clear: both;
+}
+
+.demo:before,
+.demo:after {
+  display: table;
+  content: " ";
+}
+
+.demo:after {
+  clear: both;
+}
+
+.measure-expected {
+  border-left: 4px solid #0075c4;
+}
+
 .active-icon i {
   color: #fff;
   background-color: #0075c4;
@@ -8897,8 +8946,8 @@ td.visible-print {
 
 #time-bar {
   position: absolute;
-  top: 120px;
-  left: 320px;
+  top: 50px;
+  left: 28px;
   width: 8px;
   height: 100%;
   background-color: #0075c4;
@@ -8933,5 +8982,79 @@ h2 {
 @media (min-width: 992px) {
   .timeline-title {
     margin-left: 8.333333333333332%;
+  }
+}
+
+.circle-icon {
+  position: relative;
+  display: inline-block;
+  float: left !important;
+  float: left;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+  .circle-icon {
+    float: left;
+    width: 8.333333333333332%;
+  }
+}
+
+.circle-icon i {
+  width: 36px;
+  height: 36px;
+  padding-top: 8px;
+  color: #0075c4;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 2px solid #0075c4;
+  border-radius: 18px;
+}
+
+.dl-record {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .dl-record {
+    float: left;
+    width: 50%;
+  }
+}
+
+.dl-date {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .dl-date {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+
+.dl-date dt .dl-date {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: red;
+}
+
+@media (min-width: 992px) {
+  .dl-date dt .dl-date {
+    float: left;
+    width: 8.333333333333332%;
   }
 }

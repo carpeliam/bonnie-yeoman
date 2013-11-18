@@ -37,6 +37,22 @@
     text-transform: uppercase;
   }
 }
+.main {
+  .make-md-column(10);
+  .make-lg-column(10);
+}
+.main-head {
+	i{
+		font-size: 48px;
+	}
+}
+.demo {
+	.clearfix;
+}
+.measure-expected {
+	border-left: 4px solid @brand-primary;
+	
+}
 .active-icon {
 
   i{
@@ -58,8 +74,8 @@
 }
 #time-bar {
   position: absolute;
-  left: 320px;
-  top: 120px;
+  left: 28px;
+  top: 50px;
   width: 8px;
   height: 100%;
   background-color: @brand-primary;
@@ -80,7 +96,6 @@ h2 {
 	}
 }
 
-
 .time-line {
 	background-color: @gray-lighter;
 	margin-left: 15px;
@@ -90,4 +105,37 @@ h2 {
     font-weight: bold;
     text-transform: uppercase;
 	.make-md-column-offset(1);
+} 
+
+.circle-icon {
+		display: inline-block;
+		.pull-left;
+		margin-top: 15px;
+		.make-md-column(1);
+		padding-left: 0;
+
+	i {
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 8px;
+		width: 36px;
+		height: 36px;
+		background-color: #fff;
+		border-radius: 18px;
+		border: 2px solid @brand-primary;
+		color: @brand-primary;
+	}
+}
+.dl-record {
+	.make-md-column(6);
+}
+.dl-date {
+	.make-md-column(4);
+
+	dt {
+		.dl-date {
+			.make-md-column(1);
+			background-color: red;
+		}
+	}
 }
