@@ -27,9 +27,10 @@
 	margin-bottom: 50px;
 }
 
-.left-sidebar {
-  .make-md-column(2);
-  .make-lg-column(2);
+.left-sidebar, .right-sidebar {
+  .make-sm-column(3);
+  .make-md-column(3);
+  .make-lg-column(3);
 
   h1 {
     font-weight: 100;
@@ -37,6 +38,18 @@
     text-transform: uppercase;
   }
 }
+
+.main {
+  .make-sm-column(9);
+  .make-md-column(9);
+  .make-lg-column(9);
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+
 .active-icon {
 
   i{
@@ -90,4 +103,35 @@ h2 {
     font-weight: bold;
     text-transform: uppercase;
 	.make-md-column-offset(1);
+}
+
+
+// measure view styles
+.main {
+  .nav-tabs {
+    .pull-left;
+    background-color: white;
+    border: none;
+    > li > a {
+      border: 2px solid #dddddd;
+      border-bottom-color: transparent;
+    }
+    .active a {
+      background-color: @gray-lighter;
+    }
+  }
+  .measure-title {
+    .title-bar;
+    line-height: 3em;
+    padding-left: 15px;
+    .short-title {
+      .pull-left;
+      font-size: 1.8em;
+      padding-right: 15px;
+    }
+  }
+}
+
+.title-bar {
+  background-color: @gray-lighter;
 }
