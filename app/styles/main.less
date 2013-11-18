@@ -69,12 +69,32 @@
     font-size: 48px;
   }
 }
-.demo {
+.demo, .measure-expected, .col-md-7 {
   .clearfix;
+}
+.first {
+  .row;
+  .make-md-column-offset(1);
+  .make-md-column(2);
 }
 .measure-expected {
   border-left: 4px solid @brand-primary;
  
+}
+.record {
+  .make-sm-column(9);
+  .make-md-column(9);
+  .make-lg-column(9);  
+  .row; 
+
+}
+.record-listing {
+  margin-top: 20px;
+}
+.measure-view-side {
+    .make-sm-column(3);
+    .make-md-column(3);
+    .make-lg-column(3);
 }
 .active-icon {
 
@@ -91,13 +111,15 @@
   margin: auto;
 }
 .patient-data {
+  .make-sm-column(11);
   .make-md-column(11);
+  .make-lg-column(11);
   background-color: #fff;
   border: 1px solid @gray-darker;
 }
 #time-bar {
   position: absolute;
-  left: 28px;
+  left: 30px;
   top: 50px;
   width: 8px;
   height: 100%;
@@ -158,9 +180,15 @@ h2 {
 	dt {
 		.dl-date {
 			.make-md-column(1);
-			background-color: red;
 		}
 	}
+}
+.measure-title {
+  .row;
+  background-color: @gray-lighter;  
+  .short-title {
+    font-size: 14px;
+  }
 }
 
 
