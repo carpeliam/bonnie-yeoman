@@ -7104,14 +7104,14 @@ td.visible-print {
 @media (min-width: 992px) {
   .left-sidebar {
     float: left;
-    width: 25%;
+    width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 1200px) {
   .left-sidebar {
     float: left;
-    width: 25%;
+    width: 16.666666666666664%;
   }
 }
 
