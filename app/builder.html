@@ -26,34 +26,204 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-lg-3">
-          <div class="h1">MEASURE 0038:</div>
-          <div class="measure-title">Childhood Immunization Status</div>
-          <div class="measures-dsp">Percentage of children 2 years of age who had four diphtheria, tetanus and acellular pertussis (DTaP); three polio (IPV), one measles, mumps and rubella (MMR); three H influenza type B (HiB); three hepatitis B (Hep B); one chicken pox (VZV); four pneumococcal conjugate (PCV); one hepatitis A (Hep A); two or three rotavirus (RV); and two influenza (flu) vaccines by their second birthday.</div>
-        </div>
-        <div class="col-lg-3">
-          <div class="h1">PATIENT INFORMATION</div>
-          <div class="row">
-            <div class="p-title">
-              <p>NAME</p>
+        <div class="left-sidebar">
+          <h1></i>Test Patient</h1>
+          <div class="panel-group">
+            <form role="form">
+              <div class="form-group">
+                <label for="fname">FIRST NAME</label>
+                <input type="text" class="form-control" id="fname" placeholder="Richard">
+              </div>
+              <div class="form-group">
+                <label for="fname">LAST NAME</label>
+                <input type="text" class="form-control" id="Lname" placeholder="Smith">
+              </div>
+            </form>
+            <div class="panel-heading">
+            <h1>Clinical Elements</h1>
             </div>
-            <div class="p-text">
-              <p>Freddie Feldtron</p>
+            <div class="draggables">
+              <div class="h1">MEASURE 0038:</div>
+              <div class="element-title">CHARACTERISTICS<i class="glyphicon glyphicon-chevron-right"></i></div>
+              <div class="element-title"><i class="fa fa-stethoscope"></i> CONDITIONS<i class="fa fa-arrows"></i></div>
+              <div class="element-title"><i class="fa fa-medkit"></i>MEDICATIONS<i class="glyphicon glyphicon-chevron-right"></i></div>
+              <div class="element-title"><i class="fa fa-flask"></i>LABORATORY TESTS<i class="glyphicon glyphicon-chevron-right"></i></div>
+              <div class="element-title"><i class="fa fa-user-md"></i>ENCOUNTERS<i class="glyphicon glyphicon-chevron-right"></i></div>
             </div>
           </div>
-          <div class="row">
-            <div class="p-title">
-              <p>Date of Birth</p>
+        </div>
+        <div class="main">
+          <h1 class="main-head"><i class="fa fa-user"></i> Enzo Ferrari</h1>
+          <div id="time-bar"></div>
+          <div class="demo col-md-offset-1 col-md-3">
+            <form role="form">
+              <div class="form-group">
+                <label for="">PAYER</label>
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="">DOB</label>
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="">RACE</label>
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="">GENDER</label>
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="">LIVING STATUS</label>
+                <input type="text" class="form-control" id="" placeholder="">
+              </div><div class="form-group">
+                <label for="">ETHNICITY</label>
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+            </form>
+            <dl class="dl-demo dl-horizontal">
+              <dt>RACE</dt>
+              <dd>Hispanic</dd>
+              <dt>ETHNICITY</dt>
+              <dd>Black</dd>
+              <dt>LANGUAGES</dt>
+              <dd>English, Spanish</dd>
+              <dt>PROVIDERS</dt>
+              <dd>Jonathan Cooper MD</dd>
+            </dl>
+          </div>
+          <div class="measure-expected col-md-6">
+            <h2>MEASURE ASSOCIATED</h2>
+            <div class="col-md-2">HEART FAILURE (HF):</div>
+            <div class="col-md-4">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
             </div>
-            <div class="p-text">
-              <p>14 JAN 1956</p>
+            <ul class="nav nav-tabs col-md-6">
+              <li class="active"><a href="#">Age: 18-25</a></li>
+              <li><a href="#">Age: 26-35</a></li>
+              <li><a href="#">Age: 36-50</a></li>
+            </ul>
+            <form class="col-md-6">
+              <div class="form-group">
+                <label for="fname">EXPECTED VALUE</label>
+                <input type="radio" class="form-control" id="exp">
+              </div>
+            </form>
+          </div>
+          <div class="time-line">
+            <div class="timeline-title">Patient History Relative to Measures
+            </div>
+          </div>
+          <div class="record-listing ">
+            <div class="circle-icon active-icon">
+              <i class="fa fa-question"></i>
+            </div>
+            <div class="patient-data active">
+              <dl class="dl-record">
+                <dt>MISSING</dt>
+                <dd>Medication ordered
+                </dd>
+              </dl>
+              <dl class="dl-date">
+                <dt>DATE </dt>
+                <dd>12-2-2012 - 12-2-2012
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="record-listing">
+            <div class="circle-icon">
+              <i class="fa fa-user-md"></i>
+            </div>
+            <div class="patient-data">
+              <dl class="dl-record">
+                <dt>ENCOUNTER</dt>
+                <dd>Outpatient                                      
+                </dd>
+              </dl>
+              <dl class="dl-date">
+                <dt>DATE</dt>
+                <dd>5-25-2012 - 5-25-2012
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="record-listing">
+            <div class="circle-icon">
+              <i class="fa fa-user-md"></i>
+            </div>
+            <div class="patient-data">
+              <dl class="dl-record">
+                <dt>ENCOUNTER</dt>
+                <dd>Outpatient 
+                </dd>
+                <dt>VITAL SIGNS</dt>
+                <dd>BMI:  23</dd>
+                <dt>MEDICATIONS</dt>
+                <dd>Influenza Vaccine</dd>
+                </dd>
+              </dl>
+              <dl class="dl-date">
+                <dt>DATE</dt>
+                <dd>3-2-2011 - 3-2-2011
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="record-listing">
+            <div class="circle-icon">
+              <i class="fa fa-stethoscope"></i>
+            </div>
+            <div class="patient-data">
+              <dl class="dl-record">
+                <dt>CONDITION</dt>
+                <dd>Hypertention
+                </dd>
+              </dl>
+              <dl class="dl-date">
+                <dt>DATE </dt>
+                <dd>2-2-2010 - 2-2-2010
+                </dd>
+              </dl>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="h1">DESCRIPTION <a class="btn btn-primary">EDIT</a></div>
-          <div>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="left-sidebar .col-md-3">
+           <h1 class="main-head"><i class="fa fa-user"></i> Enzo Ferrari</h1>
+          <div class="draggables">
+            <div class="h1">MEASURE 0038:</div>
+            <div class="element-title">CHARACTERISTICS<i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div class="element-title">CONDITIONS<i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div class="element-title">MEDICATIONS<i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div class="element-title">LABORATORY TESTS<i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div class="element-title">ENCOUNTERS<i class="glyphicon glyphicon-chevron-right"></i></div>
+          </div>
+          <div id="time-bar"></div>
+        </div>
+        <div class="main .col-md-9">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="h1">PATIENT INFORMATION</div>
+        <div class="row">
+          <div class="p-title">
+            <p>NAME</p>
+          </div>
+          <div class="p-text">
+            <p>Freddie Feldtron</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="p-title">
+            <p>Date of Birth</p>
+          </div>
+          <div class="p-text">
+            <p>14 JAN 1956</p>
+          </div>
         </div>
         <div class="col-lg-9">
           <div class="h1">EXPECTED VALUE</div>
@@ -95,14 +265,6 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
-            <div class="h1">MEASURE 0038:</div>
-            <div class="element-title">CHARACTERISTICS<i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div class="element-title">CONDITIONS<i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div class="element-title">MEDICATIONS<i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div class="element-title">LABORATORY TESTS<i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div class="element-title">ENCOUNTERS<i class="glyphicon glyphicon-chevron-right"></i></div>
-          </div>
           <div class="col-lg-9">
             <div class="h1">TIMELINE</div>
           </div>
