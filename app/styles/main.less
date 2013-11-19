@@ -54,9 +54,9 @@
 // builder view 
 
 .left-sidebar-builder{
-  .make-sm-column(2);
-  .make-md-column(2);
-  .make-lg-column(2);
+  .make-sm-column(3);
+  .make-md-column(3);
+  .make-lg-column(3);
 
   .panel-heading {
     font-size: 18px;
@@ -75,14 +75,30 @@
       color: #fff;
       margin-right: 5px;
     }
+  }
 
+  .paramText {
+    border: 2px solid @gray-lighter;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: @blue-lightest;
+
+    .fa-arrows {
+      .pull-right;
+      color: white;
+    }
+    .ui-draggable {
+      font-size: 12px;
+      font-weight: 400;
+
+    }
   }
 }
 
 .main-builder {
-  .make-sm-column(10);
-  .make-md-column(10);
-  .make-lg-column(10);
+  .make-sm-column(9);
+  .make-md-column(9);
+  .make-lg-column(9);
 }
 .main-head {
   i{

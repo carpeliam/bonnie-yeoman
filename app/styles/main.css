@@ -8921,21 +8921,21 @@ td.visible-print {
 @media (min-width: 768px) {
   .left-sidebar-builder {
     float: left;
-    width: 16.666666666666664%;
+    width: 25%;
   }
 }
 
 @media (min-width: 992px) {
   .left-sidebar-builder {
     float: left;
-    width: 16.666666666666664%;
+    width: 25%;
   }
 }
 
 @media (min-width: 1200px) {
   .left-sidebar-builder {
     float: left;
-    width: 16.666666666666664%;
+    width: 25%;
   }
 }
 
@@ -8957,6 +8957,24 @@ td.visible-print {
   color: #fff;
 }
 
+.left-sidebar-builder .paramText {
+  padding: 5px;
+  margin: 10px 0;
+  background-color: #99c8e7;
+  border: 2px solid #f2f2f2;
+}
+
+.left-sidebar-builder .paramText .fa-arrows {
+  float: right !important;
+  float: right;
+  color: white;
+}
+
+.left-sidebar-builder .paramText .ui-draggable {
+  font-size: 12px;
+  font-weight: 400;
+}
+
 .main-builder {
   position: relative;
   min-height: 1px;
@@ -8967,21 +8985,21 @@ td.visible-print {
 @media (min-width: 768px) {
   .main-builder {
     float: left;
-    width: 83.33333333333334%;
+    width: 75%;
   }
 }
 
 @media (min-width: 992px) {
   .main-builder {
     float: left;
-    width: 83.33333333333334%;
+    width: 75%;
   }
 }
 
 @media (min-width: 1200px) {
   .main-builder {
     float: left;
-    width: 83.33333333333334%;
+    width: 75%;
   }
 }
 
