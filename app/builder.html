@@ -50,7 +50,10 @@
           </div>
         </div>
         <div class="main-builder">
-          <a class="btn btn-primary pull-right">DONE</a>
+          <div class="btn-group">
+           <a class="cancel-btn btn-default btn">CANCEL</a>
+            <a class="done-btn btn btn-primary pull-right">DONE</a>
+          </div>
           <h1 class="main-head"><i class="fa fa-user"></i></h1>
           <div id="time-bar"></div>
           <div class="demo">  
@@ -85,11 +88,11 @@
                 </div>
               </form>
             </div>
-            <div class="measure-expected col-md-7">
-              <h2>MEASURE ASSOCIATED</h2>
+            <div class="measure-expected">
+              <h2 class="measure-h2">MEASURE ASSOCIATED</h2>
               <div class="measure-name">
-                <div class="col-md-4">HEART FAILURE (HF):</div>
-                <div class="col-md-8">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
+                <div class="measure-name-primary">HEART FAILURE (HF):</div>
+                <div class="measure-name-secondary">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
                 </div>
               </div>
               <div class="sub-measure-tabs">
@@ -100,22 +103,24 @@
                 </ul>
               </div>
               <div class="expected-value">
-                <h2 for="fname">EXPECTED VALUE</h2>
-                <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox1" value="option1">NUM
-                </label>
-                <label class="checkbox-inline">
-                  <input type="radio" id="inlineCheckbox2" value="option2">DEN
-                </label>
-                <label class="checkbox-inline">
-                  <input type="radio" id="inlineCheckbox3" value="option3">IPP
-                </label>
-                <label class="checkbox-inline">
-                  <input type="radio" id="inlineCheckbox3" value="option3">EXCL.
-                </label>
-                <label class="checkbox-inline">
-                  <input type="radio" id="inlineCheckbox3" value="option3">EXCEP.
-                </label>
+                <div class="form-group">
+                  <label class="expected-label">EXPECTED VALUE</label>
+                  <label class="radio-inline">
+                    <input type="radio" id="inlineCheckbox1" value="option1">NUM
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox2" value="option2">DEN
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox3" value="option3">IPP
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox3" value="option3">EXCL.
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox3" value="option3">EXCEP.
+                  </label>
+                </div>
               </div>
             </div>
           </div>

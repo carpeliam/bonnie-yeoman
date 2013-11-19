@@ -22,6 +22,7 @@
 @panel-primary-border: white;
 @border-radius-base: 0px;
 @blue-lighter: #3391D0;
+@blue-lightest: #99C8E7;
 
 .navbar {
 	color: @header-bar;
@@ -88,38 +89,98 @@
     font-size: 48px;
   }
 }
-.demo {
-  .row;
-  .make-md-column-offset(1);
-   margin: 20px 0;
 
+.btn-group {
+  .pull-right;
+
+  .cancel-btn {
+    margin-right: 10px;
+  }
+  .btn {
+    font-size: 18px;
+  }
 }
+.demo {  
+   margin: 20px 0 20px 39px;
+}
+
 .demo, .measure-expected, .col-md-7 {
   .clearfix;
 }
 
 .first {
-  .row;
-  .make-md-column(2);
+  .make-sm-column(3);
+  .make-md-column(3);
+  .make-lg-column(3);
+  .first {
+    left-margin: 0;
+  }
 }
 .measure-expected {
   border-left: 4px solid @brand-primary;
- 
+  .make-md-column(7);
+  .make-sm-column(7);
+  .make-lg-column(7);
+  padding-left: 0;
+  padding-right: 0;
+
+  .measure-h2 {
+    margin-top: 0;
+    padding-left: 15px;
+  }
+  .measure-name-primary {
+    font-size: 18px;
+    .make-sm-column(4);
+    .make-md-column(4);
+    .make-lg-column(4);
+  }
+  .measure-name-secondary {
+    .make-sm-column(8);
+    .make-md-column(8);
+    .make-lg-column(8);
+    margin-bottom: 10px;
+    .clearfix; 
+  }
+  .sub-measure-tabs {
+    padding-left: 15px;
+
+      .active a {
+        background-color: @gray-lighter;
+      }
+  } 
+  .form-group {
+    padding-bottom: 15px;
+    margin-bottom: 0;
+  }
+  .expected-label {
+    padding: 10px 0;
+    display: block;
+  }
 }
 .record {
   .make-sm-column(9);
   .make-md-column(9);
   .make-lg-column(9);  
   .row; 
-
 }
 .record-listing {
   margin-top: 20px;
 }
 .measure-view-side {
-    .make-sm-column(3);
-    .make-md-column(3);
-    .make-lg-column(3);
+  .make-sm-column(3);
+  .make-md-column(3);
+  .make-lg-column(3);
+  margin-top: 20px;
+
+  .measure-title {
+    background-color: @gray-lighter;  
+    padding: 10px;
+
+    .short-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
 }
 .active-icon {
 
@@ -145,10 +206,10 @@
 #time-bar {
   position: absolute;
   left: 30px;
-  top: 50px;
+  top: 63px;
   width: 8px;
   height: 100%;
-  background-color: @brand-primary;
+  background-color: @blue-lightest;
 }
 
 h2 {
@@ -160,10 +221,10 @@ h2 {
   background-color: @gray-lighter;
   margin-bottom: 5px;
 }
-.expected-group {
-	.form-control {
-		display: inline-block;
-	}
+.expected-value {
+  background-color: @gray-lighter;
+  margin-left: 0;
+  padding-left: 15px;
 }
 
 .time-line {
@@ -171,11 +232,14 @@ h2 {
 	margin-left: 15px;
 }
 .timeline-title {
+  .row;
   color: #fff;
 	font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
-	.make-md-column-offset(1);
+	.make-sm-column-offset(1);
+  .make-md-column-offset(1);
+  .make-lg-column-offset(1);
 } 
 
 .circle-icon {
@@ -209,14 +273,6 @@ h2 {
 		}
 	}
 }
-.measure-title {
-  .row;
-  background-color: @gray-lighter;  
-  .short-title {
-    font-size: 14px;
-  }
-}
-
 
 // measure view styles
 .main {
