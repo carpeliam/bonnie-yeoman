@@ -8939,6 +8939,24 @@ td.visible-print {
   }
 }
 
+.left-sidebar-builder .panel-heading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.left-sidebar-builder .element-title {
+  padding: 10px 5px;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #3391d0;
+  border: 3px solid #f2f2f2;
+}
+
+.left-sidebar-builder .element-title i {
+  margin-right: 5px;
+  color: #fff;
+}
+
 .main-builder {
   position: relative;
   min-height: 1px;

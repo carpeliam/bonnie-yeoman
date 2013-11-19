@@ -21,6 +21,7 @@
 @panel-default-heading-bg: @gray-lighter;
 @panel-primary-border: white;
 @border-radius-base: 0px;
+@blue-lighter: #3391D0;
 
 .navbar {
 	color: @header-bar;
@@ -49,14 +50,32 @@
   text-transform: uppercase;
 }
 
-
-
-
 // builder view 
+
 .left-sidebar-builder{
   .make-sm-column(2);
   .make-md-column(2);
   .make-lg-column(2);
+
+  .panel-heading {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .element-title {
+    border: 3px solid @gray-lighter;
+    color: #fff;
+    background-color: @blue-lighter;
+    margin-top: 10px;
+    padding: 10px 5px;
+
+
+    i {
+      color: #fff;
+      margin-right: 5px;
+    }
+
+  }
 }
 
 .main-builder {
@@ -72,6 +91,7 @@
 .demo, .measure-expected, .col-md-7 {
   .clearfix;
 }
+
 .first {
   .row;
   .make-md-column-offset(1);
