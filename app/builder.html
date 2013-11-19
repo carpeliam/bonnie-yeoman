@@ -39,13 +39,13 @@
                 <input type="text" class="form-control" id="Lname" placeholder="Smith">
               </div>
             </form>
-            <div class="panel-heading">
-            <h1>Clinical Elements</h1>
-              <div class="element-title">CHARACTERISTICS<i class="glyphicon glyphicon-chevron-right"></i></div>
-              <div class="element-title"><i class="fa fa-stethoscope"></i> CONDITIONS<i class="fa fa-arrows"></i></div>
-              <div class="element-title"><i class="fa fa-medkit"></i>MEDICATIONS<i class="glyphicon glyphicon-chevron-right"></i></div>
-              <div class="element-title"><i class="fa fa-flask"></i>LABORATORY TESTS<i class="glyphicon glyphicon-chevron-right"></i></div>
-              <div class="element-title"><i class="fa fa-user-md"></i>ENCOUNTERS<i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div class="panel-heading">Elements</div>
+            <div class="panel-listing">
+              <div class="element-title"><i class="fa fa-users"></i>CHARACTERISTICS</div>
+              <div class="element-title"><i class="fa fa-stethoscope"></i> CONDITIONS</div>
+              <div class="element-title"><i class="fa fa-medkit"></i>MEDICATIONS</div>
+              <div class="element-title"><i class="fa fa-flask"></i>LAB TESTS</div>
+              <div class="element-title"><i class="fa fa-user-md"></i>ENCOUNTERS</div>
             </div>
           </div>
         </div>
@@ -53,68 +53,70 @@
           <a class="btn btn-primary pull-right">DONE</a>
           <h1 class="main-head"><i class="fa fa-user"></i></h1>
           <div id="time-bar"></div>
-          <div class="demo first col-md-offset-1 col-md-2">
-            <form role="form">
-              <div class="form-group">
-                <label for="">PAYER</label>
-                <input type="text" class="form-control" id="" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="">DOB</label>
-                <input type="text" class="form-control" id="" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="">RACE</label>
-                <input type="text" class="form-control" id="" placeholder="">
-              </div>
-            </form>
-          </div>
-          <div class="demo col-md-2">
-            <form role="form col-md-2">
-              <div class="form-group">
-                <label for="">GENDER</label>
-                <input type="text" class="form-control" id="" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="">LIVING STATUS</label>
-                <input type="text" class="form-control" id="" placeholder="">
-              </div><div class="form-group">
-                <label for="">ETHNICITY</label>
-                <input type="text" class="form-control" id="" placeholder="">
-              </div>
-            </form>
-          </div>
-          <div class="measure-expected col-md-7">
-            <h2>MEASURE ASSOCIATED</h2>
-            <div class="row">
-              <div class="col-md-4">HEART FAILURE (HF):</div>
-              <div class="col-md-8">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
-              </div>
+          <div class="demo">  
+            <div class="first">
+              <form role="form">
+                <div class="form-group">
+                  <label for="">PAYER</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="">DOB</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="">RACE</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+              </form>
             </div>
-            <div class="row">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#">Age: 18-25</a></li>
-                <li><a href="#">26-35</a></li>
-                <li><a href="#">36-50</a></li>
-              </ul>
+            <div class="col-md-2">
+              <form role="form col-md-2">
+                <div class="form-group">
+                  <label for="">GENDER</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="">LIVING STATUS</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div><div class="form-group">
+                  <label for="">ETHNICITY</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+              </form>
             </div>
-            <div class="row">
-              <h2 for="fname">EXPECTED VALUE</h2>
-              <label class="radio-inline">
-                <input type="radio" id="inlineCheckbox1" value="option1">NUM
-              </label>
-              <label class="checkbox-inline">
-                <input type="radio" id="inlineCheckbox2" value="option2">DEN
-              </label>
-              <label class="checkbox-inline">
-                <input type="radio" id="inlineCheckbox3" value="option3">IPP
-              </label>
-              <label class="checkbox-inline">
-                <input type="radio" id="inlineCheckbox3" value="option3">EXCL.
-              </label>
-              <label class="checkbox-inline">
-                <input type="radio" id="inlineCheckbox3" value="option3">EXCEP.
-              </label>
+            <div class="measure-expected col-md-7">
+              <h2>MEASURE ASSOCIATED</h2>
+              <div class="measure-name">
+                <div class="col-md-4">HEART FAILURE (HF):</div>
+                <div class="col-md-8">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
+                </div>
+              </div>
+              <div class="sub-measure-tabs">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#">Age: 18-25</a></li>
+                  <li><a href="#">26-35</a></li>
+                  <li><a href="#">36-50</a></li>
+                </ul>
+              </div>
+              <div class="expected-value">
+                <h2 for="fname">EXPECTED VALUE</h2>
+                <label class="radio-inline">
+                  <input type="radio" id="inlineCheckbox1" value="option1">NUM
+                </label>
+                <label class="checkbox-inline">
+                  <input type="radio" id="inlineCheckbox2" value="option2">DEN
+                </label>
+                <label class="checkbox-inline">
+                  <input type="radio" id="inlineCheckbox3" value="option3">IPP
+                </label>
+                <label class="checkbox-inline">
+                  <input type="radio" id="inlineCheckbox3" value="option3">EXCL.
+                </label>
+                <label class="checkbox-inline">
+                  <input type="radio" id="inlineCheckbox3" value="option3">EXCEP.
+                </label>
+              </div>
             </div>
           </div>
           <div class="time-line">

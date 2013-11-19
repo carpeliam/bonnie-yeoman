@@ -88,13 +88,18 @@
     font-size: 48px;
   }
 }
+.demo {
+  .row;
+  .make-md-column-offset(1);
+   margin: 20px 0;
+
+}
 .demo, .measure-expected, .col-md-7 {
   .clearfix;
 }
 
 .first {
   .row;
-  .make-md-column-offset(1);
   .make-md-column(2);
 }
 .measure-expected {
@@ -162,13 +167,14 @@ h2 {
 }
 
 .time-line {
-	background-color: @gray-lighter;
+	background-color: #99C8E7;
 	margin-left: 15px;
 }
 .timeline-title {
+  color: #fff;
 	font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-weight: bold;
+  text-transform: uppercase;
 	.make-md-column-offset(1);
 } 
 
