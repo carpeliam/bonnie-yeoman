@@ -152,6 +152,7 @@
                   </dd>
                 </dl>
                 <form role="form" class="element-edit">
+                  <div class="section-heading"><i class="fa fa-clock-o"></i> TIME</div>
                   <div class="form-group">
                     <label for="event-start">EVENT START</label>
                     <input type="text" class="form-control" id="event-start" placeholder="01/01/2013">
@@ -168,23 +169,23 @@
                     <label for="event-start-time">END TIME</label>
                     <input type="text" class="form-control" id="event-end-time" placeholder="08:00"><button type="button" class="close" aria-hidden="true">&times;</button>
                   </div>
+                  <div class="section-heading"><i class="fa fa-bar-chart-o"></i> VALUE</div>
                   <div class="form-group btn-form">
-                    <label for="field-type"><i class="fa fa-bar-chart-o"></i> VALUE</label>
                     <div class=" pull-left btn-group" id="field-type">
                       <button type="radio" class="btn btn-default" value="VALUE"><i class="fa fa-pencil-square-o"></i> INPUT</button>
                       <button type="radio" class="btn btn-default" value="CODED"><i class="fa fa-list"></i> Coded</button>
                     </div>
                   </div>
                   <div class="form-group">
-                      <label for="event-start">INPUT</label>
-                      <input type="text" class="form-control" id="event-start" placeholder="140">
-                    </div>
-                    <div class="form-group">
-                      <label for="event-start-time">UNITS</label>
-                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
-                    </div>
+                    <label for="event-start">INPUT</label>
+                    <input type="text" class="form-control" id="event-start" placeholder="140">
+                  </div>
+                  <div class="form-group">
+                    <label for="event-start-time">UNITS</label>
+                    <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                  </div>
+                  <div class="section-heading"><i class="fa fa-list"></i> FIELD VALUE <a class="btn btn-default pull-right"><i class="fa fa-plus-square"></i></a></div>  
                   <div class="form-group full-group">
-                    <label for="field-value"><i class="fa fa-list"></i> FIELD VALUE</label>
                     <select class="form-control" id="field-value" placeholder="select">
                       <option value="">--</option>               
                       <option value="SEVERITY">Severity</option>              
@@ -210,7 +211,6 @@
                       <option value="TRANSFER_TO">Transfer To</option>               
                       <option value="TRANSFER_FROM">Transfer From</option>          
                     </select>
-                    <a class="btn btn-default add-field"><i class="fa fa-plus-square"></i></a>
                   </div>
                   <div class="form-group full-group">
                     <div class=" pull-left btn-group" id="field-type">
