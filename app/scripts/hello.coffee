@@ -1,1 +1,2 @@
-console.log "'Allo from CoffeeScript!"
+'use strict'
+console.log 'Allo from CoffeeScript!'
