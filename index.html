@@ -1,0 +1,116 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/37a843a0.main.css">
+    <script src="scripts/vendor/d7100892.modernizr.js"></script>
+    </head>
+  <body>
+    <div class="container">
+      <div class="navbar" role="navigation">
+          <a class="navbar-brand col-md-6" href="#">BONNIE</a>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="builder.html" class="">Patients</a></li>
+            <li><a href="results.html" class="">Results</a></li>
+          </ul>
+      </div>
+      <div class="row">
+          <div class="col-sm-6 h1">MEASURE LISTING</div>
+          <a class="update-btn" data-toggle="popover" id="update" rel="popover" data-placement="bottom">UPLOAD</a>
+          <div class="col-sm-2 h2">PATIENTS</div>
+          <div class="col-sm-4 h1">RESULTS</div>
+      </div>
+      <div class="row">
+        <div class="measure-title col-lg-4">
+          <a href="measure-0034.html">Coronary Artery Disease (CAD)</a>
+        </div>
+        <div class="NQF-listing col-lg-1">
+          <span>0081</span>
+        </div>
+        <div class="col-lg-5">
+          <a class="update-btn" data-toggle="popover" id="update" rel="popover" data-placement="bottom">UPDATE</a>
+        </div>
+        <div class="patient-listing col-lg-1">
+          <i class="glyphicon glyphicon-user"></i> 5
+        </div>
+        <div class="col-lg-1">
+          <a href="builder.html" class="update-btn">ADD</a>
+        </div>
+        <div class="col-lg-3">
+          <div class="measure-title">100% Expected Passed</div>
+        </div>
+      </div>
+      <script type="text/template" id="template">
+        <form>
+          <div id="dialog-box">
+            <h1>Re-import a Measure</h1>
+            <label class="title">Measure location:</label>
+            <div class="upload">
+              <input type="file" class="upload">
+            </div>
+            <label class="title">MEASURE TYPE:</label>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn-default btn EP">
+                <input type="radio" class="btn-selection">Eligible Professional (EP)
+              </label>
+              <label class="btn-default btn EH">
+                <input type="radio" class="btn-selection">Eligible Hospital (EH)
+              </label>
+            </div>
+            <label class="title">CALCULATION BASED:</label>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn-default btn PB">
+                <input type="radio" class="btn-selection">Patient Based
+              </label>
+              <label class="btn-default btn EC">
+                <input type="radio" class="btn-selection">Episode of Care
+              </label>
+              <label class="btn-default btn CV">
+                <input type="radio" class="btn-selection">
+                Continuous Variable
+            </div>
+            <div class="ok-cancel">
+              <button type="button" class="btn-ok">UPLOAD</button>
+              <button type="button" class="btn-cancel">CANCEL</button>
+            </div>
+          </div>
+        </form>
+      </script>
+    </div>
+
+
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+
+        <script src="scripts/e712e61e.main.js"></script>
+
+        <script src="scripts/vendor/20bdd8fe.bootstrap.js"></script>
+        <script>
+          $('#update').popover({
+              html: true, content: $('#template').text()
+            });
+        </script>
+</body>
+</html>
