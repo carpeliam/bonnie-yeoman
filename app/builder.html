@@ -71,11 +71,11 @@
             <div class="first">
               <form role="form">
                 <div class="form-group">
-                  <label for="">PAYER</label>
+                  <label for="">DOB</label>
                   <input type="text" class="form-control" id="" placeholder="">
                 </div>
                 <div class="form-group">
-                  <label for="">DOB</label>
+                  <label for="">DOB-Time</label>
                   <input type="text" class="form-control" id="" placeholder="">
                 </div>
                 <div class="form-group">
@@ -140,38 +140,100 @@
             </div>
           </div>
           <div class="record">
-            <div class="record-listing ">
-              <div class="circle-icon active-icon">
-                <i class="fa fa-question"></i>
-              </div>
-              <div class="patient-data active">
-                <dl class="dl-record">
-                  <dt>MISSING</dt>
-                  <dd>Medication ordered
-                  </dd>
-                </dl>
-                <dl class="dl-date">
-                  <dt>DATE </dt>
-                  <dd>12-2-2012 - 12-2-2012
-                  </dd>
-                </dl>
-              </div>
-            </div>
             <div class="record-listing">
               <div class="circle-icon">
                 <i class="fa fa-user-md"></i>
               </div>
               <div class="patient-data">
-                <dl class="dl-record">
+                <button type="button" class="close" aria-hidden="true">&times;</button>
+                <dl class="dl-record-edit edit">
                   <dt>ENCOUNTER</dt>
                   <dd>Outpatient                                      
                   </dd>
                 </dl>
-                <dl class="dl-date">
-                  <dt>DATE</dt>
-                  <dd>5-25-2012 - 5-25-2012
-                  </dd>
-                </dl>
+                <form role="form" class="element-edit">
+                  <div class="form-group">
+                    <label for="event-start">EVENT START</label>
+                    <input type="text" class="form-control" id="event-start" placeholder="01/01/2013">
+                  </div>
+                  <div class="form-group">
+                    <label for="event-start-time">START TIME</label>
+                    <input type="text" class="form-control" id="event-start-time" placeholder="08:00">
+                  </div>
+                  <div class="form-group">
+                    <label for="event-end">EVENT END</label>
+                    <input type="text" class="form-control" id="" placeholder="01/01/2013">
+                  </div>
+                  <div class="form-group">
+                    <label for="event-start-time">END TIME</label>
+                    <input type="text" class="form-control" id="event-end-time" placeholder="08:00"><button type="button" class="close" aria-hidden="true">&times;</button>
+                  </div>
+                  <div class="form-group btn-form">
+                    <label for="field-type"><i class="fa fa-bar-chart-o"></i> VALUE</label>
+                    <div class=" pull-left btn-group" id="field-type">
+                      <button type="radio" class="btn btn-default" value="VALUE"><i class="fa fa-pencil-square-o"></i> INPUT</button>
+                      <button type="radio" class="btn btn-default" value="CODED"><i class="fa fa-list"></i> Coded</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="event-start">INPUT</label>
+                      <input type="text" class="form-control" id="event-start" placeholder="140">
+                    </div>
+                    <div class="form-group">
+                      <label for="event-start-time">UNITS</label>
+                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                    </div>
+                  <div class="form-group full-group">
+                    <label for="field-value"><i class="fa fa-list"></i> FIELD VALUE</label>
+                    <select class="form-control" id="field-value" placeholder="select">
+                      <option value="">--</option>               
+                      <option value="SEVERITY">Severity</option>              
+                      <option value="ORDINAL">Ordinal</option>               
+                      <option value="REASON">Reason</option>               
+                      <option value="SOURCE">Source</option>               
+                      <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>               
+                      <option value="FACILITY_LOCATION">Facility Location</option>               
+                      <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>               
+                      <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>               
+                      <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>               
+                      <option value="DISCHARGE_STATUS">Discharge Status</option>               
+                      <option value="ADMISSION_DATETIME">Admission Date/Time</option>              
+                      <option value="LENGTH_OF_STAY">Length of Stay</option>               
+                      <option value="DOSE">Dose</option>               
+                      <option value="ROUTE">Route</option>               
+                      <option value="START_DATETIME">Start Date/Time</option>               
+                      <option value="FREQUENCY">Frequency</option>               
+                      <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>               
+                      <option value="STOP_DATETIME">Stop Date/Time</option>               
+                      <option value="INCISION_DATETIME">Incision Date/Time</option>               
+                      <option value="REMOVAL_DATETIME">Removal Date/Time</option>               
+                      <option value="TRANSFER_TO">Transfer To</option>               
+                      <option value="TRANSFER_FROM">Transfer From</option>          
+                    </select>
+                    <a class="btn btn-default add-field"><i class="fa fa-plus-square"></i></a>
+                  </div>
+                  <div class="form-group full-group">
+                    <div class=" pull-left btn-group" id="field-type">
+                      <button type="radio" class="btn btn-default selected" value="VALUE"><i class="fa fa-pencil-square-o"></i> INPUT</button>
+                      <button type="radio" class="btn btn-default" value="CODED"><i class="fa fa-list"></i> Coded</button>
+                      <button type="radio" class="btn btn-default" value="TIME"><i class="fa fa-calendar"></i> Time</button>
+                    </div>
+                    <div class="form-group">
+                      <label for="event-start">INPUT</label>
+                      <input type="text" class="form-control" id="event-start" placeholder="140">
+                    </div>
+                    <div class="form-group">
+                      <label for="event-start-time">UNITS</label>
+                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                    </div>
+                  </div>
+                  <div class="form-group full-group">
+                    <label>
+                      <input type="checkbox"> NOT PERFORMED
+                    </label>
+                  </div>
+                    <a class="btn btn-primary pull-right">CLOSE</a>
+                </form>
               </div>
             </div>
             <div class="record-listing">
@@ -179,6 +241,7 @@
                 <i class="fa fa-user-md"></i>
               </div>
               <div class="patient-data">
+                <button type="button" class="close" aria-hidden="true">&times;</button>
                 <dl class="dl-record">
                   <dt>ENCOUNTER</dt>
                   <dd>Outpatient 
@@ -201,6 +264,7 @@
                 <i class="fa fa-stethoscope"></i>
               </div>
               <div class="patient-data">
+                <button type="button" class="close" aria-hidden="true">&times;</button>
                 <dl class="dl-record">
                   <dt>CONDITION</dt>
                   <dd>Hypertention

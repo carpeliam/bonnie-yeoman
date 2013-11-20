@@ -9542,3 +9542,34 @@ h2 {
 .title-bar {
   background-color: #f2f2f2;
 }
+
+.edit {
+  display: block;
+}
+
+.element-edit {
+  display: block;
+}
+
+.element-edit .form-group {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .element-edit .form-group {
+    float: left;
+    width: 50%;
+  }
+}
+
+.element-edit .form-group .btn-group i {
+  color: black;
+}
+
+.element-edit .btn-form,
+.element-edit .full-group {
+  width: 100%;
+}
