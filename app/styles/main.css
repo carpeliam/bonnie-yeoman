@@ -9270,8 +9270,12 @@ td.visible-print {
   clear: both;
 }
 
-.record-listing {
+.record .record-listing {
   margin-top: 20px;
+}
+
+.record .record-listing .patient-data {
+  margin-bottom: 20px;
 }
 
 .measure-view-side {
@@ -9358,7 +9362,7 @@ td.visible-print {
 #time-bar {
   position: absolute;
   top: 63px;
-  left: 30px;
+  left: 29px;
   width: 8px;
   height: 100%;
   background-color: #99c8e7;
