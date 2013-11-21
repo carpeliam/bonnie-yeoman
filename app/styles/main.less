@@ -1,7 +1,7 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
-@icon-font-path: "../bower_components/bootstrap/fonts/";
+@icon-font-path: "../bower_components/fonts";
 @import "../bower_components/font-awesome/less/font-awesome.less";
-@fa-font-path: "../bower_components/font-awesome/fonts/";
+@fa-font-path: "../bower_components/font-awesome/fonts";
 
 @brand-primary: #0075C4;
 @header-bar: gray;
@@ -51,7 +51,7 @@
   text-transform: uppercase;
 }
 
-// builder view
+// builder view 
 
 .left-sidebar-builder{
   .make-sm-column(3);
@@ -107,7 +107,6 @@
 }
 
 .btn-group {
-  .pull-right;
 
   .cancel-btn {
     margin-right: 10px;
@@ -116,7 +115,7 @@
     font-size: 18px;
   }
 }
-.demo {
+.demo {  
    margin: 20px 0 20px 39px;
 }
 
@@ -155,7 +154,7 @@
     .make-md-column(8);
     .make-lg-column(8);
     margin-bottom: 10px;
-    .clearfix;
+    .clearfix; 
   }
   .sub-measure-tabs {
     padding-left: 15px;
@@ -163,7 +162,7 @@
       .active a {
         background-color: @gray-lighter;
       }
-  }
+  } 
   .form-group {
     padding-bottom: 15px;
     margin-bottom: 0;
@@ -176,14 +175,15 @@
 .record {
   .make-sm-column(9);
   .make-md-column(9);
-  .make-lg-column(9);
-  .row;
+  .make-lg-column(9);  
+  .row; 
 
   .record-listing {
     margin-top: 20px;
 
     .patient-data {
       margin-bottom: 20px;
+      padding: 20px;
     }
   }
 }
@@ -195,7 +195,7 @@
   margin-top: 20px;
 
   .measure-title {
-    background-color: @gray-lighter;
+    background-color: @gray-lighter;  
     padding: 10px;
 
     .short-title {
@@ -262,7 +262,7 @@ h2 {
 	.make-sm-column-offset(1);
   .make-md-column-offset(1);
   .make-lg-column-offset(1);
-}
+} 
 
 .circle-icon {
 		display: inline-block;
@@ -325,34 +325,80 @@ h2 {
 .title-bar {
   background-color: @gray-lighter;
 }
-.edit {
+.dl-heading-edit {
   display: block;
+  padding: 0 15px;
+  font-size: 18px;
+
 }
 
 .element-edit{
   display: block;
+  margin-bottom: 30px;
 
   .section-heading {
     font-size: 24px;
     font-weight: bold;
-    margin: 20px 0 10px 15px;
+    margin-left: 15px;
     color: @brand-primary;
 
   }
 
   .form-group{
-    .make-md-column(6);
+    margin-bottom: 20px;
 
     .form-control{
 
     }
+    #field-value {
+      .make-sm-column(8);
+      .make-md-column(8);
+      .make-lg-column(8);
+      margin-right: 15px;
+
+    }
+
     .btn-group {
 
       i {
         color: black;
       }
     }
+  }
+  .date {
+    .make-sm-column(8);
+    .make-md-column(8);
+    .make-lg-column(8);
+  }
+  .time {
+    .make-sm-column(4);
+    .make-md-column(4);
+    .make-lg-column(4);
+  }
+  .select {
+    .make-sm-column(12);
+    .make-md-column(12);
+    .make-lg-column(12);
+  }
+  .input {
+    .make-sm-column(8);
+    .make-md-column(8);
+    .make-lg-column(8);
 
+  }
+  .units {
+    .make-sm-column(4);
+    .make-md-column(4);
+    .make-lg-column(4);
+
+  }
+  .not-per {
+    .make-sm-column(12);
+    .make-md-column(12);
+    .make-lg-column(12);
+  }
+  .minimize {
+    margin-bottom: 30px;
   }
 
   .btn-form, .full-group {
@@ -361,5 +407,45 @@ h2 {
   .btn-form {
 
   }
+  .existing-value {
+    margin-bottom: 20px;
+
+    span{
+      background-color: @gray-lighter;
+      color: @gray-darker;
+      font-size: 14px;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      display: inline-block;
+
+      .delete {
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 1;
+        color: #000000;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.2;
+        filter: alpha(opacity=20);
+      }
+      .delete:hover,
+      .delete:focus {
+        color: #000000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      button.delete {
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+      }
+    }
+  }
 }
+
 

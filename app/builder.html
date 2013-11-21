@@ -54,6 +54,7 @@
               <div class="paramText">
                 <label draggable="true" data-criteria-id="DiagnosisActiveAcuteTonsillitis" class="ui-draggable">Acute Tonsillitis</label><i class="fa fa-arrows"></i>
               </div>
+              <div class="element-title"><i class="fa fa-scissors"></i> PROCEDURES<i class="fa fa-angle-down pull-right"></i></div>
                <div class="element-title"><i class="fa fa-medkit"></i>MEDICATIONS<i class="fa fa-angle-right pull-right"></i></div>
               <div class="element-title"><i class="fa fa-flask"></i>LAB TESTS<i class="fa fa-angle-right pull-right"></i></div>
               <div class="element-title"><i class="fa fa-user-md"></i>ENCOUNTERS<i class="fa fa-angle-right pull-right"></i></div>
@@ -146,31 +147,35 @@
               </div>
               <div class="patient-data">
                 <button type="button" class="close" aria-hidden="true">&times;</button>
-                <dl class="dl-record-edit edit">
+                <dl class="dl-heading-edit">
                   <dt>ENCOUNTER</dt>
                   <dd>Outpatient                                      
                   </dd>
                 </dl>
                 <form role="form" class="element-edit">
                   <div class="section-heading"><i class="fa fa-clock-o"></i> TIME</div>
-                  <div class="form-group">
+                  <div class="form-group date">
                     <label for="event-start">EVENT START</label>
                     <input type="text" class="form-control" id="event-start" placeholder="01/01/2013">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group time">
                     <label for="event-start-time">START TIME</label>
                     <input type="text" class="form-control" id="event-start-time" placeholder="08:00">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group date">
                     <label for="event-end">EVENT END</label>                   
-                    <input type="text" class="form-control" id="" placeholder="01/01/2013">
+                    <input type="text" class="form-control" id="event-end" placeholder="01/01/2013">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group time">
                     <label for="event-start-time">END TIME</label>
                     <input type="text" class="form-control" id="event-end-time">
                   </div>
                   <div class="section-heading"><i class="fa fa-bar-chart-o"></i> VALUE</div>
-                  <div class="form-group">
+                  <div class="existing-value">
+                    <span>Severity-BLAH <button type="button" class="delete" aria-hidden="true">&times;</button></span>
+                    <span>Cumulative Medication Duration <button type="button" class="delete" aria-hidden="true">&times;</button></span>
+                  </div>
+                  <div class="form-group input">
                     <label for="event-start">INPUT</label>
                     <div class="input-group">
                       <div class="input-group-btn">
@@ -183,7 +188,7 @@
                       <input type="text" class="form-control" id="event-start" placeholder="140">
                     </div><!-- /input-group -->
                   </div>
-                  <div class="form-group">
+                  <div class="form-group units">
                     <label for="event-start-time">UNITS</label>
                     <div class="input-group">
                       <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
@@ -193,8 +198,12 @@
                     </div>
                   </div>
                   <div class="section-heading"><i class="fa fa-list"></i> FIELD VALUE</div>
-                  <div></div>  
-                  <div class="form-group">
+                  <div class="existing-value">
+                    <span>Severity-BLAH <button type="button" class="delete" aria-hidden="true">&times;</button></span>
+                    <span>Cumulative Medication Duration <button type="button" class="delete" aria-hidden="true">&times;</button></span>
+                    <span>Start Date/Time <button type="button" class="delete" aria-hidden="true">&times;</button></span>
+                  </div>
+                  <div class="form-group select">
                     <select class="form-control" id="field-value" placeholder="select">
                       <option value="">--</option>               
                       <option value="SEVERITY">Severity</option>              
@@ -220,15 +229,9 @@
                       <option value="TRANSFER_TO">Transfer To</option>               
                       <option value="TRANSFER_FROM">Transfer From</option>          
                     </select>
+                    <button class="btn btn-default add"><i class="fa fa-plus"></i></button>
                   </div>
-                  <div class="form-group ">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default"><i class="fa fa-plus"></i></button>
-                    </div>
-                  </div>
-                  
-
-                  <div class="form-group">
+                  <div class="form-group input">
                     <label for="event-start">INPUT</label>
                     <div class="input-group">
                       <div class="input-group-btn">
@@ -242,22 +245,23 @@
                       <input type="text" class="form-control" id="event-start" placeholder="140">
                     </div><!-- /input-group -->
                   </div>
-                  <div class="form-group">
-                    <label for="event-start">UNITS</label>
+                  <div class="form-group units">
+                    <label for="event-units">UNITS</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
-                      <div class="input-group-btn">
-                        <button class="btn btn-default"><i class="fa fa-plus"></i></button>
+                      <input type="text" class="form-control" id="event-units" placeholder="mgHg">
+                      <div class="input-group-btn add">
+                        <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
                       </div>
                     </div>
                   </div>
-
-                  <div class="form-group full-group">
+                  <div class="form-group not-per">
                     <label>
                       <input type="checkbox"> NOT PERFORMED
                     </label>
                   </div>
-                  <a class="btn btn-primary pull-right">CLOSE</a>
+                  <div class="form-group minimize">
+                    <a class="btn btn-primary pull-right">CLOSE</a>
+                  </div>
                 </form>
               </div>
             </div>
@@ -309,58 +313,6 @@
             </div>
           </div>
         </div>
-      <!-- </div>
-      <div class="row">
-        <div class="left-sidebar .col-md-3">
-           <h1 class="main-head"><i class="fa fa-user"></i> Enzo Ferrari</h1>
-
-          <div id="time-bar"></div>
-        </div>
-        <div class="main .col-md-9">
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="col-lg-9">
-          <div class="h1">EXPECTED VALUE</div>
-            <div class="row">
-              <div class="btn-heading col-lg-7"> Included in:
-                <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="NUM">Numerator
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="DEN">Denominator
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="IPP">IPP
-                  </label>
-                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="IPP">Exceptions
-                  </label>
-                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="IPP">Exclusions
-                  </label>
-
-                </div>
-              </div>
-              <div class="btn-heading col-lg-5"> Not Included in:
-                <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="X-NUM">Numerator
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="NUM">Denominator
-                  </label>
-                   <label class="btn btn-primary">
-                    <input type="radio" name="options" id="NUM">IPP
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- -->
       <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
