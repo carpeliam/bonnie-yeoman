@@ -8911,6 +8911,10 @@ td.visible-print {
   text-transform: uppercase;
 }
 
+.btn-primary i {
+  color: #fff;
+}
+
 .left-sidebar-builder {
   position: relative;
   min-height: 1px;
@@ -8921,21 +8925,21 @@ td.visible-print {
 @media (min-width: 768px) {
   .left-sidebar-builder {
     float: left;
-    width: 25%;
+    width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 992px) {
   .left-sidebar-builder {
     float: left;
-    width: 25%;
+    width: 16.666666666666664%;
   }
 }
 
 @media (min-width: 1200px) {
   .left-sidebar-builder {
     float: left;
-    width: 25%;
+    width: 16.666666666666664%;
   }
 }
 
@@ -8946,33 +8950,40 @@ td.visible-print {
 
 .left-sidebar-builder .element-title {
   padding: 10px 5px;
+  padding: 15px;
   margin-top: 10px;
+  font-size: 10px;
   color: #fff;
   background-color: #3391d0;
-  border: 3px solid #f2f2f2;
 }
 
 .left-sidebar-builder .element-title i {
+  display: block;
   margin-right: 5px;
+  margin-left: 10px;
+  font-size: 36px;
   color: #fff;
 }
 
+.left-sidebar-builder .element-title i i {
+  font-size: 32px;
+  vertical-align: middle;
+}
+
 .left-sidebar-builder .paramText {
-  padding: 5px;
+  padding: 10px;
   margin: 10px 0;
-  background-color: #99c8e7;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #3391d0;
 }
 
 .left-sidebar-builder .paramText .fa-arrows {
   float: right !important;
   float: right;
-  color: white;
+  color: #888888;
 }
 
 .left-sidebar-builder .paramText .ui-draggable {
   font-size: 12px;
-  font-weight: 400;
 }
 
 .main-builder {
@@ -8985,21 +8996,21 @@ td.visible-print {
 @media (min-width: 768px) {
   .main-builder {
     float: left;
-    width: 75%;
+    width: 83.33333333333334%;
   }
 }
 
 @media (min-width: 992px) {
   .main-builder {
     float: left;
-    width: 75%;
+    width: 83.33333333333334%;
   }
 }
 
 @media (min-width: 1200px) {
   .main-builder {
     float: left;
-    width: 75%;
+    width: 83.33333333333334%;
   }
 }
 
@@ -9561,35 +9572,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.element-edit .form-group #field-value {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: 15px;
-}
-
-@media (min-width: 768px) {
-  .element-edit .form-group #field-value {
-    float: left;
-    width: 66.66666666666666%;
-  }
-}
-
-@media (min-width: 992px) {
-  .element-edit .form-group #field-value {
-    float: left;
-    width: 66.66666666666666%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .element-edit .form-group #field-value {
-    float: left;
-    width: 66.66666666666666%;
-  }
-}
-
 .element-edit .form-group .btn-group i {
   color: black;
 }
@@ -9650,32 +9632,37 @@ h2 {
   }
 }
 
-.element-edit .select {
+.element-edit .select #field-value {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-left: 15px;
 }
 
 @media (min-width: 768px) {
-  .element-edit .select {
+  .element-edit .select #field-value {
     float: left;
-    width: 100%;
+    width: 83.33333333333334%;
   }
 }
 
 @media (min-width: 992px) {
-  .element-edit .select {
+  .element-edit .select #field-value {
     float: left;
-    width: 100%;
+    width: 83.33333333333334%;
   }
 }
 
 @media (min-width: 1200px) {
-  .element-edit .select {
+  .element-edit .select #field-value {
     float: left;
-    width: 100%;
+    width: 83.33333333333334%;
   }
+}
+
+.element-edit .select button {
+  margin-left: 25px;
 }
 
 .element-edit .input {
@@ -9732,6 +9719,38 @@ h2 {
     float: left;
     width: 33.33333333333333%;
   }
+}
+
+.element-edit .units .form-control {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .element-edit .units .form-control {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+
+@media (min-width: 992px) {
+  .element-edit .units .form-control {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .element-edit .units .form-control {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+
+.element-edit .units button i {
+  color: #fff;
 }
 
 .element-edit .not-per {

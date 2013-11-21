@@ -51,12 +51,18 @@
   text-transform: uppercase;
 }
 
+.btn-primary {
+  i {
+    color: #fff;
+  }
+}
+
 // builder view 
 
 .left-sidebar-builder{
-  .make-sm-column(3);
-  .make-md-column(3);
-  .make-lg-column(3);
+  .make-sm-column(2);
+  .make-md-column(2);
+  .make-lg-column(2);
 
   .panel-heading {
     font-size: 18px;
@@ -64,41 +70,49 @@
   }
 
   .element-title {
-    border: 3px solid @gray-lighter;
     color: #fff;
     background-color: @blue-lighter;
     margin-top: 10px;
     padding: 10px 5px;
+    font-size: 10px;
+    padding: 15px;
+
 
 
     i {
+      display: block;
       color: #fff;
       margin-right: 5px;
+      font-size: 36px;
+      margin-left: 10px;
+
+      i {
+        font-size: 32px;
+        vertical-align: middle;
+      }
     }
   }
 
   .paramText {
-    border: 2px solid @gray-lighter;
+    border: 2px solid @blue-lighter;
     margin: 10px 0;
-    padding: 5px;
-    background-color: @blue-lightest;
+    padding: 10px;
+
 
     .fa-arrows {
       .pull-right;
-      color: white;
+      color: @gray-darker;
     }
     .ui-draggable {
       font-size: 12px;
-      font-weight: 400;
-
     }
   }
 }
 
 .main-builder {
-  .make-sm-column(9);
-  .make-md-column(9);
-  .make-lg-column(9);
+  .make-sm-column(10);
+  .make-md-column(10);
+  .make-lg-column(10);
 }
 .main-head {
   i{
@@ -350,13 +364,7 @@ h2 {
     .form-control{
 
     }
-    #field-value {
-      .make-sm-column(8);
-      .make-md-column(8);
-      .make-lg-column(8);
-      margin-right: 15px;
 
-    }
 
     .btn-group {
 
@@ -376,9 +384,16 @@ h2 {
     .make-lg-column(4);
   }
   .select {
-    .make-sm-column(12);
-    .make-md-column(12);
-    .make-lg-column(12);
+    #field-value {
+      margin-left: 15px;
+      .make-sm-column(10);
+      .make-md-column(10);
+      .make-lg-column(10);
+    }
+    button {
+      margin-left: 25px;
+    }
+
   }
   .input {
     .make-sm-column(8);
@@ -390,6 +405,17 @@ h2 {
     .make-sm-column(4);
     .make-md-column(4);
     .make-lg-column(4);
+
+    .form-control {
+      .make-sm-column(10);
+      .make-md-column(10);
+      .make-lg-column(10);
+    }
+    button {
+      i {
+        color: #fff;
+      }
+    }
 
   }
   .not-per {
