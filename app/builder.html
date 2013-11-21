@@ -162,30 +162,39 @@
                     <input type="text" class="form-control" id="event-start-time" placeholder="08:00">
                   </div>
                   <div class="form-group">
-                    <label for="event-end">EVENT END</label>
+                    <label for="event-end">EVENT END</label>                   
                     <input type="text" class="form-control" id="" placeholder="01/01/2013">
                   </div>
                   <div class="form-group">
                     <label for="event-start-time">END TIME</label>
-                    <input type="text" class="form-control" id="event-end-time" placeholder="08:00"><button type="button" class="close" aria-hidden="true">&times;</button>
+                    <input type="text" class="form-control" id="event-end-time">
                   </div>
                   <div class="section-heading"><i class="fa fa-bar-chart-o"></i> VALUE</div>
-                  <div class="form-group btn-form">
-                    <div class=" pull-left btn-group" id="field-type">
-                      <button type="radio" class="btn btn-default" value="VALUE"><i class="fa fa-pencil-square-o"></i> INPUT</button>
-                      <button type="radio" class="btn btn-default" value="CODED"><i class="fa fa-list"></i> Coded</button>
-                    </div>
-                  </div>
                   <div class="form-group">
                     <label for="event-start">INPUT</label>
-                    <input type="text" class="form-control" id="event-start" placeholder="140">
+                    <div class="input-group">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a><i class="fa fa-pencil-square-o"></i> INPUT</a></li>
+                          <li><a><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div><!-- /btn-group -->
+                      <input type="text" class="form-control" id="event-start" placeholder="140">
+                    </div><!-- /input-group -->
                   </div>
                   <div class="form-group">
                     <label for="event-start-time">UNITS</label>
-                    <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="section-heading"><i class="fa fa-list"></i> FIELD VALUE <a class="btn btn-default pull-right"><i class="fa fa-plus-square"></i></a></div>  
-                  <div class="form-group full-group">
+                  <div class="section-heading"><i class="fa fa-list"></i> FIELD VALUE</div>
+                  <div></div>  
+                  <div class="form-group">
                     <select class="form-control" id="field-value" placeholder="select">
                       <option value="">--</option>               
                       <option value="SEVERITY">Severity</option>              
@@ -212,27 +221,43 @@
                       <option value="TRANSFER_FROM">Transfer From</option>          
                     </select>
                   </div>
-                  <div class="form-group full-group">
-                    <div class=" pull-left btn-group" id="field-type">
-                      <button type="radio" class="btn btn-default selected" value="VALUE"><i class="fa fa-pencil-square-o"></i> INPUT</button>
-                      <button type="radio" class="btn btn-default" value="CODED"><i class="fa fa-list"></i> Coded</button>
-                      <button type="radio" class="btn btn-default" value="TIME"><i class="fa fa-calendar"></i> Time</button>
-                    </div>
-                    <div class="form-group">
-                      <label for="event-start">INPUT</label>
-                      <input type="text" class="form-control" id="event-start" placeholder="140">
-                    </div>
-                    <div class="form-group">
-                      <label for="event-start-time">UNITS</label>
-                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                  <div class="form-group ">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default"><i class="fa fa-plus"></i></button>
                     </div>
                   </div>
+                  
+
+                  <div class="form-group">
+                    <label for="event-start">INPUT</label>
+                    <div class="input-group">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a><i class="fa fa-pencil-square-o"></i> INPUT</a></li>
+                          <li><a><i class="fa fa-list"></i> Coded</a></li>
+                          <li><a><i class="fa fa-calendar"></i> Time</a></li>
+                        </ul>
+                      </div><!-- /btn-group -->
+                      <input type="text" class="form-control" id="event-start" placeholder="140">
+                    </div><!-- /input-group -->
+                  </div>
+                  <div class="form-group">
+                    <label for="event-start">UNITS</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="form-group full-group">
                     <label>
                       <input type="checkbox"> NOT PERFORMED
                     </label>
                   </div>
-                    <a class="btn btn-primary pull-right">CLOSE</a>
+                  <a class="btn btn-primary pull-right">CLOSE</a>
                 </form>
               </div>
             </div>
