@@ -44,16 +44,16 @@
               <div class="element-title">
                   <i class="fa fa-stethoscope"><i class="fa fa-angle-down pull-right"></i></i> CONDITIONS  
               </div>
-              <div class="paramText">
-                <label draggable="true" data-criteria-id="OccurrenceAAcuteTonsillitis2" class="ui-draggable"></i>Acute Tonsillitis</label><i class="fa fa-arrows"></i>
+              <div class="paramText draggable="true"">
+                <label data-criteria-id="OccurrenceAAcuteTonsillitis2" class="ui-draggable"></i>Acute Tonsillitis</label><i class="fa fa-arrows"></i>
               </div>
-              <div class="paramText">
-                <label draggable="true" data-criteria-id="DiagnosisActiveAcutePharyngitis" class="ui-draggable"></i>Acute Pharyngitis</label><i class="fa fa-arrows"></i>
+              <div class="paramText" draggable="true">
+                <label data-criteria-id="DiagnosisActiveAcutePharyngitis" class="ui-draggable"></i>Acute Pharyngitis</label><i class="fa fa-arrows"></i>
               </div>
-              <div class="paramText">
+              <div class="paramText" draggable="true">
                 <label draggable="true" data-criteria-id="OccurrenceAAcutePharyngitis1" class="ui-draggable">Acute Pharyngitis</label><i class="fa fa-arrows"></i>
               </div>
-              <div class="paramText">
+              <div class="paramText" draggable="true">
                 <label draggable="true" data-criteria-id="DiagnosisActiveAcuteTonsillitis" class="ui-draggable">Acute Tonsillitis</label><i class="fa fa-arrows"></i>
               </div>
               <div class="element-title"><i class="fa fa-scissors"><i class="fa fa-angle-right pull-right"></i></i> PROCEDURES</div>
@@ -150,27 +150,19 @@
               <div class="patient-data">
                 <button type="button" class="close" aria-hidden="true">&times;</button>
                 <dl class="dl-heading-edit">
-                  <dt>ENCOUNTER</dt>
-                  <dd>Outpatient                                      
-                  </dd>
+                  <dt>DIAGNOSIS</dt>
+                  <dd>active diabetes</dd>
                 </dl>
                 <form role="form" class="element-edit">
-                  <div class="section-heading"><i class="fa fa-clock-o"></i> TIME</div>
-                  <div class="form-group date">
-                    <label for="event-start">EVENT START</label>
-                    <input type="text" class="form-control" id="event-start" placeholder="01/01/2013">
+                  <div class="form-group start">
+                    <div class="section-heading time-heading"><i class="fa fa-clock-o"></i> START</div>
+                    <input type="text" class="form-control date" id="event-start" placeholder="01/01/2013">
+                    <input type="text" class="form-control time" id="event-start-time" placeholder="08:00 AM">
                   </div>
-                  <div class="form-group time">
-                    <label for="event-start-time">START TIME</label>
-                    <input type="text" class="form-control" id="event-start-time" placeholder="08:00">
-                  </div>
-                  <div class="form-group date">
-                    <label for="event-end">EVENT END</label>                   
-                    <input type="text" class="form-control" id="event-end" placeholder="01/01/2013">
-                  </div>
-                  <div class="form-group time">
-                    <label for="event-start-time">END TIME</label>
-                    <input type="text" class="form-control" id="event-end-time">
+                  <div class="form-group stop">     
+                    <div class="section-heading time-heading"><i class="fa fa-clock-o"></i> STOP</div>            
+                    <input type="text" class="form-control date" id="event-end" placeholder="01/01/2013">
+                    <input type="text" class="form-control time" id="event-end-time" placeholder="08:00 AM">
                   </div>
                   <div class="section-heading"><i class="fa fa-bar-chart-o"></i> VALUE</div>
                   <div class="existing-value">
@@ -178,7 +170,6 @@
                     <span>Cumulative Medication Duration <button type="button" class="delete" aria-hidden="true">&times;</button></span>
                   </div>
                   <div class="form-group input">
-                    <label for="event-start">INPUT</label>
                     <div class="input-group">
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type<span class="caret"></span></button>
@@ -187,13 +178,12 @@
                           <li><a><i class="fa fa-list"></i> Coded</a></li>
                         </ul>
                       </div><!-- /btn-group -->
-                      <input type="text" class="form-control" id="event-start" placeholder="140">
+                      <input type="text" class="form-control" id="event-start" placeholder="input">
                     </div><!-- /input-group -->
                   </div>
                   <div class="form-group units">
-                    <label for="event-start-time">UNITS</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                      <input type="text" class="form-control" id="event-start-time" placeholder="units">
                       <div class="input-group-btn">
                         <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
                       </div>
@@ -201,9 +191,8 @@
                   </div>
                   <div class="section-heading"><i class="fa fa-list"></i> FIELD VALUE</div>
                   <div class="existing-value">
-                    <span>Severity-BLAH <button type="button" class="delete" aria-hidden="true">&times;</button></span>
+                    <span>Diastolic Blood Pressure (0018): 60 mmHg <button type="button" class="delete" aria-hidden="true">&times;</button></span>
                     <span>Cumulative Medication Duration <button type="button" class="delete" aria-hidden="true">&times;</button></span>
-                    <span>Start Date/Time <button type="button" class="delete" aria-hidden="true">&times;</button></span>
                   </div>
                   <div class="form-group select">
                     <select class="form-control" id="field-value" placeholder="select">
@@ -231,10 +220,8 @@
                       <option value="TRANSFER_TO">Transfer To</option>               
                       <option value="TRANSFER_FROM">Transfer From</option>          
                     </select>
-                    <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
                   </div>
                   <div class="form-group input">
-                    <label for="event-start">INPUT</label>
                     <div class="input-group">
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type<span class="caret"></span></button>
@@ -244,13 +231,12 @@
                           <li><a><i class="fa fa-calendar"></i> Time</a></li>
                         </ul>
                       </div><!-- /btn-group -->
-                      <input type="text" class="form-control" id="event-start" placeholder="140">
+                      <input type="text" class="form-control" id="event-start" placeholder="input">
                     </div><!-- /input-group -->
                   </div>
                   <div class="form-group units">
-                    <label for="event-units">UNITS</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" id="event-start-time" placeholder="mgHg">
+                      <input type="text" class="form-control" id="event-start-time" placeholder="units">
                       <div class="input-group-btn">
                         <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
                       </div>
@@ -311,8 +297,9 @@
           </div>
           <div class="measure-view-side">
             <div class="measure-title">
-              <div class="short-title"><i class="fa fa-tasks"></i>MEASURE: 0024</div> 
+              <div class="short-title"><i class="fa fa-tasks"></i> MEASURE</div> 
             </div>
+            <div class="measure-viz"></div>
           </div>
         </div>
       <!--[if lt IE 7]>

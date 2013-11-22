@@ -141,9 +141,6 @@
   .make-sm-column(3);
   .make-md-column(3);
   .make-lg-column(3);
-  .first {
-    left-margin: 0;
-  }
 }
 .measure-expected {
   border-left: 4px solid @brand-primary;
@@ -207,15 +204,21 @@
   .make-md-column(3);
   .make-lg-column(3);
   margin-top: 20px;
+  padding-right: 0;
 
   .measure-title {
     background-color: @gray-lighter;  
     padding: 10px;
 
+
     .short-title {
       font-size: 18px;
       font-weight: bold;
     }
+  }
+  .measure-viz {
+    height: 600px;
+    background-color: @gray-lighter;
   }
 }
 .active-icon {
@@ -351,11 +354,14 @@ h2 {
   margin-bottom: 30px;
 
   .section-heading {
-    font-size: 24px;
+    font-size: 12px;
     font-weight: bold;
     margin-left: 15px;
     color: @brand-primary;
-
+  }
+  .time-heading {
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 
   .form-group{
@@ -373,27 +379,37 @@ h2 {
       }
     }
   }
+  .start {
+    .make-sm-column(6);
+    .make-md-column(6);
+    .make-lg-column(6);
+  }
+  .stop {
+    .make-sm-column(6);
+    .make-md-column(6);
+    .make-lg-column(6);
+  }
   .date {
-    .make-sm-column(8);
-    .make-md-column(8);
-    .make-lg-column(8);
+    .make-sm-column(6);
+    .make-md-column(6);
+    .make-lg-column(6);
   }
   .time {
-    .make-sm-column(4);
-    .make-md-column(4);
-    .make-lg-column(4);
+    .make-sm-column-offset(1);
+    .make-md-column-offset(1);
+    .make-lg-column-offset(1);
+    .make-sm-column(5);
+    .make-md-column(5);
+    .make-lg-column(5);
   }
   .select {
     #field-value {
       margin-left: 15px;
-      .make-sm-column(10);
-      .make-md-column(10);
-      .make-lg-column(10);
+      margin-bottom: 15px;
+      .make-sm-column(6);
+      .make-md-column(6);
+      .make-lg-column(6);
     }
-    button {
-      margin-left: 25px;
-    }
-
   }
   .input {
     .make-sm-column(8);
