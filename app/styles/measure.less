@@ -1,0 +1,57 @@
+// Measure View - Logic/Measure Visualization
+
+.right-sidebar {
+  .make-sm-column(3.5);
+  .patient-row {
+    .make-sm-column(12);
+    font-size: 1.6em;
+    line-height: 2em;
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+}
+
+.main {
+  .make-sm-column(8.5);
+  > * {
+    padding: 0 15px;
+  }
+  .fa {
+    color: black;
+  }
+
+  .measure-title {
+    .make-sm-column(12);
+//    .title-bar;
+    .short-title {
+      font-size: 1.8em;
+      padding-right: 15px;
+      line-height: 1.75;
+    }
+    .full-title {
+      line-height: 1.6;
+    }
+  }
+
+  .measure-dsp {
+    .make-sm-column(12);
+    padding-top: 15px;
+    padding-bottom: 30px;
+    .measure-dsp-title {
+      font-weight: 700;
+      font-size: 1.2em;
+      .popover {
+        min-width: 187px;
+        .popover-content {
+          padding: 9px;
+        }
+      }
+    }
+  }
+
+  .measure-viz {
+    .make-sm-column(12);
+    padding-top: 15px;
+    padding-left: 0px;
+  }
+}
