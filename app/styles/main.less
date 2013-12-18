@@ -3,66 +3,14 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../bower_components/font-awesome/fonts";
 
-@brand-primary: #0075C4;
-@header-bar: gray;
-@list-top-margin: 20px;
-@gray-lighter: #f2f2f2;
-@gray-darker: #888;
-@circle-border: @gray-lighter;
-@title-color: @gray-lighter;
-@list-border: @gray-darker;
-@btn-hover: #005893;
-@title-line-height: 1.5;
-@listing-line-height: 1.5;
-@circle-bkg-color: #fff;
-@title-bar-height: 3em;
-@category: #f2f2f2;
-@panel-default-border: white;
-@panel-default-heading-bg: @gray-lighter;
-@panel-primary-border: white;
-@border-radius-base: 0px;
-@blue-lighter: #3391D0;
-@blue-lightest: #99C8E7;
-
-
+// Helper classes
+@import "bootstrap3.less";
 @import "mixins.less";
 @import "variables.less";
 
-.navbar {
-	color: @header-bar;
-	margin-bottom: 50px;
-}
-
-.left-sidebar, .right-sidebar {
-  .make-sm-column(3);
-  .make-md-column(3);
-  .make-lg-column(3);
-
-  h1 {
-    font-weight: 100;
-    font-size: 1.8em;
-    text-transform: uppercase;
-  }
-}
-
-.main {
-  .make-sm-column(9);
-  .make-md-column(9);
-  .make-lg-column(9);
-}
-
-.btn {
-  text-transform: uppercase;
-}
-
-.btn-primary {
-  i {
-    color: #fff;
-  }
-}
-
-// builder view 
+//individual views
 @import "builder.less";  
-
-// measure view styles
 @import "measure.less";
+@import "login.less";
+@import "measure_calculation.less";
+@import "rationale.less";

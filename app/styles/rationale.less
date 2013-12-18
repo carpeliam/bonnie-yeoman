@@ -1,0 +1,19 @@
+// Displays colors according to patient results on the measure logic
+
+.rationale {
+  .true_eval, .false_eval, .bad_specifics {
+    font-weight: 500;
+    padding: 2px;
+  }
+  .true_eval {
+    background-color: @state-success-bg;
+    color: @state-success-text;
+  }
+  .false_eval, .bad_specifics {
+    background-color: @state-danger-bg;
+    color: @state-danger-text;
+  }
+  .no_eval {
+    background-color: @body-bg;
+  }
+}
