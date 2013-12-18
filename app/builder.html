@@ -1,320 +1,1145 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE html>
+<html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonnie</title>
     <link rel="stylesheet" href="styles/main.css">
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
   </head>
   <body>
     <div class="container">
-      <div class="navbar" role="navigation">
-        <a class="navbar-brand col-md-6" href="#">BONNIE</a>
-        <ul class="nav navbar-nav">
-          <li><a href="index.html" class="">Dashboard</a></li>
-          <li><a href="builder.html" class="active">Patients</a></li>
-          <li><a href="results.html" class="">Results</a></li>
+      <div class="navbar row" role="navigation">
+        <ul class="nav navbar-nav pull-right">
+          <li class="active"><a href="http://localhost:3000/#">Measures</a></li>
+          <li><a href="http://localhost:3000/users/edit">Account</a></li>
+          <li><a href="http://localhost:3000/users/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
         </ul>
+        <a class="navbar-brand" href="http://localhost:3000/#">Bonnie</a>
       </div>
-      <div class="row">
-        <div class="left-sidebar-builder">
-          <h1>Test Patient</h1>
-          <div class="panel-group">
-            <form role="form">
-              <div class="form-group">
-                <label for="fname">FIRST NAME</label>
-                <input type="text" class="form-control" id="fname" placeholder="Richard">
+      <div id="bonnie" data-view-cid="view2" data-layout-cid="view2">
+        <div class="patient-builder" data-view-cid="view3591" data-model-cid="c3593">
+          <div class="left-sidebar-builder">
+            <h1>Test Patient</h1>
+            <div class="panel-group">
+              <form role="form">
+                <div class="form-group">
+                  <label for="last">LAST NAME</label>
+                  <input type="text" name="last" class="form-control" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                  <label for="first">FIRST NAME</label>
+                  <input type="text" name="first" class="form-control" placeholder="First name">
+                </div>
+              </form>
+              <div class="panel-heading">Elements</div>
+              <div class="panel-listing" id="criteriaElements">
+            
+                <div data-view-cid="view3748">
+                  <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3748">
+        <i class="fa fa-flask"><i class="fa fa-angle-right pull-right"></i></i>
+        laboratory tests
+                  </div>
+                  <div id="collapse-view3748" class="collapse">
+        <div data-view-cid="view3764" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3742"><div class="paramText draggable ui-draggable" data-model-cid="c2860">
+            <label class="ui-draggable">Laboratory Test, Performed: LDL Code</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2864">
+            <label class="ui-draggable">Laboratory Test, Performed: Total Cholesterol</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2865">
+            <label class="ui-draggable">Laboratory Test, Performed: High Density Lipoprotein (HDL)</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2866">
+            <label class="ui-draggable">Laboratory Test, Performed: Triglycerides</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2869">
+            <label class="ui-draggable">Laboratory Test, Result: High Density Lipoprotein (HDL)</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2871">
+            <label class="ui-draggable">Laboratory Test, Result: LDL Code</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2872">
+            <label class="ui-draggable">Laboratory Test, Result: Triglycerides</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2879">
+            <label class="ui-draggable">Laboratory Test: LDL Code</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2880">
+            <label class="ui-draggable">Laboratory Test: High Density Lipoprotein (HDL)</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div><div class="paramText draggable ui-draggable" data-model-cid="c2882">
+            <label class="ui-draggable">Laboratory Test: Triglycerides</label>
+            <i class="fa fa-arrows pull-right"></i>
+          </div></div>
+                  </div>
+                </div>
+            
+                <div data-view-cid="view3750">
+                  <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3750">
+                    <i class="fa fa-scissors"><i class="fa fa-angle-right pull-right"></i></i>
+        procedures
+                  </div>
+                  <div id="collapse-view3750" class="collapse">
+                  <div data-view-cid="view3781" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3743">
+                    <div class="paramText draggable ui-draggable" data-model-cid="c2861">
+                    <label class="ui-draggable">Procedure, Order: Palliative Care</label>
+                    <i class="fa fa-arrows pull-right"></i>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="fname">LAST NAME</label>
-                <input type="text" class="form-control" id="Lname" placeholder="Smith">
+            </div>
+            <div data-view-cid="view3752">
+              <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3752">
+                <i class="fa fa-stethoscope"><i class="fa fa-angle-right pull-right"></i></i>
+        conditions
               </div>
-            </form>
-            <div class="panel-heading">Elements</div>
-            <div class="panel-listing">
-              <div class="element-title">
-                  <i class="fa fa-stethoscope"><i class="fa fa-angle-down pull-right"></i></i> CONDITIONS  
+              <div id="collapse-view3752" class="collapse">
+                <div data-view-cid="view3789" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3744">
+                  <div class="paramText draggable ui-draggable" data-model-cid="c2862">
+                  <label class="ui-draggable">Diagnosis, Active: CHD or CHD Risk Equivalent</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2867">
+                  <label class="ui-draggable">Diagnosis, Family History: Family History CHD</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2868">
+                  <label class="ui-draggable">Diagnosis, Active: Diagnosis of hypertension grouped</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2874">
+                  <label class="ui-draggable">Diagnosis, Active: Pregnancy</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
               </div>
-              <div class="paramText draggable="true"">
-                <label data-criteria-id="OccurrenceAAcuteTonsillitis2" class="ui-draggable"></i>Acute Tonsillitis</label><i class="fa fa-arrows"></i>
+            </div>
+          </div>
+          <div data-view-cid="view3754">
+            <div class="element-title" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3754">
+              <i class="fa fa-user"><i class="fa fa-angle-right pull-right"></i></i>
+        risk category assessments
+            </div>
+            <div id="collapse-view3754" class="in" style="height: auto;">
+              <div data-view-cid="view3800" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3745"><div class="paramText draggable ui-draggable" data-model-cid="c2870">
+                <label class="ui-draggable">Risk Category Assessment: Framingham coronary heart disease 10 year risk</label>
+                <i class="fa fa-arrows pull-right"></i>
               </div>
-              <div class="paramText" draggable="true">
-                <label data-criteria-id="DiagnosisActiveAcutePharyngitis" class="ui-draggable"></i>Acute Pharyngitis</label><i class="fa fa-arrows"></i>
-              </div>
-              <div class="paramText" draggable="true">
-                <label draggable="true" data-criteria-id="OccurrenceAAcutePharyngitis1" class="ui-draggable">Acute Pharyngitis</label><i class="fa fa-arrows"></i>
-              </div>
-              <div class="paramText" draggable="true">
-                <label draggable="true" data-criteria-id="DiagnosisActiveAcuteTonsillitis" class="ui-draggable">Acute Tonsillitis</label><i class="fa fa-arrows"></i>
-              </div>
-              <div class="element-title"><i class="fa fa-scissors"><i class="fa fa-angle-right pull-right"></i></i> PROCEDURES</div>
-               <div class="element-title"><i class="fa fa-medkit"><i class="fa fa-angle-right pull-right"></i></i>MEDICATIONS</div>
-              <div class="element-title"><i class="fa fa-flask"><i class="fa fa-angle-right pull-right"></i></i>LAB TESTS</div>
-              <div class="element-title"><i class="fa fa-user-md"><i class="fa fa-angle-right pull-right"></i></i>ENCOUNTERS</div>
             </div>
           </div>
         </div>
-        <div class="main-builder">
-          <div class="btn-group pull-right">
-           <a class="cancel-btn btn-default btn">CANCEL</a>
-            <a class="done-btn btn btn-primary pull-right">DONE</a>
+        <div data-view-cid="view3756">
+          <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3756">
+            <i class="fa fa-medkit"><i class="fa fa-angle-right pull-right"></i></i>
+        medications
           </div>
-          <h1 class="main-head"><i class="fa fa-user"></i></h1>
-          <div id="time-bar"></div>
-          <div class="demo">  
-            <div class="first">
-              <form role="form">
-                <div class="form-group">
-                  <label for="">DOB</label>
-                  <input type="text" class="form-control" id="" placeholder="">
-                </div>
-                <div class="form-group">
-                  <label for="">DOB-Time</label>
-                  <input type="text" class="form-control" id="" placeholder="">
-                </div>
-                <div class="form-group">
-                  <label for="">RACE</label>
-                  <input type="text" class="form-control" id="" placeholder="">
-                </div>
-              </form>
-            </div>
-            <div class="col-md-2">
-              <form role="form col-md-2">
-                <div class="form-group">
-                  <label for="">GENDER</label>
-                  <input type="text" class="form-control" id="" placeholder="">
-                </div>
-                <div class="form-group">
-                  <label for="">LIVING STATUS</label>
-                  <input type="text" class="form-control" id="" placeholder="">
-                </div><div class="form-group">
-                  <label for="">ETHNICITY</label>
-                  <input type="text" class="form-control" id="" placeholder="">
-                </div>
-              </form>
-            </div>
-            <div class="measure-expected">
-              <h2 class="measure-h2">MEASURE ASSOCIATED</h2>
-              <div class="measure-name">
-                <div class="measure-name-primary">HEART FAILURE (HF):</div>
-                <div class="measure-name-secondary">Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
-                </div>
-              </div>
-              <div class="sub-measure-tabs">
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#">Age: 18-25</a></li>
-                  <li><a href="#">26-35</a></li>
-                  <li><a href="#">36-50</a></li>
-                </ul>
-              </div>
-              <div class="expected-value">
-                <div class="form-group">
-                  <label class="expected-label">EXPECTED VALUE</label>
-                  <label class="radio-inline">
-                    <input type="radio" id="inlineCheckbox1" value="option1">NUM
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox2" value="option2">DEN
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox3" value="option3">IPP
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox3" value="option3">EXCL.
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox3" value="option3">EXCEP.
-                  </label>
-                </div>
+          <div id="collapse-view3756" class="collapse">
+            <div data-view-cid="view3808" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3746">
+              <div class="paramText draggable ui-draggable" data-model-cid="c2873">
+                <label class="ui-draggable">Medication, Active: Anti-Hypertensive Pharmacologic Therapy</label>
+                <i class="fa fa-arrows pull-right"></i>
               </div>
             </div>
           </div>
-          <div class="time-line">
-            <div class="timeline-title">Patient History Relative to Measures
+        </div>
+        <div data-view-cid="view3758">
+          <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3758">
+            <i class="fa fa-user-md"><i class="fa fa-angle-right pull-right"></i></i>
+        encounters
+          </div>
+          <div id="collapse-view3758" class="collapse">
+            <div data-view-cid="view3816" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3747">
+              <div class="paramText draggable ui-draggable" data-model-cid="c2875">
+              <label class="ui-draggable">Encounter, Performed: Cholesterol Measure Encounter Codes</label>
+              <i class="fa fa-arrows pull-right"></i>
             </div>
           </div>
-          <div class="record">
-            <div class="record-listing">
-              <div class="circle-icon">
-                <i class="fa fa-user-md"></i>
-              </div>
-              <div class="patient-data">
-                <button type="button" class="close" aria-hidden="true">&times;</button>
-                <dl class="dl-heading-edit">
-                  <dt>DIAGNOSIS</dt>
-                  <dd>active diabetes</dd>
-                </dl>
-                <form role="form" class="element-edit">
-                  <div class="form-group start">
-                    <div class="section-heading time-heading"><i class="fa fa-clock-o"></i> START</div>
-                    <input type="text" class="form-control date" id="event-start" placeholder="01/01/2013">
-                    <input type="text" class="form-control time" id="event-start-time" placeholder="08:00 AM">
-                  </div>
-                  <div class="form-group stop">     
-                    <div class="section-heading time-heading"><i class="fa fa-clock-o"></i> STOP</div>            
-                    <input type="text" class="form-control date" id="event-end" placeholder="01/01/2013">
-                    <input type="text" class="form-control time" id="event-end-time" placeholder="08:00 AM">
-                  </div>
-                  <div class="section-heading"><i class="fa fa-bar-chart-o"></i> VALUE</div>
-                  <div class="existing-value">
-                    <span>Severity-BLAH <button type="button" class="delete" aria-hidden="true">&times;</button></span>
-                    <span>Cumulative Medication Duration <button type="button" class="delete" aria-hidden="true">&times;</button></span>
-                  </div>
-                  <div class="form-group input">
-                    <div class="input-group">
-                      <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type<span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a><i class="fa fa-pencil-square-o"></i> INPUT</a></li>
-                          <li><a><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
-                      </div><!-- /btn-group -->
-                      <input type="text" class="form-control" id="event-start" placeholder="input">
-                    </div><!-- /input-group -->
-                  </div>
-                  <div class="form-group units">
-                    <div class="input-group">
-                      <input type="text" class="form-control" id="event-start-time" placeholder="units">
-                      <div class="input-group-btn">
-                        <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="section-heading"><i class="fa fa-list"></i> FIELD VALUE</div>
-                  <div class="existing-value">
-                    <span>Diastolic Blood Pressure (0018): 60 mmHg <button type="button" class="delete" aria-hidden="true">&times;</button></span>
-                    <span>Cumulative Medication Duration <button type="button" class="delete" aria-hidden="true">&times;</button></span>
-                  </div>
-                  <div class="form-group select">
-                    <select class="form-control" id="field-value" placeholder="select">
-                      <option value="">--</option>               
-                      <option value="SEVERITY">Severity</option>              
-                      <option value="ORDINAL">Ordinal</option>               
-                      <option value="REASON">Reason</option>               
-                      <option value="SOURCE">Source</option>               
-                      <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>               
-                      <option value="FACILITY_LOCATION">Facility Location</option>               
-                      <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>               
-                      <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>               
-                      <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>               
-                      <option value="DISCHARGE_STATUS">Discharge Status</option>               
-                      <option value="ADMISSION_DATETIME">Admission Date/Time</option>              
-                      <option value="LENGTH_OF_STAY">Length of Stay</option>               
-                      <option value="DOSE">Dose</option>               
-                      <option value="ROUTE">Route</option>               
-                      <option value="START_DATETIME">Start Date/Time</option>               
-                      <option value="FREQUENCY">Frequency</option>               
-                      <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>               
-                      <option value="STOP_DATETIME">Stop Date/Time</option>               
-                      <option value="INCISION_DATETIME">Incision Date/Time</option>               
-                      <option value="REMOVAL_DATETIME">Removal Date/Time</option>               
-                      <option value="TRANSFER_TO">Transfer To</option>               
-                      <option value="TRANSFER_FROM">Transfer From</option>          
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="main-builder">
+      <div class="pull-right">
+        <button class="btn btn-default" data-call-method="cancel">CANCEL</button>
+        <button data-saving-text="SAVING..." class="btn btn-primary" data-call-method="save">SAVE</button>
+      </div>
+      <h1 class="main-head"><i class="fa fa-user"></i></h1>
+      <div id="timeBar"></div>
+        <div class="demographics">  
+          <div class="demographics-left-col">
+            <form role="form">
+                  <div class="form-group">
+                    <label for="payer">PAYER</label>
+                    <select name="payer" class="form-control">
+                      <option value="MA">Medicare</option>
+                      <option value="MC">Medicaid</option>
+                      <option value="OT">Other</option>
                     </select>
                   </div>
-                  <div class="form-group input">
-                    <div class="input-group">
-                      <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type<span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a><i class="fa fa-pencil-square-o"></i> INPUT</a></li>
-                          <li><a><i class="fa fa-list"></i> Coded</a></li>
-                          <li><a><i class="fa fa-calendar"></i> Time</a></li>
-                        </ul>
-                      </div><!-- /btn-group -->
-                      <input type="text" class="form-control" id="event-start" placeholder="input">
-                    </div><!-- /input-group -->
+                  <div class="form-group">
+                    <label for="birthdate">DOB</label>
+                    <input type="text" name="birthdate" class="form-control" placeholder="xx/xx/xxxx xx:xx">
                   </div>
-                  <div class="form-group units">
-                    <div class="input-group">
-                      <input type="text" class="form-control" id="event-start-time" placeholder="units">
-                      <div class="input-group-btn">
-                        <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
-                      </div>
-                    </div>
+                  <div class="form-group">
+                    <label for="race">RACE</label>
+                    <select name="race" class="form-control">
+                      <option value="1002-5">American Indian or Alaska Native</option>
+                      <option value="2028-9">Asian</option>
+                      <option value="2054-5">Black or African American</option>
+                      <option value="2076-8">Native Hawaiian or Other Pacific Islander</option>
+                      <option value="2106-3">White</option>
+                      <option value="2131-1">Other</option>
+                    </select>
                   </div>
-                  <div class="form-group not-per">
-                    <label>
-                      <input type="checkbox"> NOT PERFORMED
-                    </label>
+                  </form>
+              </div>
+              <div class="demographics-right-col">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="gender">GENDER</label>
+                    <select name="gender" class="form-control">
+                      <option value="M">Male</option>
+                      <option value="F">Female</option>
+                    </select>
                   </div>
-                  <div class="form-group minimize">
-                    <a class="btn btn-primary pull-right">CLOSE</a>
+                  <div class="form-group">
+                    <label for="expired">LIVING STATUS</label>
+                    <select name="expired" class="form-control">
+                      <option value="false">Alive</option>
+                      <option value="true">Deceased</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="ethnicity">ETHNICITY</label>
+                    <select name="ethnicity" class="form-control">
+                      <option value="2186-5">Not Hispanic or Latino</option>
+                      <option value="2135-2">Hispanic Or Latino</option>
+                    </select>
                   </div>
                 </form>
               </div>
+              <div class="measure-expected">
+                <h2>MEASURE ASSOCIATED</h2>
+                <div class="measure-name">
+                  <div class="measure-name-primary">Preventive Care and Screening: Risk-Stratified Cholesterol – Fasting Low Density Lipoprotein (LDL-C):</div>
+                  <div class="measure-name-secondary">Percentage of patients aged 20 through 79 years who had a fasting LDL-C test performed and whose risk-stratified fasting LDL-C is at or below the recommended LDL-C goal.</div>
+                </div>
+                <div data-view-cid="view3603">
+                  <div class="sub-measure-tabs">
+            
+              <!-- Population titles or sub_ids -->
+                    <ul class="nav nav-tabs" data-view-cid="view3821" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3599">
+                      <li data-model-cid="c3600" class="active">
+                        <a href="http://localhost:3000/#expected-0" data-toggle="tab">
+                    LDL-C &lt;100 mg/dL
+                        </a>
+                      </li>
+                      <li data-model-cid="c3601">
+                        <a href="http://localhost:3000/#expected-1" data-toggle="tab">
+                    LDL-C &lt;130 mg/dL
+                        </a>
+                      </li>
+                      <li data-model-cid="c3602">
+                        <a href="http://localhost:3000/#expected-2" data-toggle="tab">
+                    LDL-C &lt;160 mg/dL
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+      <!-- Expected values per population sub_ids -->
+                  <div class="tab-content expected-value" data-view-cid="view3604" data-collection-cid="collection3599">
+                    <div id="expected-0" class="tab-pane active" data-view-cid="view3828" data-model-cid="c3600">
+                      <div class="expected-values">
+                        <h2>EXPECTED VALUE</h2>
+                        <form class="form-inline" role="form">
+                          <div class="checkbox ">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="IPP">
+                              <span>INITIAL PATIENT POP.</span>
+                            </label>
+                          </div>            
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="DENOM">
+                              <span>DENOMINATOR</span>
+                            </label>
+                          </div>
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="NUMER">
+                              <span>NUMERATOR</span>
+                            </label>
+                          </div>         
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="DENEX">
+                              <span>EXCLUSION</span>
+                            </label>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div id="expected-1" class="tab-pane" data-view-cid="view3831" data-model-cid="c3601">
+                      <div class="expected-values">
+                        <h2>EXPECTED VALUE</h2>
+                        <form class="form-inline" role="form">  
+                          <div class="checkbox ">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="IPP">
+                              <span>INITIAL PATIENT POP.</span>
+                            </label>
+                          </div>
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="DENOM">
+                              <span>DENOMINATOR</span>
+                            </label>
+                          </div>
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="NUMER">
+                              <span>NUMERATOR</span>
+                            </label>
+                          </div>   
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="DENEX">
+                              <span>EXCLUSION</span>
+                            </label>
+                          </div>     
+                        </form>
+                      </div>
+                    </div>
+                    <div id="expected-2" class="tab-pane" data-view-cid="view3834" data-model-cid="c3602">
+                      <div class="expected-values">
+                        <h2>EXPECTED VALUE</h2>
+                        <form class="form-inline" role="form">
+                          <div class="checkbox ">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="IPP">
+                              <span>INITIAL PATIENT POP.</span>
+                            </label>
+                          </div>
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="DENOM">
+                              <span>DENOMINATOR</span>
+                            </label>
+                          </div>
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="NUMER">
+                              <span>NUMERATOR</span>
+                            </label>
+                          </div>
+                          <div class="checkbox checkbox-divider">
+                            <label class="checkbox-population">
+                              <input type="checkbox" name="DENEX">
+                              <span>EXCLUSION</span>
+                            </label>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="record-listing">
-              <div class="circle-icon">
-                <i class="fa fa-user-md"></i>
-              </div>
-              <div class="patient-data">
-                <button type="button" class="close" aria-hidden="true"><i class="fa fa-gear"></i></button>
-                <dl class="dl-record">
-                  <dt>ENCOUNTER</dt>
-                  <dd>Outpatient 
-                  </dd>
-                  <dt>VITAL SIGNS</dt>
-                  <dd>BMI:  23</dd>
-                  <dt>MEDICATIONS</dt>
-                  <dd>Influenza Vaccine</dd>
-                  </dd>
-                </dl>
-                <dl class="dl-date">
-                  <dt>DATE</dt>
-                  <dd>3-2-2011 - 3-2-2011
-                  </dd>
-                </dl>
-              </div>
+            <div class="timeline-title">Patient History Relative to Measures</div>
+            <div class="record patient-data-list droppable ui-droppable">
+              <div data-view-cid="view3597" data-collection-cid="collection3594" class="empty" data-collection-empty="true"></div>
             </div>
-            <div class="record-listing">
-              <div class="circle-icon">
-                <i class="fa fa-stethoscope"></i>
-              </div>
-              <div class="patient-data">
-                <button type="button" class="close" aria-hidden="true"><i class="fa fa-gear"></i></button>
-                <dl class="dl-record">
-                  <dt>CONDITION</dt>
-                  <dd>Hypertention
-                  </dd>
-                </dl>
-                <dl class="dl-date">
-                  <dt>DATE </dt>
-                  <dd>2-2-2010 - 2-2-2010
-                  </dd>
-                </dl>
-              </div>
+            <div class="measure-view-side">
+              <div class="measure-title">
+                <div data-view-cid="view3606" data-model-cid="c2834"><div class="short-title">
+            <i class="fa fa-tasks"></i>MEASURE: <span class="population-title">LDL-C &lt;100 mg/dL</span>
+          </div>
+          <div data-layout-cid="view3606">
+            <div data-view-cid="view3608" data-model-cid="c2834">
+              <div class="measure-viz rationale">
+                <div data-view-cid="view3611">
+                  <div class="IPP_children">
+                    <div>
+                      <span class="IPP rationale_target false_eval">
+                        <b>Initial Patient Population:</b>
+                      </span>
+                    </div>
+                  <div>
+                <!-- Start back here with fixing spacing-->
+                
+                 
+                  <div data-view-cid="view3616"><ul id="precondition_420">
+            <li>
+              <span class="precondition_428 rationale_target false_eval">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3619"><span class="EncounterPerformedCholesterolMeasureEncounterCodes_precondition_420 rationale_target false_eval">
+
+
+            Encounter, Performed: Cholesterol Measure Encounter Codes
+            
+            
+            
+            
+              
+                <span data-view-cid="view3621">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                
+                  <div data-view-cid="view3617"><ul id="precondition_426">
+            <li>
+              <span class="precondition_428 rationale_target false_eval">
+                AND
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3624"><ul id="precondition_422">
+            <li>
+              <span class="precondition_426 rationale_target false_eval">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3627"><span class="PatientCharacteristicBirthdateBirthDate_precondition_422 rationale_target false_eval">
+
+
+            Patient Characteristic Birthdate: birth date
+            
+            
+            
+            
+              
+                <span data-view-cid="view3629">
+            <span data-view-cid="view3631"> 
+            
+              
+                
+                  
+                    
+                      <span data-view-cid="view3633"> 
+            
+              &gt;=
+              20 years 
+            
+
+          </span>
+                    
+                  
+                
+              
+            
+
+          </span>
+
+          starts before start of
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3625"><ul id="precondition_424">
+            <li>
+              <span class="precondition_426 rationale_target false_eval">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3636"><span class="PatientCharacteristicBirthdateBirthDate_precondition_424 rationale_target false_eval">
+
+
+            Patient Characteristic Birthdate: birth date
+            
+            
+            
+            
+              
+                <span data-view-cid="view3638">
+            <span data-view-cid="view3640"> 
+            
+              
+                
+                  
+                    <span data-view-cid="view3642"> 
+            
+              &lt;
+              79 years 
+            
+
+          </span>
+                  
+                
+              
+            
+
+          </span>
+
+          starts before start of
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                
+                
+              
             </div>
           </div>
-          <div class="measure-view-side">
-            <div class="measure-title">
-              <div class="short-title"><i class="fa fa-tasks"></i> MEASURE</div> 
+          </div>
+            
+              <div data-view-cid="view3612">
+          <div class="DENOM_children">
+            <div><span class="DENOM rationale_target"><b>Denominator: 
+          </b></span></div>
+            <div>
+              
+                
+                 
+                  <div data-view-cid="view3645"><ul id="precondition_83">
+            <li>
+              <span class="precondition_91 rationale_target">
+                AND
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3648"><ul id="precondition_73">
+            <li>
+              <span class="precondition_83 rationale_target">
+                OR
+                : 
+              </span>
+              
+                <span data-view-cid="view3651"><span class="LaboratoryTestPerformedLdlCode_precondition_73 rationale_target">
+
+
+            Laboratory Test, Performed: LDL Code
+            
+            
+            
+            
+              
+                <span data-view-cid="view3653">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3649"><ul id="precondition_81">
+            <li>
+              <span class="precondition_83 rationale_target">
+                OR
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3656"><ul id="precondition_75">
+            <li>
+              <span class="precondition_81 rationale_target">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3660"><span class="LaboratoryTestPerformedTotalCholesterol_precondition_75 rationale_target">
+
+
+            Laboratory Test, Performed: Total Cholesterol
+            
+            
+            
+            
+              
+                <span data-view-cid="view3662">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3657"><ul id="precondition_77">
+            <li>
+              <span class="precondition_81 rationale_target">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3665"><span class="LaboratoryTestPerformedHighDensityLipoproteinHdl_precondition_77 rationale_target">
+
+
+            Laboratory Test, Performed: High Density Lipoprotein (HDL)
+            
+            
+            
+            
+              
+                <span data-view-cid="view3667">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3658"><ul id="precondition_79">
+            <li>
+              <span class="precondition_81 rationale_target">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3670"><span class="LaboratoryTestPerformedTriglycerides_precondition_79 rationale_target">
+
+
+            Laboratory Test, Performed: Triglycerides
+            
+            
+            
+            
+              
+                <span data-view-cid="view3672">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                
+                  <div data-view-cid="view3646"><ul id="precondition_89">
+            <li>
+              <span class="precondition_91 rationale_target">
+                AND
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3675"><ul id="precondition_85">
+            <li>
+              <span class="precondition_89 rationale_target">
+                OR
+                : 
+              </span>
+              
+                <span data-view-cid="view3678"><span class="DiagnosisActiveChdOrChdRiskEquivalent_precondition_85 rationale_target">
+
+
+            Diagnosis, Active: CHD or CHD Risk Equivalent
+            
+            
+            
+            
+              
+                <span data-view-cid="view3680">
+          starts before or during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3676"><ul id="precondition_87">
+            <li>
+              <span class="precondition_89 rationale_target">
+                OR
+                : 
+              </span>
+              
+                <span data-view-cid="view3683"><span class="OccurrenceAFraminghamCoronaryHeartDisease10YearRisk1_precondition_87 rationale_target">
+
+
+            Occurrence A: Risk Category Assessment: Framingham coronary heart disease 10 year risk
+            
+              
+                (result<span data-view-cid="view3685"> 
+            
+              
+                
+                  
+                    
+                      <span data-view-cid="view3688"> 
+            
+              &gt;
+              20 % 
+            
+
+          </span>
+                    
+                  
+                
+              
+            
+
+          </span>)
+              
+            
+            
+            
+            
+              
+                <span data-view-cid="view3686">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                
+                
+              
             </div>
-            <div class="measure-viz"></div>
+          </div>
+          </div>
+            
+              <div data-view-cid="view3613">
+          <div class="NUMER_children">
+            <div><span class="NUMER rationale_target"><b>Numerator: 
+          </b></span></div>
+            <div>
+              
+                
+                 
+                  <div data-view-cid="view3692"><ul id="precondition_46">
+            <li>
+              <span class="precondition_48 rationale_target">
+                AND
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3694"><ul id="precondition_42">
+            <li>
+              <span class="precondition_46 rationale_target">
+                OR
+                : 
+              </span>
+              
+                <span data-view-cid="view3697"><span class="OccurrenceALdlCode2_precondition_42 rationale_target">
+
+
+            Occurrence A: Laboratory Test: LDL Code
+            
+              
+                (result<span data-view-cid="view3699"> 
+            
+              
+                
+                  
+                    <span data-view-cid="view3702"> 
+            
+              &lt;
+              100 mg/dL 
+            
+
+          </span>
+                  
+                
+              
+            
+
+          </span>)
+              
+            
+            
+            
+            
+              
+                <span data-view-cid="view3700">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3695"><ul id="precondition_44">
+            <li>
+              <span class="precondition_46 rationale_target">
+                OR
+                : 
+              </span>
+              
+                <span data-view-cid="view3706"><span class="LaboratoryTestResultTriglycerides_precondition_44 rationale_target">
+
+
+            Laboratory Test, Result: Triglycerides
+            
+              
+                (result<span data-view-cid="view3708"> 
+            
+              
+                
+                  
+                    <span data-view-cid="view3711"> 
+            
+              &lt;=
+              400 mg/dL 
+            
+
+          </span>
+                  
+                
+              
+            
+
+          </span>)
+              
+            
+            
+            
+            
+              
+                <span data-view-cid="view3709">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                
+                
+              
+            </div>
+          </div>
+          </div>
+            
+              <div data-view-cid="view3614">
+          <div class="DENEX_children">
+            <div><span class="DENEX rationale_target"><b>Denominator Exclusions: 
+          </b></span></div>
+            <div>
+              
+                
+                 
+                  <div data-view-cid="view3715"><ul id="precondition_15">
+            <li>
+              <span class="precondition_17 rationale_target">
+                AND
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3717"><ul id="precondition_6">
+            <li>
+              <span class="precondition_15 rationale_target">
+                OR
+                : 
+              </span>
+              
+                <span data-view-cid="view3720"><span class="ProcedureOrderPalliativeCare_precondition_6 rationale_target">
+
+
+            Procedure, Order: Palliative Care
+            
+            
+            
+            
+              
+                <span data-view-cid="view3722">
+          during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3718"><ul id="precondition_13">
+            <li>
+              <span class="precondition_15 rationale_target">
+                OR
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3725"><ul id="precondition_10">
+            <li>
+              <span class="precondition_13 rationale_target">
+                AND
+                : 
+              </span>
+              
+                <span data-view-cid="view3728"><span class="OccurrenceAPregnancy4_precondition_10 rationale_target">
+
+
+            Occurrence A: Diagnosis, Active: Pregnancy
+            
+            
+            
+            
+              
+                <span data-view-cid="view3730">
+          starts before or during
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+                    <div data-view-cid="view3726"><ul id="precondition_12">
+            <li>
+              <span class="precondition_13 rationale_target">
+                AND
+                : 
+              </span>
+              
+                  
+                    <div data-view-cid="view3733"><ul id="precondition_8">
+            <li>
+              <span class="precondition_12 rationale_target">
+                OR
+                 NOT: 
+              </span>
+              
+                <span data-view-cid="view3735"><span class="OccurrenceAPregnancy4_precondition_8 rationale_target">
+
+
+            Occurrence A: Diagnosis, Active: Pregnancy
+            
+            
+            
+            
+              
+                <span data-view-cid="view3737">
+          ends before start of
+
+            "Measurement Period"
+
+           
+          </span>
+              
+            
+
+          </span>
+
+
+          </span>
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+          </div>
+                  
+              
+            </li>
+          </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
 
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-      <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
-      </script>
+          <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+          <![endif]-->
+
+          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+          <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+          </script>
 
 
           <!-- build:js scripts/main.js -->
