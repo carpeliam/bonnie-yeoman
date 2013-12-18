@@ -9954,6 +9954,28 @@ h2 {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col:before,
+.patient-builder .main-builder .demographics .demographics-left-col:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col:before,
+.patient-builder .main-builder .demographics .demographics-left-col:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col:after {
+  clear: both;
 }
 
 @media (min-width: 768px) {
@@ -9967,6 +9989,122 @@ h2 {
   .patient-builder .main-builder .demographics .demographics-left-col {
     margin-left: 8.333333333333332%;
   }
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:before,
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:before,
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .form-group-dob-input {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .form-group-dob-input {
+    float: left;
+    width: 50%;
+  }
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob {
+  position: relative;
+  display: inline-block;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  .patient-builder .main-builder .demographics .demographics-left-col form-group-dob {
+    float: left;
+    width: 50%;
+  }
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob:before,
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob:before,
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col form-group-dob input {
+  width: 70%;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  .patient-builder .main-builder .demographics .demographics-left-col .form-group-tob {
+    float: left;
+    width: 50%;
+  }
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob:before,
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob:before,
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob:after {
+  clear: both;
 }
 
 .patient-builder .main-builder .demographics .demographics-right-col {

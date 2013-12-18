@@ -77,16 +77,37 @@
       margin: 20px 0 20px 39px;
 
       .demographics-left-col {
+        .row;
         .make-sm-column(3);
+        .make-sm-column-offset(1);
+
+        .form-group-dob{
+          .row;
+          .form-group-dob-input {
+            .make-sm-column(6);
+          }
+        }
+       form-group-dob {
+          display: inline-block;
+          .make-sm-column(6);
+          .row;
+          input {
+            width: 70%;
+          }
+        }
+        .form-group-tob {
+          .make-sm-column(6);
+          .row;
+        }
       }
 
       .demographics-right-col {
-        .make-sm-column(2);
+        .make-sm-column(3);
       }
 
       .measure-expected {
         .clearfix;
-        .make-sm-column(7);
+        .make-sm-column(5);
         border-left: 4px solid @brand-primary;
         padding-left: 10px;
         padding-right: 0;
