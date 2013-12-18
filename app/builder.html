@@ -8,18 +8,18 @@
     <title>Bonnie</title>
     <link rel="stylesheet" href="styles/main.css">
     <!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="container">
       <div class="navbar row" role="navigation">
         <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="http://localhost:3000/#">Measures</a></li>
-          <li><a href="http://localhost:3000/users/edit">Account</a></li>
-          <li><a href="http://localhost:3000/users/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
+          <li class="active"><a href="http://localhost:9000/#">Measures</a></li>
+          <li><a href="http://localhost:9000/users/edit">Account</a></li>
+          <li><a href="sign_out.html" data-method="delete" rel="nofollow">Logout</a></li>
         </ul>
-        <a class="navbar-brand" href="http://localhost:3000/#">Bonnie</a>
+        <a class="navbar-brand" href="http://localhost:9000/#">Bonnie</a>
       </div>
       <div id="bonnie" data-view-cid="view2" data-layout-cid="view2">
         <div class="patient-builder" data-view-cid="view3591" data-model-cid="c3593">
@@ -36,71 +36,77 @@
                   <input type="text" name="first" class="form-control" placeholder="First name">
                 </div>
               </form>
-              <div class="panel-heading">Elements</div>
+
+            <div class="panel-heading">Elements</div>
               <div class="panel-listing" id="criteriaElements">
-            
                 <div data-view-cid="view3748">
                   <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3748">
-        <i class="fa fa-flask"><i class="fa fa-angle-right pull-right"></i></i>
-        laboratory tests
+                    <i class="fa fa-flask"><i class="fa fa-angle-right pull-right"></i></i>laboratory tests
                   </div>
                   <div id="collapse-view3748" class="collapse">
-        <div data-view-cid="view3764" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3742"><div class="paramText draggable ui-draggable" data-model-cid="c2860">
-            <label class="ui-draggable">Laboratory Test, Performed: LDL Code</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2864">
-            <label class="ui-draggable">Laboratory Test, Performed: Total Cholesterol</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2865">
-            <label class="ui-draggable">Laboratory Test, Performed: High Density Lipoprotein (HDL)</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2866">
-            <label class="ui-draggable">Laboratory Test, Performed: Triglycerides</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2869">
-            <label class="ui-draggable">Laboratory Test, Result: High Density Lipoprotein (HDL)</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2871">
-            <label class="ui-draggable">Laboratory Test, Result: LDL Code</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2872">
-            <label class="ui-draggable">Laboratory Test, Result: Triglycerides</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2879">
-            <label class="ui-draggable">Laboratory Test: LDL Code</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2880">
-            <label class="ui-draggable">Laboratory Test: High Density Lipoprotein (HDL)</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div><div class="paramText draggable ui-draggable" data-model-cid="c2882">
-            <label class="ui-draggable">Laboratory Test: Triglycerides</label>
-            <i class="fa fa-arrows pull-right"></i>
-          </div></div>
-                  </div>
-                </div>
-            
-                <div data-view-cid="view3750">
-                  <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3750">
-                    <i class="fa fa-scissors"><i class="fa fa-angle-right pull-right"></i></i>
-        procedures
-                  </div>
-                  <div id="collapse-view3750" class="collapse">
-                  <div data-view-cid="view3781" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3743">
-                    <div class="paramText draggable ui-draggable" data-model-cid="c2861">
-                    <label class="ui-draggable">Procedure, Order: Palliative Care</label>
+                    <div data-view-cid="view3764" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3742"><div class="paramText draggable ui-draggable" data-model-cid="c2860">
+                    <label class="ui-draggable">Laboratory Test, Performed: LDL Code</label>
                     <i class="fa fa-arrows pull-right"></i>
                   </div>
+                  <div class="paramText draggable ui-draggable" data-model-cid="c2864">
+                  <label class="ui-draggable">Laboratory Test, Performed: Total Cholesterol</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2865">
+                  <label class="ui-draggable">Laboratory Test, Performed: High Density Lipoprotein (HDL)</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2866">
+                  <label class="ui-draggable">Laboratory Test, Performed: Triglycerides</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2869">
+                  <label class="ui-draggable">Laboratory Test, Result: High Density Lipoprotein (HDL)</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2871">
+                  <label class="ui-draggable">Laboratory Test, Result: LDL Code</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2872">
+                  <label class="ui-draggable">Laboratory Test, Result: Triglycerides</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2879">
+                  <label class="ui-draggable">Laboratory Test: LDL Code</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2880">
+                  <label class="ui-draggable">Laboratory Test: High Density Lipoprotein (HDL)</label>
+                  <i class="fa fa-arrows pull-right"></i>
+                </div>
+                <div class="paramText draggable ui-draggable" data-model-cid="c2882">
+                <label class="ui-draggable">Laboratory Test: Triglycerides</label>
+                <i class="fa fa-arrows pull-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div data-view-cid="view3750">
+            <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3750">
+              <i class="fa fa-scissors"><i class="fa fa-angle-right pull-right"></i></i>procedures
+            </div>
+            <div id="collapse-view3750" class="collapse">
+              <div data-view-cid="view3781" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3743">
+                <div class="paramText draggable ui-draggable" data-model-cid="c2861">
+                  <label class="ui-draggable">Procedure, Order: Palliative Care</label>
+                  <i class="fa fa-arrows pull-right"></i>
                 </div>
               </div>
             </div>
-            <div data-view-cid="view3752">
-              <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3752">
-                <i class="fa fa-stethoscope"><i class="fa fa-angle-right pull-right"></i></i>
-        conditions
-              </div>
-              <div id="collapse-view3752" class="collapse">
-                <div data-view-cid="view3789" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3744">
-                  <div class="paramText draggable ui-draggable" data-model-cid="c2862">
+          </div>
+          <div data-view-cid="view3752">              
+            <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3752">
+              <i class="fa fa-stethoscope"><i class="fa fa-angle-right pull-right"></i></i>conditions
+            </div>
+            <div id="collapse-view3752" class="collapse">
+              <div data-view-cid="view3789" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3744">                
+                <div class="paramText draggable ui-draggable" data-model-cid="c2862">
                   <label class="ui-draggable">Diagnosis, Active: CHD or CHD Risk Equivalent</label>
                   <i class="fa fa-arrows pull-right"></i>
                 </div>
@@ -112,55 +118,53 @@
                   <label class="ui-draggable">Diagnosis, Active: Diagnosis of hypertension grouped</label>
                   <i class="fa fa-arrows pull-right"></i>
                 </div>
-                <div class="paramText draggable ui-draggable" data-model-cid="c2874">
-                  <label class="ui-draggable">Diagnosis, Active: Pregnancy</label>
+                  <div class="paramText draggable ui-draggable" data-model-cid="c2874">
+                    <label class="ui-draggable">Diagnosis, Active: Pregnancy</label>
+                    <i class="fa fa-arrows pull-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-view-cid="view3754">
+              <div class="element-title" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3754">
+                <i class="fa fa-user"><i class="fa fa-angle-right pull-right"></i></i>risk category assessments
+              </div>
+              <div id="collapse-view3754" class="in" style="height: auto;">
+                <div data-view-cid="view3800" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3745">
+                  <div class="paramText draggable ui-draggable" data-model-cid="c2870">
+                    <label class="ui-draggable">Risk Category Assessment: Framingham coronary heart disease 10 year risk</label>
+                    <i class="fa fa-arrows pull-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-view-cid="view3756">
+            <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3756">
+              <i class="fa fa-medkit"><i class="fa fa-angle-right pull-right"></i></i>medications
+            </div>
+            <div id="collapse-view3756" class="collapse">
+              <div data-view-cid="view3808" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3746">
+                <div class="paramText draggable ui-draggable" data-model-cid="c2873">
+                  <label class="ui-draggable">Medication, Active: Anti-Hypertensive Pharmacologic Therapy</label>
                   <i class="fa fa-arrows pull-right"></i>
                 </div>
               </div>
             </div>
           </div>
-          <div data-view-cid="view3754">
-            <div class="element-title" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3754">
-              <i class="fa fa-user"><i class="fa fa-angle-right pull-right"></i></i>
-        risk category assessments
+          <div data-view-cid="view3758">
+            <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3758">
+              <i class="fa fa-user-md"><i class="fa fa-angle-right pull-right"></i></i>encounters
             </div>
-            <div id="collapse-view3754" class="in" style="height: auto;">
-              <div data-view-cid="view3800" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3745"><div class="paramText draggable ui-draggable" data-model-cid="c2870">
-                <label class="ui-draggable">Risk Category Assessment: Framingham coronary heart disease 10 year risk</label>
+            <div id="collapse-view3758" class="collapse">
+              <div data-view-cid="view3816" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3747">
+                <div class="paramText draggable ui-draggable" data-model-cid="c2875">
+                <label class="ui-draggable">Encounter, Performed: Cholesterol Measure Encounter Codes</label>
                 <i class="fa fa-arrows pull-right"></i>
               </div>
-            </div>
-          </div>
-        </div>
-        <div data-view-cid="view3756">
-          <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3756">
-            <i class="fa fa-medkit"><i class="fa fa-angle-right pull-right"></i></i>
-        medications
-          </div>
-          <div id="collapse-view3756" class="collapse">
-            <div data-view-cid="view3808" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3746">
-              <div class="paramText draggable ui-draggable" data-model-cid="c2873">
-                <label class="ui-draggable">Medication, Active: Anti-Hypertensive Pharmacologic Therapy</label>
-                <i class="fa fa-arrows pull-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div data-view-cid="view3758">
-          <div class="element-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3758">
-            <i class="fa fa-user-md"><i class="fa fa-angle-right pull-right"></i></i>
-        encounters
-          </div>
-          <div id="collapse-view3758" class="collapse">
-            <div data-view-cid="view3816" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3747">
-              <div class="paramText draggable ui-draggable" data-model-cid="c2875">
-              <label class="ui-draggable">Encounter, Performed: Cholesterol Measure Encounter Codes</label>
-              <i class="fa fa-arrows pull-right"></i>
             </div>
           </div>
         </div>
       </div>
-    </div>
       </div>
     </div>
     <div class="main-builder">
@@ -181,9 +185,10 @@
                       <option value="OT">Other</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group input-prepend date`">
                     <label for="birthdate">DOB</label>
-                    <input type="text" name="birthdate" class="form-control" placeholder="xx/xx/xxxx xx:xx">
+                    <input type="text" name="birthdate" class="form-control" class="datepicker" data-date-format="mm/dd/yyyy" value="12/02/1980" data-provide="datepicker">
+                    <span class="add-on"><i class="fa fa-calendar-o"></i></span>
                   </div>
                   <div class="form-group">
                     <label for="race">RACE</label>
@@ -226,8 +231,8 @@
               <div class="measure-expected">
                 <h2>MEASURE ASSOCIATED</h2>
                 <div class="measure-name">
-                  <div class="measure-name-primary">Preventive Care and Screening: Risk-Stratified Cholesterol – Fasting Low Density Lipoprotein (LDL-C):</div>
-                  <div class="measure-name-secondary">Percentage of patients aged 20 through 79 years who had a fasting LDL-C test performed and whose risk-stratified fasting LDL-C is at or below the recommended LDL-C goal.</div>
+                  <div class="measure-name-primary">Preventive Care and Screening: </div>
+                  <div class="measure-name-secondary">Risk-Stratified Cholesterol – Fasting Low Density Lipoprotein (LDL-C):</div>
                 </div>
                 <div data-view-cid="view3603">
                   <div class="sub-measure-tabs">
@@ -235,18 +240,15 @@
               <!-- Population titles or sub_ids -->
                     <ul class="nav nav-tabs" data-view-cid="view3821" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3599">
                       <li data-model-cid="c3600" class="active">
-                        <a href="http://localhost:3000/#expected-0" data-toggle="tab">
-                    LDL-C &lt;100 mg/dL
+                        <a href="http://localhost:3000/#expected-0" data-toggle="tab"> &lt;100 mg/dL
                         </a>
                       </li>
                       <li data-model-cid="c3601">
-                        <a href="http://localhost:3000/#expected-1" data-toggle="tab">
-                    LDL-C &lt;130 mg/dL
+                        <a href="http://localhost:3000/#expected-1" data-toggle="tab">&lt;130 mg/dL
                         </a>
                       </li>
                       <li data-model-cid="c3602">
-                        <a href="http://localhost:3000/#expected-2" data-toggle="tab">
-                    LDL-C &lt;160 mg/dL
+                        <a href="http://localhost:3000/#expected-2" data-toggle="tab"> &lt;160 mg/dL
                         </a>
                       </li>
                     </ul>
@@ -1142,6 +1144,7 @@
           </script>
 
 
+
           <!-- build:js scripts/main.js -->
           <script src="bower_components/jquery/jquery.js"></script>
           <script src="scripts/main.js"></script>
@@ -1161,6 +1164,10 @@
           <script src="bower_components/bootstrap/js/scrollspy.js"></script>
           <script src="bower_components/bootstrap/js/collapse.js"></script>
           <script src="bower_components/bootstrap/js/tab.js"></script>
+          <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+          <script>
+            $('.datepicker').datepicker();
+          </script>
           <!-- endbuild -->
   </body>
 </html>
