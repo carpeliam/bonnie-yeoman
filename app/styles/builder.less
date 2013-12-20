@@ -82,22 +82,21 @@
         .make-sm-column-offset(1);
 
         .form-group-dob{
-          .row;
+          
+          .birthdate-label {
+            .make-sm-column(12);
+            .row;
+          }
           .form-group-dob-input {
             .make-sm-column(6);
           }
-        }
-       form-group-dob {
-          display: inline-block;
-          .make-sm-column(6);
-          .row;
-          input {
-            width: 70%;
+          bootstrap-timepicker {
+            .make-sm-column(6);
+
+            .form-group-tob-input {
+              .make-sm-column(12);
+            }
           }
-        }
-        .form-group-tob {
-          .make-sm-column(6);
-          .row;
         }
       }
 
@@ -290,7 +289,9 @@
             }
 
             .form-date {
-              .make-sm-column(6);
+              .form-control-date-start{
+
+              }
             }
 
             .btn-form {

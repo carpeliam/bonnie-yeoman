@@ -25,68 +25,91 @@
             <li><a href="results.html" class="">Results</a></li>
           </ul>
       </div>
-      <div class="row">
-          <div class="col-sm-6 h1">MEASURE LISTING</div>
-          <a class="update-btn" data-toggle="popover" id="update" rel="popover" data-placement="bottom">UPLOAD</a>
-          <div class=" col-sm-2 h2">PATIENTS</div>
-          <div class="col-sm-4 h1">RESULTS</div>
-      </div>
-      <div class="row">
-        <div class="measure-title col-lg-4">
-          <a href="measure-0034.html">Coronary Artery Disease (CAD)</a>
+      <div class="dashboard-heading row">
+        <div class="measure-col">
+          <div class="btn-wrapper pull-right">
+            <button "importMeasure" class="btn btn-primary">Upload</button>
+          </div>
+          <h1><i class="glyphicon glyphicon-tasks"></i> Measures</h1>
         </div>
-        <div class="NQF-listing col-lg-1">
-          <span>0081</span>
+        <div class="expected-col">
+          <h2>Expected</h2>
         </div>
-        <div class="col-lg-5">
-          <a class="update-btn" data-toggle="popover" id="update" rel="popover" data-placement="bottom">UPDATE</a>
+        <div class="status-col">
+          <h2>Status</h2>
         </div>
-        <div class="patient-listing col-lg-1">
-          <i class="glyphicon glyphicon-user"></i> 5
-        </div>
-        <div class="col-lg-1">
-          <a href="builder.html" class="update-btn">ADD</a>
-        </div>
-        <div class="col-lg-3">
-          <div class="measure-title">100% Expected Passed</div>
+        <div class="patient-listing-col">
+          <h2>Test Patients</h2>
         </div>
       </div>
-      <script type="text/template" id="template">
-        <form>
-          <div id="dialog-box">
-            <h1>Re-import a Measure</h1>
-            <label class="title">Measure location:</label>
-            <div class="upload">
-              <input type="file" class="upload">
+
+      {{#collection class="dashboard-data" item-view=measureRowView}}
+
+        <div class="measure row">
+          <div class="measure-col">
+            <div class="btn-wrapper pull-right">
+              <button "updateMeasure" class="btn btn-primary">Update</button>
             </div>
-            <label class="title">MEASURE TYPE:</label>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn-default btn EP">
-                <input type="radio" class="btn-selection">Eligible Professional (EP)
-              </label>
-              <label class="btn-default btn EH">
-                <input type="radio" class="btn-selection">Eligible Hospital (EH)
-              </label>
-            </div>
-            <label class="title">CALCULATION BASED:</label>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn-default btn PB">
-                <input type="radio" class="btn-selection">Patient Based
-              </label>
-              <label class="btn-default btn EC">
-                <input type="radio" class="btn-selection">Episode of Care
-              </label>
-              <label class="btn-default btn CV">
-                <input type="radio" class="btn-selection">
-                Continuous Variable
-            </div>
-            <div class="ok-cancel">
-              <button type="button" class="btn-ok">UPLOAD</button>
-              <button type="button" class="btn-cancel">CANCEL</button>
+            <div class="measure-title">
+               <span class="nqf-listing pull-right">
+                0038
+              </span>
+              Preventive Care and Screening: Risk-Stratified Cholesterol – Fasting Low Density Lipoprotein (LDL-C)
             </div>
           </div>
-        </form>
-      </script>
+          <div class="expected-col">
+              <input type="text" value="{{expectedPercentage}}" class="dial" data-readOnly="true" data-width="60" data-height="60" data-thickness=".2" data-fgColor= data-inputColor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif">
+            {{/unless}}
+          </div>
+          <div class="status-col status">
+          </div>
+          <div class="patient-listing-col">
+            <a href="#measures/{{hqmf_set_id}}/patients/new" class="btn btn-default pull-right">
+              <i class="fa fa-user"></i>
+              <i class="fa fa-plus"></i>
+            </a>
+            {{!-- FIXME: Should the following be patients.length or some other value? --}}
+            <span class="patient-listing">
+              {{#if hasPopulations}}
+                {{patients.length}}
+              {{else}}
+                {{matches}}
+              {{/if}}
+            </span>
+            {{#if hasFraction}}
+              <span class="fraction">/{{patients.length}}</span>
+            {{/if}}
+          </div>
+        </div>
+
+        {{#if hasPopulations}}
+          {{#collection populations item-context=populationContext}}
+            <div class="row population">
+              <div class="population-col">
+                <div class="population-title">
+                  <strong>population:</strong> {{title}}
+                </div>
+              </div>
+              <div class="expected-col">
+                <input type="text" value="{{expectedPercentage}}" class="dial" data-readOnly="true" data-width="60" data-height="60" data-thickness=".2" data-fgColor={{#ifCond status '==' 'pass'}}"#468847"{{/ifCond}}{{#ifCond status '==' 'fail'}}"#b94a48"{{/ifCond}} data-inputColor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif">
+              </div>
+              <div class="status-col status status-{{status}}">
+                {{status}}
+              </div>
+              <div class="patient-listing-col">
+                <span class="patient-listing">{{matches}}</span>
+                {{#if hasFraction}}
+                  <span class="fraction">/{{../../patients.length}}</span>
+                {{/if}}
+              </div>
+            </div>
+          {{/collection}}
+        {{/if}}
+      {{/collection}}
+
+      {{! FIXME view creation/removal should happen as necessary in view, not in handlebars }}
+      {{view finalizeMeasuresView}}
+
     </div>
 
 
@@ -131,5 +154,5 @@
               html: true, content: $('#template').text()
             });
         </script>
-</body>
+  </body>
 </html>

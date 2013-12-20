@@ -10169,69 +10169,7 @@ h2 {
   }
 }
 
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:before,
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:before,
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input {
-  position: relative;
-  display: inline-block;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input {
-    float: left;
-    width: 50%;
-  }
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input:before,
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input:before,
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col form-group-dob-input:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input {
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -10241,30 +10179,72 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input {
+  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label {
+    float: left;
+    width: 100%;
+  }
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:before,
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:before,
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .form-group-dob-input {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .form-group-dob-input {
     float: left;
     width: 50%;
   }
 }
 
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input:before,
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input:after {
-  display: table;
-  content: " ";
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input:after {
-  clear: both;
+@media (min-width: 768px) {
+  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker {
+    float: left;
+    width: 50%;
+  }
 }
 
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input:before,
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input:after {
-  display: table;
-  content: " ";
+.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker .form-group-tob-input {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-tob.input:after {
-  clear: both;
+@media (min-width: 768px) {
+  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker .form-group-tob-input {
+    float: left;
+    width: 100%;
+  }
 }
 
 .patient-builder .main-builder .demographics .demographics-right-col {
@@ -10614,20 +10594,6 @@ h2 {
 
 .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group.minimize {
   margin-bottom: 30px;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-date {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-date {
-    float: left;
-    width: 50%;
-  }
 }
 
 .patient-builder .main-builder .record .record-listing .patient-data .element-edit .btn-form {
