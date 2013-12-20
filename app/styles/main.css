@@ -10596,6 +10596,99 @@ h2 {
   margin-bottom: 30px;
 }
 
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-start {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-start {
+    float: left;
+    width: 50%;
+  }
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:before,
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
+  clear: both;
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:before,
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
+  clear: both;
+}
+
+@media (min-width: 992px) {
+  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop {
+    float: left;
+    width: 41.66666666666667%;
+  }
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-start {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-start {
+    float: left;
+    width: 25%;
+  }
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .add-on {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 992px) {
+  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .add-on {
+    float: left;
+    width: 8.333333333333332%;
+  }
+}
+
+.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-stop {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-stop {
+    float: left;
+    width: 25%;
+  }
+}
+
 .patient-builder .main-builder .record .record-listing .patient-data .element-edit .btn-form {
   margin: 10px 0 20px 15px;
 }
