@@ -2,37 +2,96 @@
 // builder view
 
 .patient-builder {
-  .left-sidebar-builder{
-    .make-sm-column(2);
+  @time-bar-width: 8px;
+  .time-bar(@color: @gray-lighter) {
+    border-left: @time-bar-width solid @color;
+  }
 
-    .panel-heading {
-      font-size: 18px;
-      font-weight: bold;
-      background-color: @gray-lighter;
-    }
+  label {
+    text-transform: uppercase;
+  }
 
-    .element-title {
-      color: #fff;
-      background-color: @blue-lighter;
-      margin-top: 10px;
-      font-size: 10px;
-      padding: 15px;
-      text-transform: uppercase;
+  .col-left {
+    .make-md-column(2);
+    &.measure-data-container {
+      // jog content over by @{offset} so that the border-right overlaps with the .col-center's border-left
+      @offset: @grid-gutter-width / 2 + @time-bar-width;
+      border-right: @time-bar-width solid @gray-lighter;
+      margin-left:  @offset;
+      margin-right: -@offset;
 
-      .fa {
-        display: block;
-        color: #fff;
-        margin-right: 5px;
-        font-size: 36px;
-        margin-left: 10px;
-
-        .fa {
-          font-size: 32px;
-          vertical-align: middle;
-        }
+      &> * {
+        margin-left: -@offset;
+        padding-right: (@grid-gutter-width / 2); // leave out @time-bar-width to account for parent's border-right
       }
     }
+  }
 
+  .col-center {
+    .make-md-column(6);
+    &> * {
+      .time-bar();
+      &.form-data {
+        // FIXME this border is attached here because this column is taller, but really belongs on .col-right
+        border-right: 4px solid @brand-primary;
+        margin-left: 0;
+        padding-left: (@grid-gutter-width / 2);
+      }
+    }
+  }
+
+  .col-right {
+    .make-md-column(4);
+  }
+
+  .timeline-icon {
+    color: @brand-primary;
+    margin-left: -12px;
+  }
+
+  .expected-values {
+    .nav-tabs .active a, .tab-content {
+      background-color: @gray-lighter;
+    }
+    .tab-content {
+      padding-bottom: 10px;
+      h2 {
+        margin-top: 0;
+        padding-top: 6px;
+      }
+    }
+  }
+
+
+  .heading-muted {
+    background-color: @gray-lighter;
+    padding-left: 3px;
+  }
+  .heading-primary {
+    background-color: @blue-lightest;
+    color: white;
+    padding-left: @grid-gutter-width;
+  }
+
+  .panel {
+    .panel-title {
+      background-color: @blue-lighter;
+      color: white;
+      display: block;
+      font-size: @font-size-base;
+      padding: (@grid-gutter-width / 2);
+      text-transform: uppercase;
+      .panel-icon {
+        display: block;
+      }
+      .panel-expander {
+        .pull-right;
+        line-height: 2;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
     .draggable {
       border: 2px solid @blue-lighter;
       margin: 10px 0;
@@ -42,318 +101,64 @@
         color: @gray-darker;
       }
 
-      .ui-draggable {
-        font-size: 12px;
-        max-width: 80px;
-      }
     }
   }
 
-  .main-builder {
-    .make-sm-column(10);
-    
-    .fa {
-      font-size: 18px;
-      margin: auto;
-    }
 
-    .main-head > .fa {
-      font-size: 48px;
-      color: @brand-primary;
-    }
-
-    #timeBar {
-      position: absolute;
-      left: 29px;
-      top: 63px;
-      width: 8px;
-      height: 100%;
-      background-color: @blue-lightest;
-    }
-
-    .demographics {
-      .clearfix;
-      .row;
-      margin: 20px 0 20px 39px;
-
-      .demographics-left-col {
-        .row;
-        .make-sm-column(3);
-        .make-sm-column-offset(1);
-
-        .form-group-dob{
-          
-          .birthdate-label {
-            .make-sm-column(12);
-            .row;
-          }
-          .form-group-dob-input {
-            .make-sm-column(6);
-          }
-          bootstrap-timepicker {
-             .make-sm-column(6);
-
-            .form-group-tob-input {
-              .make-sm-column(12);
-            }
-          }
+  .criteria-container {
+    padding-bottom: 100px; // drop target below last criteria
+    .patient-criteria {
+      &.during-measurement-period {
+        .time-bar(@blue-lightest);
+      }
+      .criteria-type-marker {
+        @radius: 18px;
+        .pull-left;
+        background-color: white;
+        border: 2px solid @brand-primary;
+        border-radius: @radius;
+        color: @brand-primary;
+        .square(@radius * 2);
+        line-height: 2;
+        margin-left: -22px;
+        margin-top: 10px;
+        text-align: center;
+        &.open {
+          background-color: @brand-primary;
+          color: white;
         }
       }
-
-      .demographics-right-col {
-        .make-sm-column(3);
-      }
-
-      .measure-expected {
-        .clearfix;
-        .make-sm-column(5);
-        border-left: 4px solid @brand-primary;
-        padding-left: 10px;
-        padding-right: 0;
-
-        .form-group {
-          padding-bottom: 15px;
-          margin-bottom: 0;
-        }
-
-        .measure-name-primary {
-          .make-sm-column(4);
-        }
-        .measure-name-secondary {
-          .make-sm-column(8);
-        }
-
-        .sub-measure-tabs {
-          .make-sm-column(12);
-          padding: 15px 0 0 0;
-
-          .active a {
-            background-color: @gray-lighter;
+      .criteria-body {
+        margin-left: (@grid-gutter-width / 2);
+        padding: 5px 0;
+        .criteria-data {
+          position: relative;
+          &:before {
+            content: ' ';
+            background-color: white;
+            border-bottom: 1px solid @gray;
+            border-left: 1px solid @gray;
+            position: absolute;
+            .square(@grid-gutter-width / 2);
+            left: -(@grid-gutter-width / 4) - 1; // width/2 (-1 to account for border)
+            .rotate(45deg);
           }
-        }
-
-        .expected-value {
-          .make-sm-column(12);
-          background-color: @gray-lighter;
-          margin-left: 0;
-          padding-left: 5px;
-          border-left: 1px solid #dddddd;
-
-          h2 {
-            padding-left: 5px;
-          }
-
-          .checkbox, .checkbox-divider {
-            padding-left: 5px;
-            padding-right: 5px;
-
-            .checkbox-population {
-              font-size: 9px;
-              font-weight: bold;
-
-              input[type="checkbox"] {
-                display:none;
-              }
-
-              input[type="checkbox"] + span:before {
-                font-family: 'FontAwesome';
-                padding-right: 5px;
-                font-size: 16px;
-                color: @brand-primary;
-                content: "\f096"; /* check-empty */
-              }
-
-              input[type="checkbox"]:checked + span:before {
-                content: "\f046"; /* check */
-              }
-
-              .checkbox-number {
-                width: 15%;
-              }
-
-              span {
-                margin-bottom: 5px;
-              }
-            }
-          }
-
-          .checkbox-divider {
-            border-left: 2px solid @gray-darker;
-          }
-        }
-      }
-    }
-
-    .timeline-title {
-      background-color: #99C8E7;
-      margin-left: 15px;
-      color: #fff;
-      font-size: 24px;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding-left: 30px;
-    }
-    
-    .record {
-      .make-sm-column(7);
-      .row;
-      min-height: 200px; // ADDED
-      padding-bottom: 500px; // ADDED
-
-      .record-listing {
-        margin-top: 20px;
-
-        .circle-icon {
-          .make-sm-column(1);
-          display: inline-block;
-          margin-top: 15px;
-          padding-left: 0;
-
-          &.active-icon .fa {
-            background-color: @brand-primary;
-            border-radius: 18px;
-            color: #fff;
-          }
-
-          .fa {
-            text-align: center;
-            vertical-align: middle;
-            padding-top: 8px;
-            width: 36px;
-            height: 36px;
-            background-color: #fff;
-            border-radius: 18px;
-            border: 2px solid @brand-primary;
+          border: 1px solid @gray;
+          margin-left: (@grid-gutter-width / 2);
+          padding: (@grid-gutter-width / 2);
+          .control-label {
             color: @brand-primary;
           }
-        }
-
-        .patient-data {
-          .make-sm-column(11);
-          margin-bottom: 20px;
-          padding: 20px;
-          background-color: #fff;
-          border: 1px solid @gray-darker;
-
-          &.drop-target-highlight {
-              background-color: @blue-lightest;
+          .datetime-control {
+            .make-row(0);
+            &> * {
+              .make-md-column(6; 0);
             }
-
-          .dl-record {
-            .make-sm-column(6);
-          }
-
-          .dl-date {
-            .make-md-column(5);
-          }
-
-          .definition {
-            text-transform: uppercase;
-          }
-
-          .btn-danger {
-            margin-top: -7px;
-          }
-
-          .element-edit{
-            display: block;
-            margin-bottom: 30px;
-
-            .section-heading {
-              font-weight: bold;
-              margin-left: 15px;
-              color: @brand-primary;
-
-              &.time-heading {
-                margin-left: 0;
-                margin-bottom: 10px;
-              }
-
-              .fa {
-                padding-right: 5px;
-              }
-            }
-
-            .form-group {
-              margin-bottom: 20px;
-              
-              .btn-group {
-                .fa {
-                  color: black;
-                }
-              }
-
-              &.minimize {
-                margin-bottom: 30px;
-              }
-            }
-
-            .form-group-time {
-              .time-heading-start{
-                .make-md-column(6);
-              }
-              .time-heading-stop{
-                .row;
-                .make-md-column(5);
-              }
-              .form-control-date-start{
-                .make-md-column(3);
-              }
-              .add-on {
-                .make-md-column(1);
-                background-color: #f2f2f2;
-              }
-              .form-control-date-stop {
-                .make-md-column(3);
-              }
-            }
-
-            .btn-form {
-              margin: 10px 0px 20px 15px;
-            }
-          }
-
-          .value-form {
-            padding: 15px;
-
-            .value-input {
-              .make-sm-column(5);
-            }
-
-            select {
-              margin-bottom: 5px;
+            &> :last-child input {
+              border-left: 0;
             }
           }
         }
-      }
-    }
-
-    .measure-view-side {
-      .make-sm-column(5.38);
-      margin-top: 20px;
-      padding-right: 0;
-      font-size: 12px;
-
-      .measure-title {
-        background-color: @gray-lighter;
-        padding: 10px;
-
-        .short-title {
-          font-size: 18px;
-          font-weight: bold;
-          padding-bottom: 5px;
-          .fa {
-            padding-right: 5px;
-          }
-
-          .population-title {
-            font-size: 14px;
-          }
-        }
-      }
-
-      .measure-viz {
-
       }
     }
   }

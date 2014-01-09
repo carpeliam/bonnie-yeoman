@@ -9991,764 +9991,235 @@ h2 {
   color: #843534;
 }
 
-.patient-builder .left-sidebar-builder {
+.patient-builder label {
+  text-transform: uppercase;
+}
+
+.patient-builder .col-left {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-@media (min-width: 768px) {
-  .patient-builder .left-sidebar-builder {
+@media (min-width: 992px) {
+  .patient-builder .col-left {
     float: left;
     width: 16.666666666666664%;
   }
 }
 
-.patient-builder .left-sidebar-builder .panel-heading {
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #f2f2f2;
+.patient-builder .col-left.measure-data-container {
+  margin-right: -23px;
+  margin-left: 23px;
+  border-right: 8px solid #f2f2f2;
 }
 
-.patient-builder .left-sidebar-builder .element-title {
-  padding: 15px;
-  margin-top: 10px;
-  font-size: 10px;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #3391d0;
+.patient-builder .col-left.measure-data-container > * {
+  padding-right: 15px;
+  margin-left: -23px;
 }
 
-.patient-builder .left-sidebar-builder .element-title .fa {
-  display: block;
-  margin-right: 5px;
-  margin-left: 10px;
-  font-size: 36px;
-  color: #fff;
-}
-
-.patient-builder .left-sidebar-builder .element-title .fa .fa {
-  font-size: 32px;
-  vertical-align: middle;
-}
-
-.patient-builder .left-sidebar-builder .draggable {
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid #3391d0;
-}
-
-.patient-builder .left-sidebar-builder .draggable .fa-arrows {
-  color: #888888;
-}
-
-.patient-builder .left-sidebar-builder .draggable .ui-draggable {
-  max-width: 80px;
-  font-size: 12px;
-}
-
-.patient-builder .main-builder {
+.patient-builder .col-center {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-@media (min-width: 768px) {
-  .patient-builder .main-builder {
-    float: left;
-    width: 83.33333333333334%;
-  }
-}
-
-.patient-builder .main-builder .fa {
-  margin: auto;
-  font-size: 18px;
-}
-
-.patient-builder .main-builder .main-head > .fa {
-  font-size: 48px;
-  color: #0075c4;
-}
-
-.patient-builder .main-builder #timeBar {
-  position: absolute;
-  top: 63px;
-  left: 29px;
-  width: 8px;
-  height: 100%;
-  background-color: #99c8e7;
-}
-
-.patient-builder .main-builder .demographics {
-  margin: 20px 0 20px 39px;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.patient-builder .main-builder .demographics:before,
-.patient-builder .main-builder .demographics:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics:before,
-.patient-builder .main-builder .demographics:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics:before,
-.patient-builder .main-builder .demographics:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics:before,
-.patient-builder .main-builder .demographics:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col:before,
-.patient-builder .main-builder .demographics .demographics-left-col:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col:before,
-.patient-builder .main-builder .demographics .demographics-left-col:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col:after {
-  clear: both;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col {
-    float: left;
-    width: 25%;
-  }
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col {
-    margin-left: 8.333333333333332%;
-  }
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label {
-    float: left;
-    width: 100%;
-  }
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:before,
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:before,
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .birthdate-label:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .form-group-dob-input {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob .form-group-dob-input {
+@media (min-width: 992px) {
+  .patient-builder .col-center {
     float: left;
     width: 50%;
   }
 }
 
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker {
+.patient-builder .col-center > * {
+  border-left: 8px solid #f2f2f2;
+}
+
+.patient-builder .col-center > *.form-data {
+  padding-left: 15px;
+  margin-left: 0;
+  border-right: 4px solid #0075c4;
+}
+
+.patient-builder .col-right {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker {
-    float: left;
-    width: 50%;
-  }
-}
-
-.patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker .form-group-tob-input {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-left-col .form-group-dob bootstrap-timepicker .form-group-tob-input {
-    float: left;
-    width: 100%;
-  }
-}
-
-.patient-builder .main-builder .demographics .demographics-right-col {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .demographics-right-col {
-    float: left;
-    width: 25%;
-  }
-}
-
-.patient-builder .main-builder .demographics .measure-expected {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-right: 0;
-  padding-left: 15px;
-  padding-left: 10px;
-  border-left: 4px solid #0075c4;
-}
-
-.patient-builder .main-builder .demographics .measure-expected:before,
-.patient-builder .main-builder .demographics .measure-expected:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .measure-expected:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .demographics .measure-expected:before,
-.patient-builder .main-builder .demographics .measure-expected:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .demographics .measure-expected:after {
-  clear: both;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .measure-expected {
-    float: left;
-    width: 41.66666666666667%;
-  }
-}
-
-.patient-builder .main-builder .demographics .measure-expected .form-group {
-  padding-bottom: 15px;
-  margin-bottom: 0;
-}
-
-.patient-builder .main-builder .demographics .measure-expected .measure-name-primary {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .measure-expected .measure-name-primary {
+@media (min-width: 992px) {
+  .patient-builder .col-right {
     float: left;
     width: 33.33333333333333%;
   }
 }
 
-.patient-builder .main-builder .demographics .measure-expected .measure-name-secondary {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .measure-expected .measure-name-secondary {
-    float: left;
-    width: 66.66666666666666%;
-  }
-}
-
-.patient-builder .main-builder .demographics .measure-expected .sub-measure-tabs {
-  position: relative;
-  min-height: 1px;
-  padding: 15px 0 0 0;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .measure-expected .sub-measure-tabs {
-    float: left;
-    width: 100%;
-  }
-}
-
-.patient-builder .main-builder .demographics .measure-expected .sub-measure-tabs .active a {
-  background-color: #f2f2f2;
-}
-
-.patient-builder .main-builder .demographics .measure-expected .expected-value {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-left: 5px;
-  margin-left: 0;
-  background-color: #f2f2f2;
-  border-left: 1px solid #dddddd;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .demographics .measure-expected .expected-value {
-    float: left;
-    width: 100%;
-  }
-}
-
-.patient-builder .main-builder .demographics .measure-expected .expected-value h2 {
-  padding-left: 5px;
-}
-
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox,
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox .checkbox-population,
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider .checkbox-population {
-  font-size: 9px;
-  font-weight: bold;
-}
-
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox .checkbox-population input[type="checkbox"],
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider .checkbox-population input[type="checkbox"] {
-  display: none;
-}
-
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox .checkbox-population input[type="checkbox"] + span:before,
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider .checkbox-population input[type="checkbox"] + span:before {
-  padding-right: 5px;
-  font-family: 'FontAwesome';
-  font-size: 16px;
+.patient-builder .timeline-icon {
+  margin-left: -12px;
   color: #0075c4;
-  content: "\f096";
 }
 
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox .checkbox-population input[type="checkbox"]:checked + span:before,
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider .checkbox-population input[type="checkbox"]:checked + span:before {
-  content: "\f046";
-  /* check */
-
+.patient-builder .expected-values .nav-tabs .active a,
+.patient-builder .expected-values .tab-content {
+  background-color: #f2f2f2;
 }
 
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox .checkbox-population .checkbox-number,
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider .checkbox-population .checkbox-number {
-  width: 15%;
+.patient-builder .expected-values .tab-content {
+  padding-bottom: 10px;
 }
 
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox .checkbox-population span,
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider .checkbox-population span {
-  margin-bottom: 5px;
+.patient-builder .expected-values .tab-content h2 {
+  padding-top: 6px;
+  margin-top: 0;
 }
 
-.patient-builder .main-builder .demographics .measure-expected .expected-value .checkbox-divider {
-  border-left: 2px solid #888888;
+.patient-builder .heading-muted {
+  padding-left: 3px;
+  background-color: #f2f2f2;
 }
 
-.patient-builder .main-builder .timeline-title {
+.patient-builder .heading-primary {
   padding-left: 30px;
-  margin-left: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
+  color: white;
+  background-color: #99c8e7;
+}
+
+.patient-builder .panel .panel-title {
+  display: block;
+  padding: 15px;
+  font-size: 14px;
+  color: white;
   text-transform: uppercase;
-  background-color: #99C8E7;
+  background-color: #3391d0;
 }
 
-.patient-builder .main-builder .record {
-  position: relative;
-  min-height: 1px;
-  min-height: 200px;
-  padding-right: 15px;
-  padding-bottom: 500px;
-  padding-left: 15px;
-  margin-right: -15px;
-  margin-left: -15px;
+.patient-builder .panel .panel-title .panel-icon {
+  display: block;
 }
 
-@media (min-width: 768px) {
-  .patient-builder .main-builder .record {
-    float: left;
-    width: 58.333333333333336%;
-  }
+.patient-builder .panel .panel-title .panel-expander {
+  float: right !important;
+  float: right;
+  line-height: 2;
 }
 
-.patient-builder .main-builder .record:before,
-.patient-builder .main-builder .record:after {
-  display: table;
-  content: " ";
+.patient-builder .panel .panel-title:hover {
+  text-decoration: none;
 }
 
-.patient-builder .main-builder .record:after {
-  clear: both;
+.patient-builder .panel .draggable {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #3391d0;
 }
 
-.patient-builder .main-builder .record:before,
-.patient-builder .main-builder .record:after {
-  display: table;
-  content: " ";
+.patient-builder .panel .draggable .fa-arrows {
+  color: #888888;
 }
 
-.patient-builder .main-builder .record:after {
-  clear: both;
+.patient-builder .criteria-container {
+  padding-bottom: 100px;
 }
 
-.patient-builder .main-builder .record .record-listing {
-  margin-top: 20px;
+.patient-builder .criteria-container .patient-criteria.during-measurement-period {
+  border-left: 8px solid #99c8e7;
 }
 
-.patient-builder .main-builder .record .record-listing .circle-icon {
-  position: relative;
-  display: inline-block;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .record .record-listing .circle-icon {
-    float: left;
-    width: 8.333333333333332%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .circle-icon.active-icon .fa {
-  color: #fff;
-  background-color: #0075c4;
-  border-radius: 18px;
-}
-
-.patient-builder .main-builder .record .record-listing .circle-icon .fa {
+.patient-builder .criteria-container .patient-criteria .criteria-type-marker {
+  float: left !important;
+  float: left;
   width: 36px;
   height: 36px;
-  padding-top: 8px;
+  margin-top: 10px;
+  margin-left: -22px;
+  line-height: 2;
   color: #0075c4;
   text-align: center;
-  vertical-align: middle;
-  background-color: #fff;
+  background-color: white;
   border: 2px solid #0075c4;
   border-radius: 18px;
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data {
-  position: relative;
-  min-height: 1px;
-  padding: 20px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  border: 1px solid #888888;
+.patient-builder .criteria-container .patient-criteria .criteria-type-marker.open {
+  color: white;
+  background-color: #0075c4;
 }
 
-@media (min-width: 768px) {
-  .patient-builder .main-builder .record .record-listing .patient-data {
-    float: left;
-    width: 91.66666666666666%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data.drop-target-highlight {
-  background-color: #99c8e7;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .dl-record {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .dl-record {
-    float: left;
-    width: 50%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .dl-date {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 992px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .dl-date {
-    float: left;
-    width: 41.66666666666667%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .definition {
-  text-transform: uppercase;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .btn-danger {
-  margin-top: -7px;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit {
-  display: block;
-  margin-bottom: 30px;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .section-heading {
+.patient-builder .criteria-container .patient-criteria .criteria-body {
+  padding: 5px 0;
   margin-left: 15px;
-  font-weight: bold;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data {
+  position: relative;
+  padding: 15px;
+  margin-left: 15px;
+  border: 1px solid #555555;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:before {
+  position: absolute;
+  left: -8.5px;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-bottom: 1px solid #555555;
+  border-left: 1px solid #555555;
+  content: ' ';
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .control-label {
   color: #0075c4;
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .section-heading.time-heading {
-  margin-bottom: 10px;
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control {
+  margin-right: 0;
   margin-left: 0;
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .section-heading .fa {
-  padding-right: 5px;
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control:before,
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control:after {
+  display: table;
+  content: " ";
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group {
-  margin-bottom: 20px;
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control:after {
+  clear: both;
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group .btn-group .fa {
-  color: black;
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control:before,
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control:after {
+  display: table;
+  content: " ";
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group.minimize {
-  margin-bottom: 30px;
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control:after {
+  clear: both;
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-start {
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control > * {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 @media (min-width: 992px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-start {
+  .patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control > * {
     float: left;
     width: 50%;
   }
 }
 
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:before,
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
-  clear: both;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:before,
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
-  display: table;
-  content: " ";
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop:after {
-  clear: both;
-}
-
-@media (min-width: 992px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .time-heading-stop {
-    float: left;
-    width: 41.66666666666667%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-start {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 992px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-start {
-    float: left;
-    width: 25%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .add-on {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  background-color: #f2f2f2;
-}
-
-@media (min-width: 992px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .add-on {
-    float: left;
-    width: 8.333333333333332%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-stop {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 992px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .element-edit .form-group-time .form-control-date-stop {
-    float: left;
-    width: 25%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .element-edit .btn-form {
-  margin: 10px 0 20px 15px;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .value-form {
-  padding: 15px;
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .value-form .value-input {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .record .record-listing .patient-data .value-form .value-input {
-    float: left;
-    width: 41.66666666666667%;
-  }
-}
-
-.patient-builder .main-builder .record .record-listing .patient-data .value-form select {
-  margin-bottom: 5px;
-}
-
-.patient-builder .main-builder .measure-view-side {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-right: 0;
-  padding-left: 15px;
-  margin-top: 20px;
-  font-size: 12px;
-}
-
-@media (min-width: 768px) {
-  .patient-builder .main-builder .measure-view-side {
-    float: left;
-    width: 44.83333333333333%;
-  }
-}
-
-.patient-builder .main-builder .measure-view-side .measure-title {
-  padding: 10px;
-  background-color: #f2f2f2;
-}
-
-.patient-builder .main-builder .measure-view-side .measure-title .short-title {
-  padding-bottom: 5px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.patient-builder .main-builder .measure-view-side .measure-title .short-title .fa {
-  padding-right: 5px;
-}
-
-.patient-builder .main-builder .measure-view-side .measure-title .short-title .population-title {
-  font-size: 14px;
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control > :last-child input {
+  border-left: 0;
 }
 
 .right-sidebar {
@@ -11173,10 +10644,29 @@ fieldset[disabled] .auth .login .btn-login.active {
   background-color: #dff0d8;
 }
 
-.rationale .false_eval,
+.rationale .true_eval:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+
+.rationale .false_eval {
+  color: #a94442;
+  background-color: #f2dede;
+}
+
+.rationale .false_eval:before {
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
 .rationale .bad_specifics {
   color: #a94442;
   background-color: #f2dede;
+}
+
+.rationale .bad_specifics:before {
+  font-family: FontAwesome;
+  content: "\f069";
 }
 
 .rationale .no_eval {
