@@ -1,6 +1,3 @@
-
-// builder view
-
 .patient-builder {
   @time-bar-width: 8px;
   .time-bar(@color: @gray-lighter) {
@@ -59,6 +56,19 @@
         margin-top: 0;
         padding-top: 6px;
       }
+
+      .form-inline {
+        .form-group {
+          padding-right: 10px;
+          label {
+            font-weight: normal;
+          }
+          input[type=number] {
+            display: inline-block;
+            width: 40px;
+          }
+        }
+      }
     }
   }
 
@@ -106,7 +116,11 @@
 
 
   .criteria-container {
-    padding-bottom: 100px; // drop target below last criteria
+    &.droppable {
+      // establish drop target below last criteria
+      min-height: 500px;
+      padding-bottom: 100px;
+    }
     .patient-criteria {
       &.during-measurement-period {
         .time-bar(@blue-lightest);
@@ -132,7 +146,9 @@
         margin-left: (@grid-gutter-width / 2);
         padding: 5px 0;
         .criteria-data {
-          position: relative;
+          &.drop-target-highlight, &.drop-target-highlight:before {
+            background-color: @blue-lightest;
+          }
           &:before {
             content: ' ';
             background-color: white;
@@ -146,6 +162,7 @@
           border: 1px solid @gray;
           margin-left: (@grid-gutter-width / 2);
           padding: (@grid-gutter-width / 2);
+          position: relative;
           .control-label {
             color: @brand-primary;
           }
@@ -156,6 +173,22 @@
             }
             &> :last-child input {
               border-left: 0;
+            }
+          }
+          .existing-values {
+            margin-bottom: 10px;
+
+            &> span {
+              background-color: @gray-lighter;
+              color: @gray-darker;
+              display: inline-block;
+              padding: 10px;
+              margin-bottom: 5px;
+              margin-right: 15px;
+              vertical-align: bottom;
+            }
+            .delete {
+              float: none;
             }
           }
         }

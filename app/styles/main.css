@@ -10077,6 +10077,19 @@ h2 {
   margin-top: 0;
 }
 
+.patient-builder .expected-values .tab-content .form-inline .form-group {
+  padding-right: 10px;
+}
+
+.patient-builder .expected-values .tab-content .form-inline .form-group label {
+  font-weight: normal;
+}
+
+.patient-builder .expected-values .tab-content .form-inline .form-group input[type=number] {
+  display: inline-block;
+  width: 40px;
+}
+
 .patient-builder .heading-muted {
   padding-left: 3px;
   background-color: #f2f2f2;
@@ -10121,7 +10134,8 @@ h2 {
   color: #888888;
 }
 
-.patient-builder .criteria-container {
+.patient-builder .criteria-container.droppable {
+  min-height: 500px;
   padding-bottom: 100px;
 }
 
@@ -10159,6 +10173,11 @@ h2 {
   padding: 15px;
   margin-left: 15px;
   border: 1px solid #555555;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data.drop-target-highlight,
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data.drop-target-highlight:before {
+  background-color: #99c8e7;
 }
 
 .patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:before {
@@ -10220,6 +10239,24 @@ h2 {
 
 .patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control > :last-child input {
   border-left: 0;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .existing-values {
+  margin-bottom: 10px;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .existing-values > span {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  color: #888888;
+  vertical-align: bottom;
+  background-color: #f2f2f2;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .existing-values .delete {
+  float: none;
 }
 
 .right-sidebar {

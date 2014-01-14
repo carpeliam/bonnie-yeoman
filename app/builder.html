@@ -15,15 +15,17 @@
 
 <body>
   <div class="container">
+    <div class="navbar row" role="navigation">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="http://localhost:9000/#">Measures</a></li>
+        <li><a href="http://localhost:9000/users/edit">Account</a></li>
+        <li><a href="sign_out.html" data-method="delete" rel="nofollow">Logout</a></li>
+      </ul>
+      <a class="navbar-brand" href="http://localhost:9000/#">Bonnie</a>
+    </div>
+
+    <!-- START -->
     <div class="patient-builder">
-      <div class="navbar row" role="navigation">
-        <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="http://localhost:9000/#">Measures</a></li>
-          <li><a href="http://localhost:9000/users/edit">Account</a></li>
-          <li><a href="sign_out.html" data-method="delete" rel="nofollow">Logout</a></li>
-        </ul>
-        <a class="navbar-brand" href="http://localhost:9000/#">Bonnie</a>
-      </div>
 
       <div class="row">
         <div class="col-xs-2">
@@ -33,6 +35,10 @@
         <div class="col-xs-10">
           <span class="timeline-icon"><i class="fa fa-user fa-3x"></i></span>
           <div class="pull-right">
+            <!--
+            {{#button "cancel" class="btn btn-default"}}CANCEL{{/button}}
+            {{#button "save" class="btn btn-primary" data-saving-text="SAVING..."}}SAVE{{/button}}
+            -->
             <button class="btn btn-default" data-call-method="cancel">CANCEL</button>
             <button data-saving-text="SAVING..." class="btn btn-primary" data-call-method="save">SAVE</button>
           </div>
@@ -40,7 +46,7 @@
       </div>
 
       <div class="row">
-        <div class="col-left">
+        <form class="col-left" role="form">
           <div class="form-group">
             <label for="last">Last Name</label>
             <input type="text" id="last" name="last" class="form-control" placeholder="Smith">
@@ -50,10 +56,10 @@
             <label for="first">First Name</label>
             <input type="text" id="first" name="first" class="form-control" placeholder="John">
           </div>
-        </div>
+        </form>
 
         <div class="col-center">
-          <div class="row form-data">
+          <form class="row form-data" role="form">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="payer">Payer</label>
@@ -116,15 +122,16 @@
                 </select>
               </div>
             </div>
-          </div>
+          </form>
         </div>
 
 
-        <div class="col-right expected-values">
-          <div class="row">
-            <div class="col-md-4">Preventive Care and Screening:</div>
-            <div class="col-md-8">Risk-Stratified Cholesterol &#8211; Fasting Low Density Lipoprotein (LDL-C)</div>
-          </div>
+        <form class="col-right expected-values" role="form">
+          <label>Measure Associated</label>
+          <!-- <p>{{measureTitle}}</p> -->
+          <p>Preventive Care and Screening: Risk-Stratified Cholesterol &#8211; Fasting Low Density Lipoprotein (LDL-C)</p>
+
+          <!-- {{view expectedValuesView}} -->
 
           <ul class="nav nav-tabs">
             <li class="active"><a href="#expected-0" data-toggle="tab">&lt;100 mg/dL</a></li>
@@ -133,52 +140,58 @@
           </ul>
 
           <div class="tab-content">
-            <div class="tab-pane active" id="expected-0">
+            <div class="form-inline tab-pane active" id="expected-0">
               <h2>Expected Value</h2>
-              <div style="display: table; width: 100%">
-                <div class="checkbox" style="display: table-cell">
-                  <label class="checkbox-population"><input type="checkbox" name="IPP"> IPP</label>
+              <!-- <div class="form-horizontal"> -->
+                <div class="form-group">
+                  <label>
+                     <input type="number" name="IPP" min="0"> IPP <!-- TODO add class="form-control" -->
+                  </label>
                 </div>
-
-                <div class="checkbox" style="display: table-cell">
-                  <label class="checkbox-population"><input type="checkbox" name="DENOM"> DEN</label>
+                <div class="form-group">
+                  <label>
+                    <input type="number" name="DENOM" min="0"> DEN <!-- TODO add class="form-control" -->
+                  </label>
                 </div>
-
-                <div class="checkbox" style="display: table-cell">
-                  <label class="checkbox-population"><input type="checkbox" name="NUMER"> NUM</label>
+                <div class="form-group">
+                  <label>
+                    <input type="number" name="NUMER" min="0"> NUM <!-- TODO add class="form-control" -->
+                  </label>
                 </div>
-
-                <div class="checkbox" style="display: table-cell">
-                  <label class="checkbox-population"><input type="checkbox" name="DENEX"> EXCL</label>
+                <div class="form-group">
+                  <label>
+                    <input type="number" name="DENEX" min="0"> EXCL <!-- TODO add class="form-control" -->
+                  </label>
                 </div>
-              </div>
+              <!-- </div> -->
             </div>
 
             <div class="form-inline tab-pane" id="expected-1">
               <div class="checkbox">
-                <label class="checkbox-population"><input type="checkbox" name="IPP"> IPP</label>
+                <label><input type="checkbox" name="IPP"> IPP</label>
               </div>
 
               <div class="checkbox">
-                <label class="checkbox-population"><input type="checkbox" name="DENOM"> DEN</label>
+                <label><input type="checkbox" name="DENOM"> DEN</label>
               </div>
               <div class="checkbox">
-                <label class="checkbox-population"><input type="checkbox" name="MSRPOPL"> MSRPOPL</label>
+                <label><input type="checkbox" name="MSRPOPL"> MSRPOPL</label>
               </div>
               <div class="checkbox">
-                <label class="checkbox-population"><input type="checkbox" name="OBSERV"> OBSERV</label>
-              </div>
-
-              <div class="checkbox">
-                <label class="checkbox-population"><input type="checkbox" name="DENEXCEP"> EXCP</label>
+                <label><input type="checkbox" name="OBSERV"> OBSERV</label>
               </div>
 
               <div class="checkbox">
-                <label class="checkbox-population"><input type="checkbox" name="DENEX"> EXCL</label>
+                <label><input type="checkbox" name="DENEXCEP"> EXCP</label>
+              </div>
+
+              <div class="checkbox">
+                <label><input type="checkbox" name="DENEX"> EXCL</label>
               </div>
             </div>
 
             <div class="form-inline tab-pane" id="expected-2">
+              <h2>Expected Value</h2>
               <label class="checkbox-inline"><input type="checkbox" name="IPP"> IPP</label>
               <label class="checkbox-inline"><input type="checkbox" name="DENOM"> DEN</label>
               <label class="checkbox-inline"><input type="checkbox" name="MSRPOPL"> MSRPOPL</label>
@@ -187,13 +200,18 @@
               <label class="checkbox-inline"><input type="checkbox" name="DENEX"> EXCL</label>
             </div>
           </div>
-        </div>
+        </form>
       </div>
 
       <div class="row">
         <div class="col-left measure-data-container">
           <div class="panel-group" id="criteriaElements">
-          <h1 class="heading-muted">Elements</h1>
+            <h1 class="heading-muted">Elements</h1>
+            <!--
+            {{#each dataCriteriaCategories}}
+              {{view "SelectCriteriaView" title=@key collection=this}}
+            {{/each}}
+            -->
             <div class="panel">
               <a class="panel-title collapsed" data-toggle="collapse" data-parent="#criteriaElements" href="#collapse-view3748">
                 <i class="fa fa-angle-right fa-2x panel-expander"></i>
@@ -355,194 +373,313 @@
         </div>
         <div class="col-center criteria-container">
           <h1 class="heading-primary">Patient History Relative To Measures</h1>
+          <!-- {{view editCriteriaCollectionView}} -->
           <div class="patient-criteria">
             <div class="criteria-type-marker open">
               <i class="fa fa-fw fa-lg fa-flask"></i>
             </div>
             <div class="criteria-body">
               <div class="criteria-data">
-                <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
-
-                <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
-
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
-
-                    <div class="datetime-control">
-                      <div>
-                        <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
-                      </div>
-
-                      <div>
-                        <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                      </div>
+                <div class="criteria-details hide">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Encounter, Performed</label>
+                      <div>Psych Visit - Psychotherapy</div>
                     </div>
-                  </div>
 
-                  <div class="form-group col-md-6">
-                    <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
-                    <div class="datetime-control">
-                      <div>
-                        <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
-                      </div>
-
-                      <div>
-                        <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                      </div>
+                    <div class="col-md-6">
+                      <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
+                      <label>Date</label>
+                      <div>10/01/2012 &ndash; 10/01/2012</div>
                     </div>
                   </div>
                 </div>
+                <form role="form">
+                  <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
 
-                <!--
-                <div class="form-group">
+                  <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
+
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="form-group col-md-6">
                       <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+
+                      <div class="datetime-control">
+                        <div>
+                          <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                        </div>
+
+                        <div>
+                          <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-md-6">
+
+                    <div class="form-group col-md-6">
                       <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                      <div class="datetime-control">
+                        <div>
+                          <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                        </div>
+
+                        <div>
+                          <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                        </div>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="end_date_is_undefined"> undefined
+                        </label>
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <div class="datetime-control">
-                          <div>
-                            <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+
+                  <!--
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <div class="datetime-control">
+                            <div>
+                              <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div>
+                              <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                            </div>
                           </div>
-                          <div>
-                            <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
-                          </div>
-                        </div>
-                        <span class="input-group-addon">to</span>
-                        <div class="datetime-control">
-                          <div>
-                            <input type="text" class="form-control" placeholder="mm/dd/yyyy">
-                          </div>
-                          <div>
-                            <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                          <span class="input-group-addon">to</span>
+                          <div class="datetime-control">
+                            <div>
+                              <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div>
+                              <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                -->
+                  -->
 
-                <div class="form-group">
-                  <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
+                  <div class="form-group">
+                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
 
-                  <div class="row">
-                    <div class="btn-group col-md-2">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                      <ul class="dropdown-menu">
-                        <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                        <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                      </ul>
+                    <!--
+                    {{#collection value class="existing-values"}}
+                      <span>
+                        {{value}} {{unit}}
+                        {{title}}
+                        {{#button "removeValue" class="btn btn-link delete"}}&times;{{/button}}
+                      </span>
+                    {{/collection}}
+                    -->
+                    <div class="existing-values">
+                      <span>
+                        4 mg
+                        <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
+                      </span>
                     </div>
 
-                    <div class="col-md-6">
-                      <input type="text" name="value" class="form-control" placeholder="input">
-                    </div>
+                    <!-- {{view editValueView}} -->
 
-                    <div class="col-md-3">
-                      <input type="text" name="units" class="form-control" placeholder="units">
-                    </div>
+                    <div class="row">
+                      <div class="btn-group col-md-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div>
 
-                    <div class="col-md-1">
-                      <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      <div class="col-md-6">
+                        <input type="text" name="value" class="form-control" placeholder="input">
+                      </div>
+
+                      <div class="col-md-3">
+                        <input type="text" name="unit" class="form-control" placeholder="units">
+                      </div>
+
+                      <div class="col-md-1">
+                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
-                  <p>
-                    <select name="key" class="form-control">
+                  <div class="form-group">
+                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
+
+                    <!--
+                    {{#collection field_values class="existing-values" item-context=valueWithDateContext}}
+                      <span>
+                        {{key}}:
+                        {{#if start_date}}
+                          {{start_date}} {{start_time}}
+                        {{else}}
+                          {{value}} {{unit}}
+                          {{title}}
+                        {{/if}}
+                        {{#button "removeValue" class="btn btn-link delete"}}&times;{{/button}}
+                      </span>
+                    {{/collection}}
+                    -->
+                    <div class="existing-values">
+                      <span>
+                        ADMISSION_DATETIME: 01/14/2014 1:15 AM
+                        <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
+                      </span>
+                    </div>
+
+                    <!-- {{view editFieldValueView}} -->
+
+                    <p>
+                      <select name="key" class="form-control">
+                        <option value="">--</option>
+                        <option value="SEVERITY">Severity</option>
+                        <option value="ORDINAL">Ordinal</option>
+                        <option value="REASON">Reason</option>
+                        <option value="SOURCE">Source</option>
+                        <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
+                        <option value="FACILITY_LOCATION">Facility Location</option>
+                        <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
+                        <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
+                        <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
+                        <option value="DISCHARGE_STATUS">Discharge Status</option>
+                        <option value="ADMISSION_DATETIME">Admission Date/Time</option>
+                        <option value="LENGTH_OF_STAY">Length of Stay</option>
+                        <option value="DOSE">Dose</option>
+                        <option value="ROUTE">Route</option>
+                        <option value="START_DATETIME">Start Date/Time</option>
+                        <option value="FREQUENCY">Frequency</option>
+                        <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
+                        <option value="STOP_DATETIME">Stop Date/Time</option>
+                        <option value="INCISION_DATETIME">Incision Date/Time</option>
+                        <option value="REMOVAL_DATETIME">Removal Date/Time</option>
+                        <option value="TRANSFER_TO">Transfer To</option>
+                        <option value="TRANSFER_FROM">Transfer From</option>
+                      </select>
+                    </p>
+
+                    <div class="row">
+                      <div class="btn-group col-md-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-6">
+                        <input type="text" name="value" class="form-control" placeholder="input">
+                      </div>
+
+                      <div class="col-md-3">
+                        <input type="text" name="units" class="form-control" placeholder="units">
+                      </div>
+
+                      <div class="col-md-1">
+                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="btn-group col-md-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-9">
+                        <select name="code_list_id" class="form-control">
+                          <option value="">--</option>
+                          <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
+                          <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
+                          <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
+                          <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
+                          <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
+                          <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
+                          <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
+                          <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
+                          <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
+                          <option value="2.16.840.1.114222.4.11.3591">Payer</option>
+                          <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
+                          <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
+                          <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
+                          <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
+                          <option value="2.16.840.1.114222.4.11.836">Race</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-1">
+                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="btn-group col-md-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-5">
+                        <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-autoclose="true" data-provide="datepicker">
+                      </div>
+
+                      <div class="col-md-4">
+                        <input type="text" name="start_time" class="form-control timepicker" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                      </div>
+
+                      <div class="col-md-1">
+                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
+                        NOT PERFORMED
+                      </label>
+                    </div>
+                    <select name="negation_code_list_id" class="form-control negation-code-list">
                       <option value="">--</option>
-                      <option value="SEVERITY">Severity</option>
-                      <option value="ORDINAL">Ordinal</option>
-                      <option value="REASON">Reason</option>
-                      <option value="SOURCE">Source</option>
-                      <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
-                      <option value="FACILITY_LOCATION">Facility Location</option>
-                      <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
-                      <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
-                      <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
-                      <option value="DISCHARGE_STATUS">Discharge Status</option>
-                      <option value="ADMISSION_DATETIME">Admission Date/Time</option>
-                      <option value="LENGTH_OF_STAY">Length of Stay</option>
-                      <option value="DOSE">Dose</option>
-                      <option value="ROUTE">Route</option>
-                      <option value="START_DATETIME">Start Date/Time</option>
-                      <option value="FREQUENCY">Frequency</option>
-                      <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
-                      <option value="STOP_DATETIME">Stop Date/Time</option>
-                      <option value="INCISION_DATETIME">Incision Date/Time</option>
-                      <option value="REMOVAL_DATETIME">Removal Date/Time</option>
-                      <option value="TRANSFER_TO">Transfer To</option>
-                      <option value="TRANSFER_FROM">Transfer From</option>
+                      <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
+                      <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
+                      <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
+                      <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
+                      <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
+                      <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
+                      <option value="2.16.840.1.114222.4.11.3591">Payer</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
+                      <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
+                      <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
+                      <option value="2.16.840.1.114222.4.11.836">Race</option>
                     </select>
-                  </p>
+                  </div>
 
-                  <div class="row">
-                    <div class="btn-group col-md-2">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                      <ul class="dropdown-menu">
-                        <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                        <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="col-md-6">
-                      <input type="text" name="value" class="form-control" placeholder="input">
-                    </div>
-
-                    <div class="col-md-3">
-                      <input type="text" name="units" class="form-control" placeholder="units">
-                    </div>
-
-                    <div class="col-md-1">
-                      <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                  <div class="clearfix">
+                    <div class="pull-right">
+                      <button class="btn btn-danger" data-call-method="removeCriteria">Delete</button>
+                      <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
+                      <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
                     </div>
                   </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label class="checkbox-label">
-                      <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
-                      <span>NOT PERFORMED</span>
-                    </label>
-                  </div>
-                  <select name="negation_code_list_id" class="form-control negation-code-list hide">
-                    <option value="">--</option>
-                    <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
-                    <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
-                    <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
-                    <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
-                    <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
-                    <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
-                    <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
-                    <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
-                    <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
-                    <option value="2.16.840.1.114222.4.11.3591">Payer</option>
-                    <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
-                    <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
-                    <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
-                    <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
-                    <option value="2.16.840.1.114222.4.11.836">Race</option>
-                  </select>
-                </div>
-
-                <div class="clearfix">
-                  <div class="pull-right">
-                    <button class="btn btn-danger" data-call-method="deletePatient">Delete</button>
-                    <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
-                    <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -553,20 +690,204 @@
             </div>
             <div class="criteria-body">
               <div class="criteria-data">
+                <div class="criteria-details">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Encounter, Performed</label>
+                      <div>Psych Visit - Psychotherapy</div>
+                    </div>
 
-                <div class="row">
-                  <div class="col-md-6">
-                    <label>Encounter, Performed</label>
-                    <div>Psych Visit - Psychotherapy</div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
-                    <label>Date</label>
-                    <div>10/01/2012 &ndash; 10/01/2012</div>
+                    <div class="col-md-6">
+                      <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
+                      <label>Date</label>
+                      <div>10/01/2012 &ndash; 10/01/2012</div>
+                    </div>
                   </div>
                 </div>
+                <form class="hide" role="form">
+                  <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
 
+                  <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
+
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+
+                      <div class="datetime-control">
+                        <div>
+                          <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                        </div>
+
+                        <div>
+                          <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                      <div class="datetime-control">
+                        <div>
+                          <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                        </div>
+
+                        <div>
+                          <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <div class="datetime-control">
+                            <div>
+                              <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div>
+                              <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                            </div>
+                          </div>
+                          <span class="input-group-addon">to</span>
+                          <div class="datetime-control">
+                            <div>
+                              <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div>
+                              <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  -->
+
+                  <div class="form-group">
+                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
+
+                    <div class="row">
+                      <div class="btn-group col-md-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-6">
+                        <input type="text" name="value" class="form-control" placeholder="input">
+                      </div>
+
+                      <div class="col-md-3">
+                        <input type="text" name="units" class="form-control" placeholder="units">
+                      </div>
+
+                      <div class="col-md-1">
+                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
+                    <p>
+                      <select name="key" class="form-control">
+                        <option value="">--</option>
+                        <option value="SEVERITY">Severity</option>
+                        <option value="ORDINAL">Ordinal</option>
+                        <option value="REASON">Reason</option>
+                        <option value="SOURCE">Source</option>
+                        <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
+                        <option value="FACILITY_LOCATION">Facility Location</option>
+                        <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
+                        <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
+                        <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
+                        <option value="DISCHARGE_STATUS">Discharge Status</option>
+                        <option value="ADMISSION_DATETIME">Admission Date/Time</option>
+                        <option value="LENGTH_OF_STAY">Length of Stay</option>
+                        <option value="DOSE">Dose</option>
+                        <option value="ROUTE">Route</option>
+                        <option value="START_DATETIME">Start Date/Time</option>
+                        <option value="FREQUENCY">Frequency</option>
+                        <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
+                        <option value="STOP_DATETIME">Stop Date/Time</option>
+                        <option value="INCISION_DATETIME">Incision Date/Time</option>
+                        <option value="REMOVAL_DATETIME">Removal Date/Time</option>
+                        <option value="TRANSFER_TO">Transfer To</option>
+                        <option value="TRANSFER_FROM">Transfer From</option>
+                      </select>
+                    </p>
+
+                    <div class="row">
+                      <div class="btn-group col-md-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col-md-6">
+                        <input type="text" name="value" class="form-control" placeholder="input">
+                      </div>
+
+                      <div class="col-md-3">
+                        <input type="text" name="units" class="form-control" placeholder="units">
+                      </div>
+
+                      <div class="col-md-1">
+                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
+                        <span>NOT PERFORMED</span>
+                      </label>
+                    </div>
+                    <select name="negation_code_list_id" class="form-control negation-code-list hide">
+                      <option value="">--</option>
+                      <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
+                      <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
+                      <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
+                      <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
+                      <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
+                      <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
+                      <option value="2.16.840.1.114222.4.11.3591">Payer</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
+                      <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
+                      <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
+                      <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
+                      <option value="2.16.840.1.114222.4.11.836">Race</option>
+                    </select>
+                  </div>
+
+                  <div class="clearfix">
+                    <div class="pull-right">
+                      <button class="btn btn-danger" data-call-method="removeCriteria">Delete</button>
+                      <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
+                      <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -574,6 +895,7 @@
 
         <div class="col-right">
           <h1 class="heading-muted"><i class="fa fa-tasks"></i> Measure</h1>
+          <!-- {{view populationLogicView}} -->
           <div data-view-cid="view3606" data-model-cid="c2834">
             <div class="short-title">
               MEASURE: <span class="population-title">LDL-C &lt;100 mg/dL</span>
@@ -641,230 +963,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <div data-view-cid="view3612">
-                    <div class="DENOM_children">
-                      <div>
-                        <span class="DENOM rationale_target"><b>Denominator:</b></span>
-                      </div>
-
-                      <div>
-                        <div data-view-cid="view3645">
-                          <ul id="precondition_83">
-                            <li>
-                              <span class="precondition_91 rationale_target">AND :</span>
-
-                              <div data-view-cid="view3648">
-                                <ul id="precondition_73">
-                                  <li><span class="precondition_83 rationale_target">OR
-                                  :</span> <span data-view-cid="view3651"><span class=
-                                  "LaboratoryTestPerformedLdlCode_precondition_73 rationale_target">
-                                  Laboratory Test, Performed: LDL Code <span data-view-cid=
-                                  "view3653">during "Measurement
-                                  Period"</span></span></span></li>
-                                </ul>
-                              </div>
-
-                              <div data-view-cid="view3649">
-                                <ul id="precondition_81">
-                                  <li>
-                                    <span class="precondition_83 rationale_target">OR
-                                    :</span>
-
-                                    <div data-view-cid="view3656">
-                                      <ul id="precondition_75">
-                                        <li><span class=
-                                        "precondition_81 rationale_target">AND :</span>
-                                        <span data-view-cid="view3660"><span class=
-                                        "LaboratoryTestPerformedTotalCholesterol_precondition_75 rationale_target">
-                                        Laboratory Test, Performed: Total Cholesterol
-                                        <span data-view-cid="view3662">during "Measurement
-                                        Period"</span></span></span></li>
-                                      </ul>
-                                    </div>
-
-                                    <div data-view-cid="view3657">
-                                      <ul id="precondition_77">
-                                        <li><span class=
-                                        "precondition_81 rationale_target">AND :</span>
-                                        <span data-view-cid="view3665"><span class=
-                                        "LaboratoryTestPerformedHighDensityLipoproteinHdl_precondition_77 rationale_target">
-                                        Laboratory Test, Performed: High Density
-                                        Lipoprotein (HDL) <span data-view-cid=
-                                        "view3667">during "Measurement
-                                        Period"</span></span></span></li>
-                                      </ul>
-                                    </div>
-
-                                    <div data-view-cid="view3658">
-                                      <ul id="precondition_79">
-                                        <li><span class=
-                                        "precondition_81 rationale_target">AND :</span>
-                                        <span data-view-cid="view3670"><span class=
-                                        "LaboratoryTestPerformedTriglycerides_precondition_79 rationale_target">
-                                        Laboratory Test, Performed: Triglycerides
-                                        <span data-view-cid="view3672">during "Measurement
-                                        Period"</span></span></span></li>
-                                      </ul>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div data-view-cid="view3646">
-                          <ul id="precondition_89">
-                            <li>
-                              <span class="precondition_91 rationale_target">AND :</span>
-
-                              <div data-view-cid="view3675">
-                                <ul id="precondition_85">
-                                  <li><span class="precondition_89 rationale_target">OR
-                                  :</span> <span data-view-cid="view3678"><span class=
-                                  "DiagnosisActiveChdOrChdRiskEquivalent_precondition_85 rationale_target">
-                                  Diagnosis, Active: CHD or CHD Risk Equivalent
-                                  <span data-view-cid="view3680">starts before or during
-                                  "Measurement Period"</span></span></span></li>
-                                </ul>
-                              </div>
-
-                              <div data-view-cid="view3676">
-                                <ul id="precondition_87">
-                                  <li><span class="precondition_89 rationale_target">OR
-                                  :</span> <span data-view-cid="view3683"><span class=
-                                  "OccurrenceAFraminghamCoronaryHeartDisease10YearRisk1_precondition_87 rationale_target">
-                                  Occurrence A: Risk Category Assessment: Framingham
-                                  coronary heart disease 10 year risk (result
-                                  <span data-view-cid="view3685"><span data-view-cid=
-                                  "view3688">&gt; 20 %</span></span> ) <span data-view-cid=
-                                  "view3686">during "Measurement
-                                  Period"</span></span></span></li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div data-view-cid="view3613">
-                    <div class="NUMER_children">
-                      <div>
-                        <span class="NUMER rationale_target"><b>Numerator:</b></span>
-                      </div>
-
-                      <div>
-                        <div data-view-cid="view3692">
-                          <ul id="precondition_46">
-                            <li>
-                              <span class="precondition_48 rationale_target">AND :</span>
-
-                              <div data-view-cid="view3694">
-                                <ul id="precondition_42">
-                                  <li><span class="precondition_46 rationale_target">OR
-                                  :</span> <span data-view-cid="view3697"><span class=
-                                  "OccurrenceALdlCode2_precondition_42 rationale_target">Occurrence
-                                  A: Laboratory Test: LDL Code (result <span data-view-cid=
-                                  "view3699"><span data-view-cid="view3702">&lt; 100
-                                  mg/dL</span></span> ) <span data-view-cid=
-                                  "view3700">during "Measurement
-                                  Period"</span></span></span></li>
-                                </ul>
-                              </div>
-
-                              <div data-view-cid="view3695">
-                                <ul id="precondition_44">
-                                  <li><span class="precondition_46 rationale_target">OR
-                                  :</span> <span data-view-cid="view3706"><span class=
-                                  "LaboratoryTestResultTriglycerides_precondition_44 rationale_target">
-                                  Laboratory Test, Result: Triglycerides (result
-                                  <span data-view-cid="view3708"><span data-view-cid=
-                                  "view3711">&lt;= 400 mg/dL</span></span> )
-                                  <span data-view-cid="view3709">during "Measurement
-                                  Period"</span></span></span></li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div data-view-cid="view3614">
-                    <div class="DENEX_children">
-                      <div>
-                        <span class="DENEX rationale_target"><b>Denominator Exclusions:</b></span>
-                      </div>
-
-                      <div>
-                        <div data-view-cid="view3715">
-                          <ul id="precondition_15">
-                            <li>
-                              <span class="precondition_17 rationale_target">AND :</span>
-
-                              <div data-view-cid="view3717">
-                                <ul id="precondition_6">
-                                  <li><span class="precondition_15 rationale_target">OR
-                                  :</span> <span data-view-cid="view3720"><span class=
-                                  "ProcedureOrderPalliativeCare_precondition_6 rationale_target">
-                                  Procedure, Order: Palliative Care <span data-view-cid=
-                                  "view3722">during "Measurement
-                                  Period"</span></span></span></li>
-                                </ul>
-                              </div>
-
-                              <div data-view-cid="view3718">
-                                <ul id="precondition_13">
-                                  <li>
-                                    <span class="precondition_15 rationale_target">OR
-                                    :</span>
-
-                                    <div data-view-cid="view3725">
-                                      <ul id="precondition_10">
-                                        <li><span class=
-                                        "precondition_13 rationale_target">AND :</span>
-                                        <span data-view-cid="view3728"><span class=
-                                        "OccurrenceAPregnancy4_precondition_10 rationale_target">
-                                        Occurrence A: Diagnosis, Active: Pregnancy
-                                        <span data-view-cid="view3730">starts before or
-                                        during "Measurement
-                                        Period"</span></span></span></li>
-                                      </ul>
-                                    </div>
-
-                                    <div data-view-cid="view3726">
-                                      <ul id="precondition_12">
-                                        <li>
-                                          <span class=
-                                          "precondition_13 rationale_target">AND :</span>
-
-                                          <div data-view-cid="view3733">
-                                            <ul id="precondition_8">
-                                              <li><span class=
-                                              "precondition_12 rationale_target">OR
-                                              NOT:</span> <span data-view-cid=
-                                              "view3735"><span class=
-                                              "OccurrenceAPregnancy4_precondition_8 rationale_target">
-                                              Occurrence A: Diagnosis, Active: Pregnancy
-                                              <span data-view-cid="view3737">ends before start of "Measurement Period"</span></span></span></li>
-                                            </ul>
-                                          </div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -915,10 +1013,7 @@
   </script>
   <script type="text/javascript">
     //<![CDATA[
-      $('.timepicker').timepicker({
-          showInputs: false,
-          minuteStep: 1
-      });
+      $('.timepicker').timepicker();
     //]]>
   </script>
 </body>
