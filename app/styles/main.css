@@ -10082,7 +10082,7 @@ h2 {
 }
 
 .patient-builder .expected-values .tab-content .form-inline .form-group label {
-  font-weight: normal;
+  font-weight: normcrtal;
 }
 
 .patient-builder .expected-values .tab-content .form-inline .form-group input[type=number] {
@@ -10194,6 +10194,26 @@ h2 {
           transform: rotate(45deg);
 }
 
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:before,
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:after {
+  clear: both;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:before,
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:after {
+  display: table;
+  content: " ";
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data:after {
+  clear: both;
+}
+
 .patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .control-label {
   color: #0075c4;
 }
@@ -10254,6 +10274,29 @@ h2 {
     float: left;
     width: 75%;
   }
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .criteria-tag {
+  float: right !important;
+  float: right;
+  padding: 6px 12px;
+  margin-top: 10px;
+  margin-right: -15px;
+  font-size: .8em;
+  color: #888888;
+  background-color: #f2f2f2;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .criteria-tag .criteria-tag-cms {
+  font-weight: 200;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .criteria-tag .criteria-tag-num {
+  font-weight: bold;
+}
+
+.patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .criteria-tag .criteria-tag-version {
+  font-weight: 200;
 }
 
 .patient-builder .criteria-container .patient-criteria .criteria-body .criteria-data .datetime-control {
