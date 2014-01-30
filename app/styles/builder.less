@@ -166,6 +166,18 @@
           .control-label {
             color: @brand-primary;
           }
+          .toggle-control {
+            .make-row(0);
+            .select-toggle {
+              .make-md-column(3; 0);
+              &> *, & .selectboxit-container .selectboxit {
+                width: 100%;
+              }
+            }
+            .toggle-target {
+              .make-md-column(9; 0);
+            }
+          }
           .datetime-control {
             .make-row(0);
             &> * {
@@ -175,7 +187,7 @@
               border-left: 0;
             }
           }
-          .existing-values {
+          .existing-values, .existing-codes {
             margin-bottom: 10px;
 
             &> span {
