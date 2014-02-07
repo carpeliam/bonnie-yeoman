@@ -9991,6 +9991,32 @@ h2 {
   color: #843534;
 }
 
+.patient-builder .ribbon {
+  float: right !important;
+  float: right;
+}
+
+.patient-builder .ribbon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.patient-builder .ribbon svg .expectation-success {
+  fill: #dff0d8;
+}
+
+.patient-builder .ribbon svg .expectation-fail {
+  fill: #f2dede;
+}
+
+.patient-builder .ribbon svg .expectation-exceeded {
+  fill: #fcf8e3;
+}
+
+.patient-builder .ribbon svg .expectation-none {
+  fill: #f2f2f2;
+}
+
 .patient-builder label {
   text-transform: uppercase;
 }

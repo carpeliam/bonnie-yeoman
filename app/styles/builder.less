@@ -1,4 +1,24 @@
 .patient-builder {
+  .ribbon {
+    .pull-right;
+    svg {
+      height: 50px;
+      width: 50px;
+      .expectation-success {
+        fill: @state-success-bg;
+      }
+      .expectation-fail {
+        fill: @state-danger-bg;
+      }
+      .expectation-exceeded {
+        fill: @state-warning-bg;
+      }
+      .expectation-none {
+        fill: @gray-lighter;
+      }
+    }
+  }
+
   @time-bar-width: 8px;
   .time-bar(@color: @gray-lighter) {
     border-left: @time-bar-width solid @color;
