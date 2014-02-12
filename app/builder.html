@@ -1061,11 +1061,20 @@
           {"name":"NUMER","expected":0,"actual":0,"match":true},
           {"name":"DENEXCEP","expected":0,"actual":0,"match":true},
           {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"MSRPOPL","expected":1,"actual":1,"match":true},
+          {"name":"OBSERV","expected":100,"actual":100,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"MSRPOPL","expected":1,"actual":1,"match":true}
         ]
       ];
       $.each(data, function(i, d) {
-        var $span = $('<span>').css('margin-left', '3px').appendTo('.ribbon');
-        d3.select($span.get(0)).datum(d).call(bonnie.viz.MeasureRibbon());
+        var $a = $('<a href>').css('margin-left', '3px').appendTo('.ribbon');
+        d3.select($a.get(0)).datum(d).call(bonnie.viz.MeasureRibbon());
       });
     //]]>
   </script>
