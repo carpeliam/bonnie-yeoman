@@ -10085,8 +10085,16 @@ h2 {
 }
 
 .patient-builder .timeline-icon {
-  margin-left: -12px;
+  margin-left: -32px;
   color: #0075c4;
+}
+
+.patient-builder .validation-alerts {
+  margin-left: 38px;
+}
+
+.patient-builder .validation-alerts .alert {
+  margin-bottom: 0;
 }
 
 .patient-builder .expected-values .nav-tabs .active a,
