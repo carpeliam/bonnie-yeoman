@@ -29,9 +29,16 @@
     <div class="patient-builder">
       <div class="row">
         <div class="col-md-10 col-md-offset-2" style="overflow: auto; white-space: nowrap">
+          <div class="ribbon pull-right">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-10 col-md-offset-2" style="overflow: auto; white-space: nowrap">
           <div class="ribbon pull-right"></div>
         </div>
       </div>
+       -->
 
       <div class="row">
         <div class="col-md-2">
@@ -1077,10 +1084,119 @@
         [
           {"name":"IPP","expected":1,"actual":1,"match":true},
           {"name":"MSRPOPL","expected":1,"actual":1,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"DENOM","expected":0,"actual":0,"match":true},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"DENOM","expected":1,"actual":1,"match":true},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":0,"match":false},
+          {"name":"DENOM","expected":0,"actual":0,"match":true},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"DENOM","expected":1,"actual":0,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":0,"actual":1,"match":false},
+          {"name":"DENOM","expected":0,"actual":1,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":1,"match":false}
+        ],
+        [
+          {"name":"IPP","expected":0,"actual":1,"match":false},
+          {"name":"DENOM","expected":0,"actual":1,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":0,"match":false},
+          {"name":"DENOM","expected":1,"actual":0,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEXCEP","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"MSRPOPL","expected":1,"actual":1,"match":true},
+          {"name":"OBSERV","expected":100,"actual":100,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"MSRPOPL","expected":1,"actual":1,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"DENOM","expected":0,"actual":0,"match":true},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"DENOM","expected":1,"actual":1,"match":true},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":0,"match":false},
+          {"name":"DENOM","expected":0,"actual":0,"match":true},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"DENOM","expected":1,"actual":0,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":0,"actual":1,"match":false},
+          {"name":"DENOM","expected":0,"actual":1,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":1,"match":false}
+        ],
+        [
+          {"name":"IPP","expected":0,"actual":1,"match":false},
+          {"name":"DENOM","expected":0,"actual":1,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":0,"match":false},
+          {"name":"DENOM","expected":1,"actual":0,"match":false},
+          {"name":"NUMER","expected":0,"actual":0,"match":true},
+          {"name":"DENEXCEP","expected":0,"actual":0,"match":true},
+          {"name":"DENEX","expected":0,"actual":0,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"MSRPOPL","expected":1,"actual":1,"match":true},
+          {"name":"OBSERV","expected":100,"actual":100,"match":true}
+        ],
+        [
+          {"name":"IPP","expected":1,"actual":1,"match":true},
+          {"name":"MSRPOPL","expected":1,"actual":1,"match":true}
         ]
+
       ];
+      var ids = ['0075a', '0075b', '1401a', '0403a', 'CholesterolScreeningRiskc', 'BPScreena', 'HypertensionImprovementa', 'FSACHFa', '0419a', '0418a'];
       $.each(data, function(i, d) {
-        var $a = $('<a href>').css('margin-left', '3px').appendTo('.ribbon');
+        var id = ids[i % ids.length];
+        var $cell = $('<span>').addClass('ribbon-cell').appendTo('.ribbon')
+                      .append($('<div>').addClass('title').append($('<a href>').text(id))),
+            $a = $('<a href>').appendTo($cell);
         d3.select($a.get(0)).datum(d).call(bonnie.viz.MeasureRibbon());
       });
     //]]>

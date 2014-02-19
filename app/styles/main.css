@@ -9996,9 +9996,21 @@ h2 {
   float: right;
 }
 
-.patient-builder .ribbon svg {
-  width: 50px;
+.patient-builder .ribbon .ribbon-cell {
+  display: inline-block;
+  width: 25px;
   height: 50px;
+  margin-top: 50px;
+  margin-left: 3px;
+}
+
+.patient-builder .ribbon .ribbon-cell div.title {
+  -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  -webkit-transform-origin: top left;
+     -moz-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .patient-builder .ribbon svg .expectation-success {
