@@ -28,9 +28,8 @@
     <!-- START -->
     <div class="patient-builder">
       <div class="row">
-        <div class="col-md-10 col-md-offset-2" style="overflow: auto; white-space: nowrap">
-          <div class="ribbon pull-right">
-          </div>
+        <div class="col-md-10 col-md-offset-2">
+          <div class="measure-ribbon"></div>
         </div>
       </div>
       <!-- <div class="row">
@@ -1191,10 +1190,10 @@
         ]
 
       ];
-      var ids = ['0075a', '0075b', '1401a', '0403a', 'CholesterolScreeningRiskc', 'BPScreena', 'HypertensionImprovementa', 'FSACHFa', '0419a', '0418a'];
+      var ids = ['CMS171v3a', 'CMS171v3b', 'CMS171v3c', 'CMS171v3d', 'CMS171v3e', 'CMS171v3f', 'CMS171v3g', 'CMS171v3h', 'CMS72v2a', 'CMS104v2a', 'CMS32v3a', 'CMS32v3b', 'CMS32v3e', 'CMS105v2a', 'CMS91v3a', 'CMS107v2a', 'CMS102v2a', 'CMS111v2a', 'CMS111v2b', 'CMS111v2c', 'CMS172v3a', 'CMS172v3b', 'CMS172v3c', 'CMS172v3d', 'CMS172v3e', 'CMS172v3f', 'CMS172v3g', 'CMS172v3h', 'CMS190v2a', 'CMS55v2a', 'CMS55v2b', 'CMS55v2c', 'CMS108v2a', 'CMS71v3a', 'CMS178v3a'];
       $.each(data, function(i, d) {
         var id = ids[i % ids.length];
-        var $cell = $('<span>').addClass('ribbon-cell').appendTo('.ribbon')
+        var $cell = $('<span>').addClass('ribbon-cell').appendTo('.measure-ribbon')
                       .append($('<div>').addClass('title').append($('<a href>').text(id))),
             $a = $('<a href>').appendTo($cell);
         d3.select($a.get(0)).datum(d).call(bonnie.viz.MeasureRibbon());

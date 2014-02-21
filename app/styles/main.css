@@ -9991,41 +9991,48 @@ h2 {
   color: #843534;
 }
 
-.patient-builder .ribbon {
+.patient-builder .measure-ribbon {
   float: right !important;
   float: right;
+  max-width: 100%;
+  overflow: auto;
+  white-space: nowrap;
 }
 
-.patient-builder .ribbon .ribbon-cell {
+.patient-builder .measure-ribbon .ribbon-cell {
   display: inline-block;
   width: 25px;
   height: 50px;
-  margin-top: 50px;
+  margin-top: 35px;
   margin-left: 3px;
 }
 
-.patient-builder .ribbon .ribbon-cell div.title {
-  -webkit-transform: rotate(-25deg);
-      -ms-transform: rotate(-25deg);
-          transform: rotate(-25deg);
+.patient-builder .measure-ribbon .ribbon-cell .title {
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
   -webkit-transform-origin: top left;
      -moz-transform-origin: top left;
           transform-origin: top left;
 }
 
-.patient-builder .ribbon svg .expectation-success {
+.patient-builder .measure-ribbon .ribbon-cell a {
+  cursor: pointer;
+}
+
+.patient-builder .measure-ribbon .ribbon-cell svg .expectation-success {
   fill: #dff0d8;
 }
 
-.patient-builder .ribbon svg .expectation-fail {
+.patient-builder .measure-ribbon .ribbon-cell svg .expectation-fail {
   fill: #f2dede;
 }
 
-.patient-builder .ribbon svg .expectation-absent {
+.patient-builder .measure-ribbon .ribbon-cell svg .expectation-absent {
   fill: #fcf8e3;
 }
 
-.patient-builder .ribbon svg .expectation-none {
+.patient-builder .measure-ribbon .ribbon-cell svg .expectation-none {
   fill: #f2f2f2;
 }
 
