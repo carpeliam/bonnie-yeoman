@@ -396,514 +396,516 @@
         <div class="col-center criteria-container">
           <h1 class="heading-primary">Patient History Relative To Measures</h1>
           <!-- {{view editCriteriaCollectionView}} -->
-          <div class="patient-criteria">
-            <div class="criteria-type-marker open">
-              <i class="fa fa-fw fa-lg fa-flask"></i>
-            </div>
-            <div class="criteria-body">
-              <div class="criteria-data">
-                <div class="criteria-details hide">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>Encounter, Performed</label>
-                      <div>Psych Visit - Psychotherapy</div>
-                    </div>
-                    <div class="col-md-6">
-                      <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
-                      <label>Date</label>
-                      <div>10/01/2012 &ndash; 10/01/2012</div>
-                    </div>
-                  </div>
-                </div>
-                <form role="form">
-                  <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
-
-                  <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
-
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
-
-                      <div class="datetime-control">
-                        <div>
-                          <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
-                        </div>
-
-                        <div>
-                          <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                        </div>
+          <div>
+            <div class="patient-criteria">
+              <div class="criteria-type-marker open">
+                <i class="fa fa-fw fa-lg fa-flask"></i>
+              </div>
+              <div class="criteria-body">
+                <div class="criteria-data">
+                  <div class="criteria-details hide">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Encounter, Performed</label>
+                        <div>Psych Visit - Psychotherapy</div>
                       </div>
-                    </div>
-
-                    <div class="form-group col-md-6">
-                      <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
-                      <div class="datetime-control">
-                        <div>
-                          <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
-                        </div>
-
-                        <div>
-                          <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                        </div>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" name="end_date_is_undefined"> undefined
-                        </label>
+                      <div class="col-md-6">
+                        <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
+                        <label>Date</label>
+                        <div>10/01/2012 &ndash; 10/01/2012</div>
                       </div>
                     </div>
                   </div>
+                  <form role="form">
+                    <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
 
-                  <div class="form-group">
-                    <div class="clearfix">
-                      <div class="pull-right">
-                        <button class="btn btn-default pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
-                      </div>
-                      <label class="control-label"><i class="fa fa-code"></i> Codes</label>
-                    </div>
-                    <div class="existing-codes">
-                      <span>
-                        ICD-9: 1234ABC
-                        <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
-                      </span>
-                    </div>
-                    <div class="toggle-control">
-                      <div class="select-toggle">
-                        <select>
-                          <option>Code Set</option>
-                          <option>ICD-9</option>
-                          <option>ICD-10</option>
-                          <option>SNOMED</option>
-                        </select>
-                      </div>
-                      <div class="toggle-target">
-                        <select class="form-control"></select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
-
-                    <!--
-                    {{#collection value class="existing-values"}}
-                      <span>
-                        {{value}} {{unit}}
-                        {{title}}
-                        {{#button "removeValue" class="btn btn-link delete"}}&times;{{/button}}
-                      </span>
-                    {{/collection}}
-                    -->
-                    <div class="existing-values">
-                      <span>
-                        4 mg
-                        <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
-                      </span>
-                    </div>
-
-                    <!-- {{view editValueView}} -->
+                    <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
 
                     <div class="row">
-                      <div class="btn-group col-md-2">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
+                      <div class="form-group col-md-6">
+                        <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+
+                        <div class="datetime-control">
+                          <div>
+                            <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                          </div>
+
+                          <div>
+                            <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                          </div>
+                        </div>
                       </div>
 
-                      <div class="col-md-6">
-                        <input type="text" name="value" class="form-control" placeholder="input">
-                      </div>
+                      <div class="form-group col-md-6">
+                        <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                        <div class="datetime-control">
+                          <div>
+                            <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                          </div>
 
-                      <div class="col-md-3">
-                        <input type="text" name="unit" class="form-control" placeholder="units">
-                      </div>
-
-                      <div class="col-md-1">
-                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                          <div>
+                            <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                          </div>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="end_date_is_undefined"> undefined
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="form-group">
-                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
+                    <div class="form-group">
+                      <div class="clearfix">
+                        <div class="pull-right">
+                          <button class="btn btn-default pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
+                        <label class="control-label"><i class="fa fa-code"></i> Codes</label>
+                      </div>
+                      <div class="existing-codes">
+                        <span>
+                          ICD-9: 1234ABC
+                          <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
+                        </span>
+                      </div>
+                      <div class="toggle-control">
+                        <div class="select-toggle">
+                          <select>
+                            <option>Code Set</option>
+                            <option>ICD-9</option>
+                            <option>ICD-10</option>
+                            <option>SNOMED</option>
+                          </select>
+                        </div>
+                        <div class="toggle-target">
+                          <select class="form-control"></select>
+                        </div>
+                      </div>
+                    </div>
 
-                    <!--
-                    {{#collection field_values class="existing-values" item-context=valueWithDateContext}}
-                      <span>
-                        {{key}}:
-                        {{#if start_date}}
-                          {{start_date}} {{start_time}}
-                        {{else}}
+                    <div class="form-group">
+                      <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
+
+                      <!--
+                      {{#collection value class="existing-values"}}
+                        <span>
                           {{value}} {{unit}}
                           {{title}}
-                        {{/if}}
-                        {{#button "removeValue" class="btn btn-link delete"}}&times;{{/button}}
-                      </span>
-                    {{/collection}}
-                    -->
-                    <div class="existing-values">
-                      <span>
-                        ADMISSION_DATETIME: 01/14/2014 1:15 AM
-                        <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
-                      </span>
-                    </div>
-
-                    <!-- {{view editFieldValueView}} -->
-
-                    <p>
-                      <select name="key" class="form-control">
-                        <option value="">--</option>
-                        <option value="SEVERITY">Severity</option>
-                        <option value="ORDINAL">Ordinal</option>
-                        <option value="REASON">Reason</option>
-                        <option value="SOURCE">Source</option>
-                        <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
-                        <option value="FACILITY_LOCATION">Facility Location</option>
-                        <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
-                        <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
-                        <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
-                        <option value="DISCHARGE_STATUS">Discharge Status</option>
-                        <option value="ADMISSION_DATETIME">Admission Date/Time</option>
-                        <option value="LENGTH_OF_STAY">Length of Stay</option>
-                        <option value="DOSE">Dose</option>
-                        <option value="ROUTE">Route</option>
-                        <option value="START_DATETIME">Start Date/Time</option>
-                        <option value="FREQUENCY">Frequency</option>
-                        <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
-                        <option value="STOP_DATETIME">Stop Date/Time</option>
-                        <option value="INCISION_DATETIME">Incision Date/Time</option>
-                        <option value="REMOVAL_DATETIME">Removal Date/Time</option>
-                        <option value="TRANSFER_TO">Transfer To</option>
-                        <option value="TRANSFER_FROM">Transfer From</option>
-                      </select>
-                    </p>
-
-                    <div class="row">
-                      <div class="btn-group col-md-2">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
+                          {{#button "removeValue" class="btn btn-link delete"}}&times;{{/button}}
+                        </span>
+                      {{/collection}}
+                      -->
+                      <div class="existing-values">
+                        <span>
+                          4 mg
+                          <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
+                        </span>
                       </div>
 
-                      <div class="col-md-6">
-                        <input type="text" name="value" class="form-control" placeholder="input">
-                      </div>
+                      <!-- {{view editValueView}} -->
 
-                      <div class="col-md-3">
-                        <input type="text" name="units" class="form-control" placeholder="units">
-                      </div>
+                      <div class="row">
+                        <div class="btn-group col-md-2">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                            <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                          </ul>
+                        </div>
 
-                      <div class="col-md-1">
-                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        <div class="col-md-6">
+                          <input type="text" name="value" class="form-control" placeholder="input">
+                        </div>
+
+                        <div class="col-md-3">
+                          <input type="text" name="unit" class="form-control" placeholder="units">
+                        </div>
+
+                        <div class="col-md-1">
+                          <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="btn-group col-md-2">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
+
+                    <div class="form-group">
+                      <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
+
+                      <!--
+                      {{#collection field_values class="existing-values" item-context=valueWithDateContext}}
+                        <span>
+                          {{key}}:
+                          {{#if start_date}}
+                            {{start_date}} {{start_time}}
+                          {{else}}
+                            {{value}} {{unit}}
+                            {{title}}
+                          {{/if}}
+                          {{#button "removeValue" class="btn btn-link delete"}}&times;{{/button}}
+                        </span>
+                      {{/collection}}
+                      -->
+                      <div class="existing-values">
+                        <span>
+                          ADMISSION_DATETIME: 01/14/2014 1:15 AM
+                          <button class="btn btn-link delete close" data-call-method="removeValue">&times;</button>
+                        </span>
                       </div>
 
-                      <div class="col-md-9">
-                        <select name="code_list_id" class="form-control">
+                      <!-- {{view editFieldValueView}} -->
+
+                      <p>
+                        <select name="key" class="form-control">
                           <option value="">--</option>
-                          <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
-                          <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
-                          <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
-                          <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
-                          <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
-                          <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
-                          <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
-                          <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
-                          <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
-                          <option value="2.16.840.1.114222.4.11.3591">Payer</option>
-                          <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
-                          <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
-                          <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
-                          <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
-                          <option value="2.16.840.1.114222.4.11.836">Race</option>
+                          <option value="SEVERITY">Severity</option>
+                          <option value="ORDINAL">Ordinal</option>
+                          <option value="REASON">Reason</option>
+                          <option value="SOURCE">Source</option>
+                          <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
+                          <option value="FACILITY_LOCATION">Facility Location</option>
+                          <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
+                          <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
+                          <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
+                          <option value="DISCHARGE_STATUS">Discharge Status</option>
+                          <option value="ADMISSION_DATETIME">Admission Date/Time</option>
+                          <option value="LENGTH_OF_STAY">Length of Stay</option>
+                          <option value="DOSE">Dose</option>
+                          <option value="ROUTE">Route</option>
+                          <option value="START_DATETIME">Start Date/Time</option>
+                          <option value="FREQUENCY">Frequency</option>
+                          <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
+                          <option value="STOP_DATETIME">Stop Date/Time</option>
+                          <option value="INCISION_DATETIME">Incision Date/Time</option>
+                          <option value="REMOVAL_DATETIME">Removal Date/Time</option>
+                          <option value="TRANSFER_TO">Transfer To</option>
+                          <option value="TRANSFER_FROM">Transfer From</option>
                         </select>
-                      </div>
+                      </p>
 
-                      <div class="col-md-1">
-                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                      <div class="row">
+                        <div class="btn-group col-md-2">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                            <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                          </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                          <input type="text" name="value" class="form-control" placeholder="input">
+                        </div>
+
+                        <div class="col-md-3">
+                          <input type="text" name="units" class="form-control" placeholder="units">
+                        </div>
+
+                        <div class="col-md-1">
+                          <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="btn-group col-md-2">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                            <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                          </ul>
+                        </div>
+
+                        <div class="col-md-9">
+                          <select name="code_list_id" class="form-control">
+                            <option value="">--</option>
+                            <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
+                            <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
+                            <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
+                            <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
+                            <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
+                            <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
+                            <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
+                            <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
+                            <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
+                            <option value="2.16.840.1.114222.4.11.3591">Payer</option>
+                            <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
+                            <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
+                            <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
+                            <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
+                            <option value="2.16.840.1.114222.4.11.836">Race</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-1">
+                          <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="btn-group col-md-2">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                            <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                          </ul>
+                        </div>
+
+                        <div class="col-md-5">
+                          <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-autoclose="true" data-provide="datepicker">
+                        </div>
+
+                        <div class="col-md-4">
+                          <input type="text" name="start_time" class="form-control timepicker" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                        </div>
+
+                        <div class="col-md-1">
+                          <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="btn-group col-md-2">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
-                      </div>
 
-                      <div class="col-md-5">
-                        <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-autoclose="true" data-provide="datepicker">
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
+                          NOT PERFORMED
+                        </label>
                       </div>
+                      <select name="negation_code_list_id" class="form-control negation-code-list">
+                        <option value="">--</option>
+                        <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
+                        <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
+                        <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
+                        <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
+                        <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
+                        <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
+                        <option value="2.16.840.1.114222.4.11.3591">Payer</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
+                        <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
+                        <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
+                        <option value="2.16.840.1.114222.4.11.836">Race</option>
+                      </select>
+                    </div>
 
-                      <div class="col-md-4">
-                        <input type="text" name="start_time" class="form-control timepicker" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                      </div>
-
-                      <div class="col-md-1">
-                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                    <div class="clearfix">
+                      <div class="pull-right">
+                        <button class="btn btn-danger" data-call-method="removeCriteria">Delete</button>
+                        <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
+                        <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
                       </div>
                     </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
-                        NOT PERFORMED
-                      </label>
-                    </div>
-                    <select name="negation_code_list_id" class="form-control negation-code-list">
-                      <option value="">--</option>
-                      <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
-                      <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
-                      <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
-                      <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
-                      <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
-                      <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
-                      <option value="2.16.840.1.114222.4.11.3591">Payer</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
-                      <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
-                      <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
-                      <option value="2.16.840.1.114222.4.11.836">Race</option>
-                    </select>
-                  </div>
-
-                  <div class="clearfix">
-                    <div class="pull-right">
-                      <button class="btn btn-danger" data-call-method="removeCriteria">Delete</button>
-                      <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
-                      <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
-                    </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="patient-criteria during-measurement-period">
-            <div class="criteria-type-marker">
-              <i class="fa fa-fw fa-lg fa-flask"></i>
-            </div>
-            <div class="criteria-body">
-              <div class="criteria-data">
-                <div class="criteria-details">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>Encounter, Performed</label>
-                      <div>Psych Visit - Psychotherapy</div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
-                      <label>Date</label>
-                      <div>10/01/2012 &ndash; 10/01/2012</div>
-                    </div>
-                  </div>
-                  <span class="criteria-tag">
-                    <span class="criteria-tag-cms">CMS</span> <span class="criteria-tag-num">167</span> <span class="criteria-tag-version">V2</span>
-                  </span>
-                </div>
-                <form class="hide" role="form">
-                  <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
-
-                  <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
-
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
-
-                      <div class="datetime-control">
-                        <div>
-                          <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
-                        </div>
-
-                        <div>
-                          <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group col-md-6">
-                      <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
-                      <div class="datetime-control">
-                        <div>
-                          <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
-                        </div>
-
-                        <div>
-                          <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!--
-                  <div class="form-group">
+            <div class="patient-criteria during-measurement-period">
+              <div class="criteria-type-marker">
+                <i class="fa fa-fw fa-lg fa-flask"></i>
+              </div>
+              <div class="criteria-body">
+                <div class="criteria-data">
+                  <div class="criteria-details">
                     <div class="row">
                       <div class="col-md-6">
+                        <label>Encounter, Performed</label>
+                        <div>Psych Visit - Psychotherapy</div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-right"></i></button>
+                        <label>Date</label>
+                        <div>10/01/2012 &ndash; 10/01/2012</div>
+                      </div>
+                    </div>
+                    <span class="criteria-tag">
+                      <span class="criteria-tag-cms">CMS</span> <span class="criteria-tag-num">167</span> <span class="criteria-tag-version">V2</span>
+                    </span>
+                  </div>
+                  <form class="hide" role="form">
+                    <button type="button" class="close" aria-hidden="true"><i class="fa fa-lg fa-angle-down"></i></button>
+
+                    <p><strong>Encounter, Performed:</strong> Psych Visit - Psychotherapy</p>
+
+                    <div class="row">
+                      <div class="form-group col-md-6">
                         <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+
+                        <div class="datetime-control">
+                          <div>
+                            <input type="text" name="start_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                          </div>
+
+                          <div>
+                            <input type="text" name="start_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-md-6">
+
+                      <div class="form-group col-md-6">
                         <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                        <div class="datetime-control">
+                          <div>
+                            <input type="text" name="end_date" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" data-date-keyboard-navigation="false" data-date-autoclose="true" data-provide="datepicker">
+                          </div>
+
+                          <div>
+                            <input type="text" name="end_time" class="timepicker form-control" placeholder="--:-- --" data-show-inputs="false" data-default-time="false">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="input-group">
-                          <div class="datetime-control">
-                            <div>
-                              <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+
+                    <!--
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label"><i class="fa fa-clock-o"></i> Start</label>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label"><i class="fa fa-clock-o"></i> Stop</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="input-group">
+                            <div class="datetime-control">
+                              <div>
+                                <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                              </div>
+                              <div>
+                                <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                              </div>
                             </div>
-                            <div>
-                              <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
-                            </div>
-                          </div>
-                          <span class="input-group-addon">to</span>
-                          <div class="datetime-control">
-                            <div>
-                              <input type="text" class="form-control" placeholder="mm/dd/yyyy">
-                            </div>
-                            <div>
-                              <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                            <span class="input-group-addon">to</span>
+                            <div class="datetime-control">
+                              <div>
+                                <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                              </div>
+                              <div>
+                                <input type="text" class="timepicker form-control" placeholder="- -:- - - -">
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  -->
+                    -->
 
-                  <div class="form-group">
-                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
+                    <div class="form-group">
+                      <label class="control-label"><i class="fa fa-bar-chart-o"></i> Value</label>
 
-                    <div class="row">
-                      <div class="btn-group col-md-2">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
-                      </div>
+                      <div class="row">
+                        <div class="btn-group col-md-2">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                            <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                          </ul>
+                        </div>
 
-                      <div class="col-md-6">
-                        <input type="text" name="value" class="form-control" placeholder="input">
-                      </div>
+                        <div class="col-md-6">
+                          <input type="text" name="value" class="form-control" placeholder="input">
+                        </div>
 
-                      <div class="col-md-3">
-                        <input type="text" name="units" class="form-control" placeholder="units">
-                      </div>
+                        <div class="col-md-3">
+                          <input type="text" name="units" class="form-control" placeholder="units">
+                        </div>
 
-                      <div class="col-md-1">
-                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        <div class="col-md-1">
+                          <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="form-group">
-                    <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
-                    <p>
-                      <select name="key" class="form-control">
+                    <div class="form-group">
+                      <label class="control-label"><i class="fa fa-bar-chart-o"></i> Field Value</label>
+                      <p>
+                        <select name="key" class="form-control">
+                          <option value="">--</option>
+                          <option value="SEVERITY">Severity</option>
+                          <option value="ORDINAL">Ordinal</option>
+                          <option value="REASON">Reason</option>
+                          <option value="SOURCE">Source</option>
+                          <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
+                          <option value="FACILITY_LOCATION">Facility Location</option>
+                          <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
+                          <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
+                          <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
+                          <option value="DISCHARGE_STATUS">Discharge Status</option>
+                          <option value="ADMISSION_DATETIME">Admission Date/Time</option>
+                          <option value="LENGTH_OF_STAY">Length of Stay</option>
+                          <option value="DOSE">Dose</option>
+                          <option value="ROUTE">Route</option>
+                          <option value="START_DATETIME">Start Date/Time</option>
+                          <option value="FREQUENCY">Frequency</option>
+                          <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
+                          <option value="STOP_DATETIME">Stop Date/Time</option>
+                          <option value="INCISION_DATETIME">Incision Date/Time</option>
+                          <option value="REMOVAL_DATETIME">Removal Date/Time</option>
+                          <option value="TRANSFER_TO">Transfer To</option>
+                          <option value="TRANSFER_FROM">Transfer From</option>
+                        </select>
+                      </p>
+
+                      <div class="row">
+                        <div class="btn-group col-md-2">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
+                            <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
+                          </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                          <input type="text" name="value" class="form-control" placeholder="input">
+                        </div>
+
+                        <div class="col-md-3">
+                          <input type="text" name="units" class="form-control" placeholder="units">
+                        </div>
+
+                        <div class="col-md-1">
+                          <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label class="checkbox-label">
+                          <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
+                          <span>NOT PERFORMED</span>
+                        </label>
+                      </div>
+                      <select name="negation_code_list_id" class="form-control negation-code-list hide">
                         <option value="">--</option>
-                        <option value="SEVERITY">Severity</option>
-                        <option value="ORDINAL">Ordinal</option>
-                        <option value="REASON">Reason</option>
-                        <option value="SOURCE">Source</option>
-                        <option value="CUMULATIVE_MEDICATION_DURATION">Cumulative Medication Duration</option>
-                        <option value="FACILITY_LOCATION">Facility Location</option>
-                        <option value="FACILITY_LOCATION_ARRIVAL_DATETIME">Facility Location Arrival Date/Time</option>
-                        <option value="FACILITY_LOCATION_DEPARTURE_DATETIME">Facility Location Departure Date/Time</option>
-                        <option value="DISCHARGE_DATETIME">Discharge Date/Time</option>
-                        <option value="DISCHARGE_STATUS">Discharge Status</option>
-                        <option value="ADMISSION_DATETIME">Admission Date/Time</option>
-                        <option value="LENGTH_OF_STAY">Length of Stay</option>
-                        <option value="DOSE">Dose</option>
-                        <option value="ROUTE">Route</option>
-                        <option value="START_DATETIME">Start Date/Time</option>
-                        <option value="FREQUENCY">Frequency</option>
-                        <option value="ANATOMICAL_STRUCTURE">Anatomical Structure</option>
-                        <option value="STOP_DATETIME">Stop Date/Time</option>
-                        <option value="INCISION_DATETIME">Incision Date/Time</option>
-                        <option value="REMOVAL_DATETIME">Removal Date/Time</option>
-                        <option value="TRANSFER_TO">Transfer To</option>
-                        <option value="TRANSFER_FROM">Transfer From</option>
+                        <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
+                        <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
+                        <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
+                        <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
+                        <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
+                        <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
+                        <option value="2.16.840.1.114222.4.11.3591">Payer</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
+                        <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
+                        <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
+                        <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
+                        <option value="2.16.840.1.114222.4.11.836">Race</option>
                       </select>
-                    </p>
+                    </div>
 
-                    <div class="row">
-                      <div class="btn-group col-md-2">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li><a data-call-method="setScalarValue"><i class="fa fa-pencil-square-o"></i> Scalar</a></li>
-                          <li><a data-call-method="setCodedValue"><i class="fa fa-list"></i> Coded</a></li>
-                        </ul>
-                      </div>
-
-                      <div class="col-md-6">
-                        <input type="text" name="value" class="form-control" placeholder="input">
-                      </div>
-
-                      <div class="col-md-3">
-                        <input type="text" name="units" class="form-control" placeholder="units">
-                      </div>
-
-                      <div class="col-md-1">
-                        <button class="btn btn-primary pull-right" data-call-method="addValue"><i class="fa fa-plus"></i></button>
+                    <div class="clearfix">
+                      <div class="pull-right">
+                        <button class="btn btn-danger" data-call-method="removeCriteria">Delete</button>
+                        <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
+                        <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
                       </div>
                     </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="checkbox">
-                      <label class="checkbox-label">
-                        <input type="checkbox" name="negation" class="negation-select checkbox" data-toggle="negation-select">
-                        <span>NOT PERFORMED</span>
-                      </label>
-                    </div>
-                    <select name="negation_code_list_id" class="form-control negation-code-list hide">
-                      <option value="">--</option>
-                      <option value="2.16.840.1.113883.3.526.3.1240">Annual Wellness Visit</option>
-                      <option value="2.16.840.1.113883.3.464.1003.196.12.1213">Antidepressant Medication</option>
-                      <option value="2.16.840.1.113883.3.560.100.4">birth date</option>
-                      <option value="2.16.840.1.114222.4.11.837">Ethnicity</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1048">Face-to-Face Interaction</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1016">Home Healthcare Services</option>
-                      <option value="2.16.840.1.113883.3.464.1003.105.12.1007">Major Depression</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1001">Office Visit</option>
-                      <option value="2.16.840.1.113762.1.4.1">ONC Administrative Sex</option>
-                      <option value="2.16.840.1.114222.4.11.3591">Payer</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1025">Preventive Care Services - Established Office Visit, 18 and Up</option>
-                      <option value="2.16.840.1.113883.3.464.1003.101.12.1023">Preventive Care Services-Initial Office Visit, 18 and Up</option>
-                      <option value="2.16.840.1.113883.3.526.3.1492">Psych Visit - Diagnostic Evaluation</option>
-                      <option value="2.16.840.1.113883.3.526.3.1496">Psych Visit - Psychotherapy</option>
-                      <option value="2.16.840.1.114222.4.11.836">Race</option>
-                    </select>
-                  </div>
-
-                  <div class="clearfix">
-                    <div class="pull-right">
-                      <button class="btn btn-danger" data-call-method="removeCriteria">Delete</button>
-                      <button class="btn btn-danger" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button>
-                      <!-- <button class="btn btn-danger-inverse" data-call-method="showDelete"><i class="fa fa-minus-circle"></i></button> -->
-                    </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

@@ -9917,10 +9917,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.navbar {
-  margin-bottom: 50px;
-}
-
 .navbar .navbar-brand {
   font-size: 36px;
   font-weight: 100;
@@ -9945,6 +9941,29 @@ h2 {
 
 .navbar .nav.nav-tabs > li > a {
   margin-right: 2px;
+}
+
+.navbar .measure-period {
+  position: relative;
+  min-height: 1px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 10px;
+  font-size: 1.2em;
+  color: #888888;
+}
+
+@media (min-width: 992px) {
+  .navbar .measure-period {
+    float: left;
+    width: 25%;
+  }
+}
+
+.navbar .measure-period .year {
+  font-size: 1.5em;
+  font-weight: 100;
 }
 
 .btn {
@@ -9995,6 +10014,7 @@ h2 {
   float: right !important;
   float: right;
   max-width: 100%;
+  margin-bottom: 50px;
   overflow: auto;
   white-space: nowrap;
 }
@@ -10008,15 +10028,16 @@ h2 {
 }
 
 .patient-builder .measure-ribbon .ribbon-cell .title {
-  -webkit-transform: rotate(-30deg);
-      -ms-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   -webkit-transform-origin: top left;
      -moz-transform-origin: top left;
           transform-origin: top left;
 }
 
 .patient-builder .measure-ribbon .ribbon-cell a {
+  font-size: 8px;
   cursor: pointer;
 }
 
@@ -10079,14 +10100,11 @@ h2 {
   }
 }
 
-.patient-builder .col-center > * {
-  border-left: 8px solid #f2f2f2;
-}
-
-.patient-builder .col-center > *.form-data {
+.patient-builder .col-center .form-data {
   padding-left: 15px;
   margin-left: 0;
   border-right: 4px solid #0075c4;
+  border-left: 8px solid #f2f2f2;
 }
 
 .patient-builder .col-right {
@@ -10152,6 +10170,7 @@ h2 {
   padding-left: 30px;
   color: white;
   background-color: #99c8e7;
+  border-left: 8px solid #f2f2f2;
 }
 
 .patient-builder .panel .panel-title {
@@ -10190,6 +10209,10 @@ h2 {
 .patient-builder .criteria-container.droppable {
   min-height: 500px;
   padding-bottom: 100px;
+}
+
+.patient-builder .criteria-container .patient-criteria {
+  border-left: 8px solid #f2f2f2;
 }
 
 .patient-builder .criteria-container .patient-criteria.during-measurement-period {
