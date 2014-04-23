@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://bonnie.healthit.gov/users/sign_in -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Bonnie v1.0.0</title>
+  <link rel="stylesheet" href="bower_components/jquery-selectboxit/src/stylesheets/jquery.selectBoxIt.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body data-pinterest-extension-installed="cr1.3.1">
+  <div class="auth container">
+    <div class="login">
+  <header>
+    <h1>Bonnie</h1>    
+    <h2>A Testing Tool for eCQMs</h2>
+  </header>
+  <form class="new_user" id="new_user" method="post" name="login_form"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="TdtiawZJagBH390xoQEppTtD0bOYXtRU6tMFHOreA+4="></div>
+    <div class="form-group input-group input-group-lg">
+      <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+      <label for="user_email" class="sr-only">Email </label>
+      <input class="form-control" id="user_email" name="user[email]" placeholder="email@example.com" size="30" type="email" value="">
+    </div>
+    <div class="form-group input-group input-group-lg">
+      <label for="user_password" class="sr-only">Password </label>
+      <span class="input-group-addon"><i class="fa fa-lock fa-lg fa-fw"></i></span>
+      <input class="form-control" id="user_password" name="user[password]" placeholder="password" size="30" type="password">
+    </div>
+
+    <!-- <a class="btn btn-primary form-control btn-lg">Login</a> -->
+    <input class="btn btn-login" name="commit" type="submit" value="Login">
+
+    <div class="links">
+    <p>
+      <a href="https://bonnie.healthit.gov/users/password/new">
+        <i class="fa fa-question-circle"></i>
+        forgot password?
+      </a>    
+    </p>
+
+    <p>
+      <a href="https://bonnie.healthit.gov/users/sign_up">
+        <i class="fa fa-plus-circle"></i>
+        register
+      </a>    
+    </p>
+  </div>
+
+  </form>
+</div>
+</div>
+  <script>
+    $('input, textarea').placeholder();
+  </script>
+
+
+</body></html>

@@ -17,18 +17,44 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar" role="navigation">
-          <a class="navbar-brand col-md-6" href="#">BONNIE</a>
-          <ul class="nav navbar-nav">
-            <li><a href="index.html" class="active">Dashboard</a></li>
-            <li><a href="builder.html" class="">Patients</a></li>
-            <li><a href="results.html" class="">Results</a></li>
-          </ul>
+          <div class="navbar row" role="navigation">
+      <a href="#skip">
+      </a>
+      <div class="navbar row" role="navigation">    
+        <ul class="nav navbar-nav pull-right">
+          <li class="active"><a href="http://localhost:9000/#">Dashboard</a></li>
+          <li><a href="http://localhost:9000/users/edit">Account</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Help<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="http://localhost:9000/users/edit">Contact</a></li>
+              <li><a href="http://localhost:9000/users/edit">Issue Tracker</a></li>
+              <li><a href="http://localhost:9000/users/edit">FAQ</a></li>
+
+            </ul>
+          </li>
+          <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
+        </ul>
+        <a class="navbar-brand" href="#">Bonnie</a>
       </div>
+        <div class="measure-period">
+            <label>period:
+            </label>
+            <span class="year">2012</span>
+          </div>
+        <div class="indicator col-md-offset-4">
+          <div class="indicator-circle active"></div>
+          <div class="indicator-bar"></div>
+          <div class="indicator-circle"></div>
+          <div class="indicator-bar"></div>
+          <div class="indicator-circle"></div>
+        </div>
       <div class="dashboard-heading row">
         <div class="measure-col">
           <div class="btn-wrapper pull-right">
-            <button "importMeasure" class="btn btn-primary">Upload</button>
+            <button class="btn btn-primary" data-call-method="importMeasure">Upload</button>
           </div>
           <h1><i class="glyphicon glyphicon-tasks"></i> Measures</h1>
         </div>
@@ -42,74 +68,118 @@
           <h2>Test Patients</h2>
         </div>
       </div>
-
-      {{#collection class="dashboard-data" item-view=measureRowView}}
-
-        <div class="measure row">
-          <div class="measure-col">
-            <div class="btn-wrapper pull-right">
-              <button "updateMeasure" class="btn btn-primary">Update</button>
+      <div class="dashboard-data" data-view-cid="view723" data-view-helper="collection" data-collection-element="true" data-collection-cid="collection3">
+        <div data-view-cid="view726" data-model-cid="c55">
+          <div class="measure row">
+            <div class="measure-col">
+              <div class="btn-wrapper pull-right">
+                <button class="btn btn-primary" data-call-method="updateMeasure">Update</button>
+              </div>
+              <div class="measure-title">
+                 <span class="nqf-listing pull-right">
+                  0105
+                </span>
+                <a href="http://bonnie-dev.mitre.org/#measures/8924F2B3-EC06-4650-B634-D70A53DEE577" data-call-method="_anchorClick">Anti-depressant Medication Management</a>
+              </div>
             </div>
-            <div class="measure-title">
-               <span class="nqf-listing pull-right">
-                0038
-              </span>
-              Preventive Care and Screening: Risk-Stratified Cholesterol – Fasting Low Density Lipoprotein (LDL-C)
+            <div class="expected-col">
+              
+            </div>
+            <div class="status-col">
+              
+            </div>
+            <div class="patient-listing-col">
+              <a href="http://bonnie-dev.mitre.org/#measures/8924F2B3-EC06-4650-B634-D70A53DEE577/patients/new" class="btn btn-default pull-right">
+                <i class="fa fa-user"></i>
+                <i class="fa fa-plus"></i>
+              </a>
+              
+                <span class="patient-listing">5</span>
+              
             </div>
           </div>
-          <div class="expected-col">
-              <input type="text" value="{{expectedPercentage}}" class="dial" data-readOnly="true" data-width="60" data-height="60" data-thickness=".2" data-fgColor= data-inputColor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif">
-            {{/unless}}
-          </div>
-          <div class="status-col status">
-          </div>
-          <div class="patient-listing-col">
-            <a href="#measures/{{hqmf_set_id}}/patients/new" class="btn btn-default pull-right">
-              <i class="fa fa-user"></i>
-              <i class="fa fa-plus"></i>
-            </a>
-            {{!-- FIXME: Should the following be patients.length or some other value? --}}
-            <span class="patient-listing">
-              {{#if hasPopulations}}
-                {{patients.length}}
-              {{else}}
-                {{matches}}
-              {{/if}}
-            </span>
-            {{#if hasFraction}}
-              <span class="fraction">/{{patients.length}}</span>
-            {{/if}}
-          </div>
-        </div>
-
-        {{#if hasPopulations}}
-          {{#collection populations item-context=populationContext}}
-            <div class="row population">
+          <div data-view-cid="view783" data-view-helper="collection" data-collection-cid="collection778">
+            <div class="row population" data-model-cid="c779">
               <div class="population-col">
                 <div class="population-title">
-                  <strong>population:</strong> {{title}}
+                  <strong>population:</strong> 84 days
                 </div>
               </div>
               <div class="expected-col">
-                <input type="text" value="{{expectedPercentage}}" class="dial" data-readOnly="true" data-width="60" data-height="60" data-thickness=".2" data-fgColor={{#ifCond status '==' 'pass'}}"#468847"{{/ifCond}}{{#ifCond status '==' 'fail'}}"#b94a48"{{/ifCond}} data-inputColor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif">
+                <div data-view-cid="view787" data-model-cid="c779">
+                  <div style="display: inline; width: 60px; height: 60px;">
+                    <canvas width="60" height="60"></canvas><input type="text" value="80" class="dial" data-readonly="true" data-width="60" data-height="60" data-thickness=".2" data-fgcolor="#b94a48" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 12px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;">
+                  </div>
+                </div>
               </div>
-              <div class="status-col status status-{{status}}">
-                {{status}}
+              <div class="status-col">
+                <div data-view-cid="view789" data-model-cid="c779">
+                  <span class="status status-fail">fail</span>
+                </div>
               </div>
               <div class="patient-listing-col">
-                <span class="patient-listing">{{matches}}</span>
-                {{#if hasFraction}}
-                  <span class="fraction">/{{../../patients.length}}</span>
-                {{/if}}
+                <div data-view-cid="view790" data-model-cid="c779">
+                  <span class="patient-listing">4</span>
+                  <span class="fraction">/5</span>
+
+                </div>
               </div>
             </div>
-          {{/collection}}
-        {{/if}}
-      {{/collection}}
-
-      {{! FIXME view creation/removal should happen as necessary in view, not in handlebars }}
-      {{view finalizeMeasuresView}}
-
+            <div class="row population" data-model-cid="c780">
+              <div class="population-col">
+                <div class="population-title">
+                  <strong>population:</strong> 180 days
+                </div>
+              </div>
+              <div class="expected-col">
+                <div data-view-cid="view795" data-model-cid="c780">
+                  <div style="display: inline; width: 60px; height: 60px;"><canvas width="60" height="60"></canvas><input type="text" value="100" class="dial" data-readonly="true" data-width="60" data-height="60" data-thickness=".2" data-fgcolor="#468847" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; background-image: none; font-weight: bold; font-style: normal; font-variant: normal; font-size: 12px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background-position: initial initial; background-repeat: initial initial;">
+                </div>
+              </div>
+            </div>
+            <div class="status-col">
+              <div data-view-cid="view797" data-model-cid="c780">
+                <span class="status status-pass">pass</span>
+              </div>
+            </div>
+            <div class="patient-listing-col">
+              <div data-view-cid="view798" data-model-cid="c780">
+                <span class="patient-listing">5</span>
+                <span class="fraction">/5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-view-cid="view802" data-model-cid="c93">
+        <div class="measure row">
+          <div class="measure-col">
+            <div class="btn-wrapper pull-right">
+              <button class="btn btn-primary" data-call-method="updateMeasure">Update</button>
+            </div>
+            <div class="measure-title">
+              <span class="nqf-listing pull-right">
+                  0527
+              </span>
+              <a href="http://bonnie-dev.mitre.org/#measures/D09ADD1D-30F5-462D-B677-3D17D9CCD664" data-call-method="_anchorClick">Prophylactic Antibiotic Received Within One Hour Prior to Surgical Incision</a>
+            </div>
+          </div>
+          <div class="expected-col">
+          </div>
+          <div class="status-col">
+              
+          </div>
+          <div class="patient-listing-col">
+            <a href="http://bonnie-dev.mitre.org/#measures/D09ADD1D-30F5-462D-B677-3D17D9CCD664/patients/new" class="btn btn-default pull-right">
+              <i class="fa fa-user"></i>
+              <i class="fa fa-plus"></i>
+            </a>
+            
+            <span class="patient-listing">1</span>
+            
+          </div>
+        </div>
+      </div>
     </div>
 
 

@@ -17,18 +17,24 @@
 <body>
   <div class="container">
     <div class="navbar row" role="navigation">
-      <a class="navbar-brand" href="http://localhost:9000/#">Bonnie</a>
-      <div class="measure-period">
-        <label>
-          <i class="fa fa-tasks"></i> period:
-        </label>
-        <span class="year">2012</span>
+      <a href="#skip">
+      </a>
+      <div class="navbar row" role="navigation">
+        <ul class="nav navbar-nav pull-right">
+          <li class=""><a href="http://localhost:9000/#">Dashboard</a></li>
+          <li class="active"><a href="http://localhost:9000/builder"><i class="fa fa-angle-right"></i> Builder</a></li>
+          <li class=""><a href="http://localhost:9000/#"><i class="fa fa-angle-right"></i> Results</a></li>
+          <li><a href="http://localhost:9000/users/edit">Account</a></li>
+          <li><a href="mailto:bonnie-feedback-list@lists.mitre.org">Contact</a></li>
+          <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
+        </ul>
+        <a class="navbar-brand" href="#">Bonnie</a>
+        <div class="measure-period">
+          <label>
+            <i class="fa fa-tasks"></i> period:
+          </label>
+          <span class="year">2012</span>
       </div>
-      <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="http://localhost:9000/#">Measures</a></li>
-        <li><a href="http://localhost:9000/users/edit">Account</a></li>
-        <li><a href="sign_out.html" data-method="delete" rel="nofollow">Logout</a></li>
-      </ul>
     </div>
 
     <!-- START -->
@@ -47,12 +53,18 @@
 
       <div class="row">
         <div class="col-md-2">
+          <p><a name="skip" id="skip"></a></p>
           <h1>Test Patient</h1>
         </div>
 
         <div class="col-md-6">
           <div class="timeline-icon pull-left"><i class="fa fa-user fa-fw fa-4x"></i></div>
-          <div class="validation-alerts"><div class="alert alert-danger">Alert</div></div>
+          <div class="validation-alerts">
+            <div class="alert alert-danger">Alert</div>
+          </div>
+          <div class="validation-alerts">
+            <div class="alert-508 alert-danger">Alert</div>
+          </div>
         </div>
 
         <div class="col-md-4">

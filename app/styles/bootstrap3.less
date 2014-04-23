@@ -18,6 +18,7 @@
 @panel-default-heading-bg: @gray-lighter;
 @panel-primary-border: white;
 
+
 // Custom styles on HTML tags that are part of the theme
 
 h1 {
@@ -48,10 +49,14 @@ h2 {
   }
   .nav {
     font-size: 1.5em;
-    a { color: @gray; }
+    a { color: @brand-primary; }
     .active {
+      background-color: @gray-lighter;
       border-bottom: 4px solid @brand-primary;
       a { color: @gray-darker; }
+    }
+    .inactive {
+      a { color: @gray-lighter; }
     }
     &.nav-tabs {
       > li > a {
