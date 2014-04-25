@@ -1,0 +1,38 @@
+
+.measure-period {
+	padding-top: 10px;
+	font-size: 1.2em;
+	color: @gray-darker;
+	.make-md-column(3);
+	    //.make-md-column-offset(1);
+	 
+	    .year {
+	      font-size: 1.5em;
+	      font-weight: 100;
+    } 
+  }
+
+.indicator {
+	margin-bottom: 20px;
+	.indicator-bar {
+		background-color: @gray-lighter;
+		width: 21px;
+		height: 8px;
+		display: inline-block;
+		margin-bottom: 12px;
+		margin-left:-4px;
+		margin-right:-5px;
+
+	}
+	.indicator-circle {
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		background-color: @gray-lighter;
+		display: inline-block;
+		margin-top: 12px;
+	}
+	.active {
+		background-color: @brand-primary;
+	}
+}
