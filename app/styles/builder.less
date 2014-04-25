@@ -63,14 +63,12 @@
 
   .col-center {
     .make-md-column(6);
-    &> * {
+    .form-data {
       .time-bar();
-      &.form-data {
-        // FIXME this border is attached here because this column is taller, but really belongs on .col-right
-        border-right: 4px solid @brand-primary;
-        margin-left: 0;
-        padding-left: (@grid-gutter-width / 2);
-      }
+      // FIXME this border is attached here because this column is taller, but really belongs on .col-right
+      border-right: 4px solid @brand-primary;
+      margin-left: 0;
+      padding-left: (@grid-gutter-width / 2);
     }
   }
 
@@ -122,6 +120,7 @@
     padding-left: 3px;
   }
   .heading-primary {
+    .time-bar();
     background-color: @blue-lightest;
     color: white;
     padding-left: @grid-gutter-width;
@@ -166,6 +165,7 @@
       padding-bottom: 100px;
     }
     .patient-criteria {
+      .time-bar();
       &.during-measurement-period {
         .time-bar(@blue-lightest);
       }
