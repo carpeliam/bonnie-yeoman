@@ -1,0 +1,246 @@
+.grid {
+	border-bottom: 1px solid @brand-primary;
+	border-right: 1px solid @brand-primary;
+	padding: 2px;
+	height: @grid-height;
+}
+.row:last-child grid {
+	border-bottom: none;
+}
+.grid:last-child{
+	border-right: none;
+}
+h2 {
+	.subtle {
+		font-weight: 200;
+		text-transform: lowercase;
+	}
+	text-align: center;
+}
+.circle {
+	height: @circle-size;
+	width: @circle-size;
+	border-radius: 25px;
+	background-color: @brand-primary;
+}
+.xsm-cir {
+	width: @circle-size-sm / 2;
+	height: @circle-size-sm / 2;
+	border-radius: @circle-rd-sm / 2;
+	margin: 5px + ( @circle-size-xlg - @circle-size-xsm ) / 2 auto;
+}
+.sm-cir {
+	width: @circle-size-sm;
+	height: @circle-size-sm;
+	border-radius: @circle-rd-sm;
+	margin: 5px + ( @circle-size-xlg - @circle-size-sm ) / 2 auto;
+	
+}
+.md-cir {
+	width: @circle-size-md;
+	height: @circle-size-md;
+	border-radius: @circle-rd-md;
+	margin: 5px + ( @circle-size-xlg - @circle-size-md ) / 2  auto;
+	
+}
+.lg-cir {
+	width: @circle-size-lg;
+	height: @circle-size-lg;
+	border-radius: @circle-rd-lg;
+	margin: 5px + ( @circle-size-xlg - @circle-size-lg ) / 2 auto;
+}
+.xlg-cir {
+	width: @circle-size-xlg;
+	height: @circle-size-xlg;
+	border-radius: @circle-rd-xlg;
+	margin: 5px auto;
+}
+.drill-in {
+	.xsm-cir {
+		display: inline-block;
+		margin: 0;
+	}
+	.sm-cir {
+		display: inline-block;
+		margin: 0;	
+	}
+	.md-cir {
+		display: inline-block;
+		margin: 0;		
+	}
+	.lg-cir {
+		display: inline-block;
+		margin: 0;
+	}
+	.xlg-cir {
+		display: inline-block;
+		margin: 0;
+	}
+}
+.nochange {
+}
+
+.change {
+	background-color: @brand-danger * 2;
+}
+
+.lotschange {
+	background-color: @brand-danger;
+}
+
+//size
+
+.mviz {
+  .viz-ipp, .viz-den, .viz-num, .viz-exc {
+  	margin-bottom: 15px;
+  }
+  .viz-den{}
+  .viz-num{}
+  .viz-exc{}
+  .line, .line-diff {
+  	height: 3px;
+  	width: 100%;
+  	margin-bottom: 5px;
+  }
+  .line {
+  	background-color: @brand-primary;
+  }
+  .line-diff {
+  	background-color: @brand-danger;
+  }
+  .line-delete {
+  	background-color: @gray-light;
+  }
+  margin: 0;
+
+}
+
+//trend
+.qtr {
+	height: 400px;
+}
+.qtr-1, .qtr-3 {
+	border-right: 8px solid @gray-darker;
+}
+.qtr-1, .qtr-2 {
+	border-bottom: 8px solid @gray-darker;
+}
+.label-change {
+	float: center;
+}
+.label-simple {
+	float: left;
+}
+.label-complex {
+	float: right;
+}
+.label-unchanged {
+	float: center;
+}
+.qtr-2 {
+	background-color: lighten(@brand-danger, 50%);
+}
+
+//d3 blostock 
+
+#chart {
+  margin-left: -40px;
+  height: 506px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 196px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+
+.circle-text {
+	color: red;
+	position: relative;
+	top: 100px;
+	right: 500px;
+	font-size: 2.5em;
+	z-index: 99;
+}
+.dot {
+	z-index: 0;
+	stroke: none;
+}
+.PuBu .q0-3{fill:rgb(236,231,242)} .PuBu .q1-3{fill:rgb(166,189,219)} .PuBu .q2-3{fill:rgb(43,140,190)}
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.cmsLabel {
+	font-size: 1em;
+	font-weight: 300;
+	font-color: #f2f2f2;
+}
+
+// .pop-chart {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   height: 50px;
+//   width: 165px;
+//   // shrink this down on smaller displays
+//   @media (max-width: $screen-md-max) {
+//     width: 100px;
+//   }
+//   svg {
+//     @include size(100%, 100%);
+//   }
+// }

@@ -1,74 +1,2238 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bonnie</title>
+    <link rel="stylesheet" href="bower_components/jquery-selectboxit/src/stylesheets/jquery.selectBoxIt.css">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body>
-    <div class="container">
-      <div class="navbar" role="navigation">
-        <a class="navbar-brand col-md-6" href="#">BONNIE</a>
-        <ul class="nav navbar-nav">
-          <li><a href="index.html" class="">Dashboard</a></li>
-          <li><a href="results.html" class="active">Results</a></li>
-        </ul>
-     	</div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="measure-title">0038: Childhood Immunization Status</div>
-          <div class="measures-dsp">Percentage of children 2 years of age who had four diphtheria, tetanus and acellular pertussis (DTaP); three polio (IPV), one measles, mumps and rubella (MMR); three H influenza type B (HiB); three hepatitis B (Hep B); one chicken pox (VZV); four pneumococcal conjugate (PCV); one hepatitis A (Hep A); two or three rotavirus (RV); and two influenza (flu) vaccines by their second birthday.</div>
-          <div class="measure-viz"></div>
-        </div>
-        <div class="col-md-8"><img src="http://placehold.it/700x800"></div>
-      </div>
-   	</div>
-
-
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+  </head>
+  <body data-pinterest-extension-installed="cr1.3.4">
+    <a href="" class="sr-only skip-content">Skip to main content</a>
+    <div class="container">
+      <div class="navbar row" role="navigation">
+        <div class="navbar-brand">
+          <a href="#">Bonnie</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+          <li class="nav-dashboard">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="nav-account"><a href="/users/edit">Account</a></li>
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+              Help <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="mailto:bonnie-feedback-list@lists.mitre.org">Contact</a></li>
+              <li><a href="http://jira.oncprojectracking.org/browse/BONNIE">Issue Tracker</a></li>
+              <li><a href="/resource/Bonnie_user_guide.pdf">User Guide</a></li>
+            </ul>
+          </li>
+          <li><a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a></li>
+        </ul>
+      </div>
+      <div class="navbar row">
+        <div class="col-md-4">
+          <span class="measure-period">
+            <i class="fa fa-tasks" aria-hidden="true"></i> measure period:
+            <span class="year">2012</span>
+          </span>
+        </div>
+        <div class="col-md-8">
+          <div class="indicator">
+            <div class="indicator-circle indicator-dashboard"></div>
+            <div class="indicator-bar "></div>
+            <div class="indicator-circle indicator-patient-builder"></div>
+            <div class="indicator-bar"></div>
+            <div class="indicator-circle indicator-results active"></div>
+          </div>
+        </div>
+      </div>
+      <div id="bonnie" role="main" data-view-cid="view2" data-layout-cid="view2"><div data-view-cid="view115" data-model-cid="c5"> <div class="main col-sm-8">
+        <div class="measure-title">
+          <div class="short-title"><i class="fa fa-tasks" aria-hidden="true"></i> CMS104v2: </div>
+          <div class="full-title">Discharged on Antithrombotic Therapy</div>
+          <span class="settings-container">
+            <div class="measure-settings">
+              <button class="btn btn-default btn-measure-viz btn-viz-chords" data-call-method="toggleVisualization"><i class="fa fa-sitemap" aria-hidden="true"></i> Chords View</button>
+              <button class="btn btn-default btn-measure-viz btn-viz-text" data-call-method="toggleVisualization" style="display: none;"><i class="fa fa-list" aria-hidden="true"></i> Text View</button>
+              <button class="btn btn-default update-measure" data-call-method="updateMeasure"><i class="fa fa-upload" aria-hidden="true"></i> Update</button>
+              <button class="btn btn-danger delete-measure hide" data-call-method="deleteMeasure"><i class="fa fa-times" aria-hidden="true"></i> Delete</button>
+              <button class="btn btn-danger-inverse delete-icon" data-call-method="showDelete"><i class="fa fa-minus-circle" aria-hidden="true"></i> <span class="sr-only">Show Delete</span></button>
+            </div>
+            <a href="" class="btn-settings" data-call-method="measureSettings"><i class="fa fa-cog" aria-hidden="true"></i> <span class="sr-only">Measure Settings</span></a>
+          </span>
+        </div>
+        <div class="measure-dsp">
+          
+          <div class="measure-dsp-title">
+            Description:
+          </div>
+          <p>Ischemic stroke patients prescribed antithrombotic therapy at hospital discharge</p>
+          
+        </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+        <div data-view-cid="view116" data-model-cid="c6"><div class="measure-viz rationale panel-group">
+        
+          <div data-view-cid="view165"><div class="panel panel-default IPP_children">
+        <div class="panel-heading">
+          <h4 class="panel-title panel-population">
+            <a data-toggle="collapse" href="#collapseview165">
+              <div>
+                <span class="population-label IPP rationale-target"><b>Initial Patient Population: </b><span class="sr-only sr-highlight-status"></span></span>
+                <div class="pull-right">
+                  
+                    <i class="fa fa-lg fa-angle-down toggle-icon" aria-hidden="true"></i>
+                  
+                  <span class="sr-only">toggle Initial Patient Population</span>
+                </div>
+              </div>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseview165" class="panel-collapse collapse in">
+          <div class="panel-body">
+          
+            
+            
+              
+                
+                  <div data-view-cid="view172">
+      <ul id="precondition_59">
+        <li>
+ 
+          <span class="conjunction precondition_72 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view177">
+        <span class="PatientCharacteristicBirthdateBirthDate_precondition_59 rationale-target highlight-target eval-coverage">
 
 
-        <!-- build:js scripts/main.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/hello.js"></script>
-        <!-- endbuild -->
 
-        <!-- build:js scripts/vendor/bootstrap.js -->
-        <script src="bower_components/bootstrap/js/affix.js"></script>
-        <script src="bower_components/bootstrap/js/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/modal.js"></script>
-        <script src="bower_components/bootstrap/js/transition.js"></script>
-        <script src="bower_components/bootstrap/js/button.js"></script>
-        <script src="bower_components/bootstrap/js/popover.js"></script>
-        <script src="bower_components/bootstrap/js/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
-	</body>
+
+        <span class="criteria-title">
+          
+            Patient Characteristic Birthdate: birth date
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view179">
+        <span data-view-cid="view181"> 
+        
+          
+            
+              
+                
+                  <span data-view-cid="view184"> 
+        
+          &gt;=
+          18 years 
+            
+
+          </span>
+                    
+                  
+                
+              
+            
+
+          </span>
+
+          starts before start of
+
+            <span data-view-cid="view182">
+            <span class="OccurrenceAInpatientEncounter1 rationale-target highlight-target eval-coverage">
+
+
+
+
+            <span class="criteria-title">
+              
+                Occurrence A: Encounter, Performed: Inpatient Encounter
+              
+              
+              
+              
+              <span class="sr-only sr-highlight-status">(status: covered)</span>
+            </span>
+            
+
+
+
+            </span>
+
+          </span>
+
+           
+          </span>
+                
+              
+            
+
+
+
+            </span>
+
+          </span>
+              
+
+            </li>
+      </ul>
+
+      </div>
+                
+                  <div data-view-cid="view173">
+      <ul id="precondition_61">
+        <li>
+          
+          <span class="conjunction precondition_72 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view188">
+        <span class="OccurrenceAInpatientEncounter1_precondition_61 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Length of Stay<span data-view-cid="view190"> 
+        
+          
+            
+              
+                <span data-view-cid="view192"> 
+        
+          &lt;=
+          120 days 
+        
+
+      </span>
+              
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+                
+                  <div data-view-cid="view174">
+      <ul id="precondition_63">
+        <li>
+          
+          <span class="conjunction precondition_72 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view195">
+        <span class="OccurrenceAInpatientEncounter1_precondition_63 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Discharge Date/Time
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view197">
+      during
+
+        "Measurement Period"
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+                
+                  <div data-view-cid="view175">
+      <ul id="precondition_69">
+        <li>
+          
+          <span class="conjunction precondition_72 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view200">
+      <ul id="precondition_65">
+        <li>
+          
+          <span class="conjunction precondition_69 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view203">
+        <span class="DiagnosisActiveHemorrhagicStroke_precondition_65 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Diagnosis, Active: Hemorrhagic Stroke
+          
+          
+          
+            (
+              Ordinal<span data-view-cid="view205"> 
+        
+          
+            
+              : Principal Diagnosis
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view206">
+      starts during
+
+        <span data-view-cid="view209">
+        <span class="OccurrenceAInpatientEncounter1_precondition_70 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view201">
+      <ul id="precondition_67">
+        <li>
+          
+          <span class="conjunction precondition_69 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view212">
+        <span class="DiagnosisActiveIschemicStroke_precondition_67 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Diagnosis, Active: Ischemic Stroke
+          
+          
+          
+            (
+              Ordinal<span data-view-cid="view214"> 
+        
+          
+            
+              : Principal Diagnosis
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view215">
+      starts during
+
+        <span data-view-cid="view218">
+        <span class="OccurrenceAInpatientEncounter1_precondition_70 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+                
+              
+            
+          
+          </div>
+        </div>
+      </div>
+      </div>
+        
+          <div data-view-cid="view166"><div class="panel panel-default DENOM_children">
+        <div class="panel-heading">
+          <h4 class="panel-title panel-population">
+            <a data-toggle="collapse" href="#collapseview166">
+              <div>
+                <span class="population-label DENOM rationale-target"><b>Denominator: </b><span class="sr-only sr-highlight-status"></span></span>
+                <div class="pull-right">
+                  
+                    <i class="fa fa-lg fa-angle-down toggle-icon" aria-hidden="true"></i>
+                  
+                  <span class="sr-only">toggle Denominator</span>
+                </div>
+              </div>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseview166" class="panel-collapse collapse in">
+          <div class="panel-body">
+          
+            
+            
+              None
+            
+          
+          </div>
+        </div>
+      </div>
+      </div>
+        
+          <div data-view-cid="view167"><div class="panel panel-default DENEX_children">
+        <div class="panel-heading">
+          <h4 class="panel-title panel-population">
+            <a data-toggle="collapse" href="#collapseview167">
+              <div>
+                <span class="population-label DENEX rationale-target"><b>Denominator Exclusions: </b><span class="sr-only sr-highlight-status"></span></span>
+                <div class="pull-right">
+                  
+                    <i class="fa fa-lg fa-angle-down toggle-icon" aria-hidden="true"></i>
+                  
+                  <span class="sr-only">toggle Denominator Exclusions</span>
+                </div>
+              </div>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseview167" class="panel-collapse collapse in">
+          <div class="panel-body">
+          
+            
+            
+              
+                
+                  <div data-view-cid="view222">
+      <ul id="precondition_53">
+        <li>
+          
+          <span class="conjunction precondition_55 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view224">
+      <ul id="precondition_13">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view233">
+        <span class="OccurrenceAInpatientEncounter1_precondition_13 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Reason<span data-view-cid="view235"> 
+        
+          
+            
+              : Carotid Intervention
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view225">
+      <ul id="precondition_15">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view238">
+        <span class="OccurrenceAInpatientEncounter1_precondition_15 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Discharge Status<span data-view-cid="view240"> 
+        
+          
+            
+              : Discharge To Another Hospital
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view226">
+      <ul id="precondition_17">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view243">
+        <span class="OccurrenceAInpatientEncounter1_precondition_17 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Discharge Status<span data-view-cid="view245"> 
+        
+          
+            
+              : Left Against Medical Advice
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view227">
+      <ul id="precondition_19">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view248">
+        <span class="OccurrenceAInpatientEncounter1_precondition_19 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Discharge Status<span data-view-cid="view250"> 
+        
+          
+            
+              : Discharged To Home For Hospice Care
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view228">
+      <ul id="precondition_21">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view253">
+        <span class="OccurrenceAInpatientEncounter1_precondition_21 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Discharge Status<span data-view-cid="view255"> 
+        
+          
+            
+              : Patient Expired
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view229">
+      <ul id="precondition_23">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view258">
+        <span class="OccurrenceAInpatientEncounter1_precondition_23 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Discharge Status<span data-view-cid="view260"> 
+        
+          
+            
+              : Discharged To Health Care Facility For Hospice Care
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view230">
+      <ul id="precondition_44">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view263">
+      <ul id="precondition_26">
+        <li>
+          
+          <span class="conjunction precondition_44 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view266">
+        <span class="OccurrenceAInpatientEncounter1_precondition_26 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+            (
+              Admission Date/Time
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view268">
+        <span data-view-cid="view270"> 
+        
+          
+            
+              
+                <span data-view-cid="view273"> 
+        
+          &lt;=
+          1 hour 
+        
+
+      </span>
+              
+            
+          
+        
+
+      </span>
+
+      starts after end of
+
+        <span data-view-cid="view271">
+        <span class="OccurrenceAEmergencyDepartmentVisit2_precondition_25 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Emergency Department Visit
+          
+          
+          
+            (
+              Facility Location Departure Date/Time<span data-view-cid="view276"> 
+        
+          
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view264">
+      <ul id="precondition_42">
+        <li>
+          
+          <span class="conjunction precondition_44 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view279">
+      <ul id="precondition_33">
+        <li>
+          
+          <span class="conjunction precondition_42 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view282">
+      <ul id="precondition_29">
+        <li>
+          
+          <span class="conjunction precondition_33 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view285">
+        <span class="OccurrenceAPalliativeCare3_precondition_29 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Intervention, Ordered: Palliative Care
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view287">
+      starts after start of
+
+        <span data-view-cid="view289">
+        <span class="OccurrenceAEmergencyDepartmentVisit2_precondition_28 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Emergency Department Visit
+          
+          
+          
+            (
+              Facility Location Arrival Date/Time<span data-view-cid="view291"> 
+        
+          
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view283">
+      <ul id="precondition_31">
+        <li>
+          
+          <span class="conjunction precondition_33 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view294">
+        <span class="OccurrenceAPalliativeCare3_precondition_31 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Intervention, Ordered: Palliative Care
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view296">
+      starts before end
+
+        <span data-view-cid="view298">
+        <span class="OccurrenceAInpatientEncounter1 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view280">
+      <ul id="precondition_40">
+        <li>
+          
+          <span class="conjunction precondition_42 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view301">
+      <ul id="precondition_36">
+        <li>
+          
+          <span class="conjunction precondition_40 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view304">
+        <span class="OccurrenceAPalliativeCare4_precondition_36 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Intervention, Performed: Palliative Care
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view306">
+      starts after start of
+
+        <span data-view-cid="view308">
+        <span class="OccurrenceAEmergencyDepartmentVisit2_precondition_35 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Emergency Department Visit
+          
+          
+          
+            (
+              Facility Location Arrival Date/Time<span data-view-cid="view310"> 
+        
+          
+            
+          
+        
+
+      </span> 
+            )
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view302">
+      <ul id="precondition_38">
+        <li>
+          
+          <span class="conjunction precondition_40 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view313">
+        <span class="OccurrenceAPalliativeCare4_precondition_38 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Intervention, Performed: Palliative Care
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view315">
+      starts before end
+
+        <span data-view-cid="view317">
+        <span class="OccurrenceAInpatientEncounter1 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view231">
+      <ul id="precondition_50">
+        <li>
+          
+          <span class="conjunction precondition_53 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view320">
+      <ul id="precondition_46">
+        <li>
+          
+          <span class="conjunction precondition_50 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view323">
+        <span class="InterventionOrderPalliativeCare_precondition_46 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Intervention, Order: Palliative Care
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view325">
+      starts during
+
+        <span data-view-cid="view327">
+        <span class="OccurrenceAInpatientEncounter1_precondition_51 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view321">
+      <ul id="precondition_48">
+        <li>
+          
+          <span class="conjunction precondition_50 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view330">
+        <span class="InterventionPerformedPalliativeCare_precondition_48 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Intervention, Performed: Palliative Care
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view332">
+      starts during
+
+        <span data-view-cid="view334">
+        <span class="OccurrenceAInpatientEncounter1_precondition_51 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+                
+              
+            
+          
+          </div>
+        </div>
+      </div>
+      </div>
+        
+          <div data-view-cid="view168"><div class="panel panel-default NUMER_children">
+        <div class="panel-heading">
+          <h4 class="panel-title panel-population">
+            <a data-toggle="collapse" href="#collapseview168">
+              <div>
+                <span class="population-label NUMER rationale-target"><b>Numerator: </b><span class="sr-only sr-highlight-status"></span></span>
+                <div class="pull-right">
+                  
+                    <i class="fa fa-lg fa-angle-down toggle-icon" aria-hidden="true"></i>
+                  
+                  <span class="sr-only">toggle Numerator</span>
+                </div>
+              </div>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseview168" class="panel-collapse collapse in">
+          <div class="panel-body">
+          
+            
+            
+              
+                
+                  <div data-view-cid="view337">
+      <ul id="precondition_56">
+        <li>
+          
+          <span class="conjunction precondition_58 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view339">
+        <span class="MedicationDischargeAntithromboticTherapy_precondition_56 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Medication, Discharge: Antithrombotic Therapy
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view341">
+      during
+
+        <span data-view-cid="view343">
+        <span class="OccurrenceAInpatientEncounter1 rationale-target highlight-target eval-coverage">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+                
+              
+            
+          
+          </div>
+        </div>
+      </div>
+      </div>
+        
+          <div data-view-cid="view169"><div class="panel panel-default DENEXCEP_children">
+        <div class="panel-heading">
+          <h4 class="panel-title panel-population">
+            <a data-toggle="collapse" href="#collapseview169">
+              <div>
+                <span class="population-label DENEXCEP rationale-target"><b>Denominator Exceptions: </b><span class="sr-only sr-highlight-status"></span></span>
+                <div class="pull-right">
+                  
+                    <i class="fa fa-lg fa-angle-down toggle-icon" aria-hidden="true"></i>
+                  
+                  <span class="sr-only">toggle Denominator Exceptions</span>
+                </div>
+              </div>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseview169" class="panel-collapse collapse in">
+          <div class="panel-body">
+          
+            
+            
+              
+                
+                  <div data-view-cid="view346">
+      <ul id="precondition_9">
+        <li>
+          
+          <span class="conjunction precondition_12 rationale-target">
+            AND
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+              
+                <div data-view-cid="view348">
+      <ul id="precondition_5">
+        <li>
+          
+          <span class="conjunction precondition_9 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view351">
+        <span class="MedicationOrderAntithromboticTherapy_precondition_5 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Medication, Order: Antithrombotic Therapy
+          
+          
+          
+          
+            (Not Done: Medical Reason)
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view353">
+      starts during
+
+        <span data-view-cid="view355">
+        <span class="OccurrenceAInpatientEncounter1_precondition_10 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+                <div data-view-cid="view349">
+      <ul id="precondition_7">
+        <li>
+          
+          <span class="conjunction precondition_9 rationale-target">
+            OR
+            : 
+            <span class="sr-only sr-highlight-status"></span>
+          </span>
+
+          
+            <span data-view-cid="view358">
+        <span class="MedicationOrderAntithromboticTherapy_precondition_7 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Medication, Order: Antithrombotic Therapy
+          
+          
+          
+          
+            (Not Done: Patient Refusal)
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+          
+            
+              <span data-view-cid="view360">
+      starts during
+
+        <span data-view-cid="view362">
+        <span class="OccurrenceAInpatientEncounter1_precondition_10 rationale-target highlight-target">
+
+
+
+
+        <span class="criteria-title">
+          
+            Occurrence A: Encounter, Performed: Inpatient Encounter
+          
+          
+          
+          
+          <span class="sr-only sr-highlight-status">(status: not covered)</span>
+        </span>
+        
+
+
+
+        </span>
+
+      </span>
+
+       
+      </span>
+            
+          
+        
+
+
+
+        </span>
+
+      </span>
+          
+
+        </li>
+      </ul>
+
+      </div>
+              
+          
+
+        </li>
+      </ul>
+
+      </div>
+                
+              
+            
+          
+          </div>
+        </div>
+      </div>
+      </div>
+        
+        <div data-view-cid="view170">
+      </div>
+      </div>
+      <div class="d3-measure-viz" style="display: none;">
+      </div>
+      </div>
+      </div>
+
+      <div class="right-sidebar">
+        <div class="patients-title">
+          <span class="short-title pull-left"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Test Patients</span>
+          <span class="settings-container">
+            <div class="patients-settings">
+              <button class="btn btn-default export-patients" data-call-method="exportPatients"><i class="fa fa-download" aria-hidden="true"></i> Export</button>
+              
+                
+                  <button class="btn btn-default btn-measure-listing toggle-measure-listing" data-call-method="toggleMeasureListing"><i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-arrow-right" aria-hidden="true"></i> <i class="fa fa-tasks" aria-hidden="true"></i><span class="sr-only">Toggle measure listing</span></button>
+                
+              
+            </div>
+            <a href="" class="btn-settings" data-call-method="patientsSettings"><i class="fa fa-cog" aria-hidden="true"></i> <span class="sr-only">Patient Options</span></a>
+          </span>
+        </div>
+        <span class="patients-listing-header" style="display:none;">Select Patients to Clone:</span>
+        <div data-view-cid="view148" data-model-cid="c6"><div class="measure-calculation">
+        <div class="row summary">
+          <div class="expected-col">
+            <div data-view-cid="view370" data-model-cid="c156">
+        <label><span class="sr-only">100% patients meet expected</span>
+        <div style="display: inline; width: 60px; height: 60px;"><canvas width="60" height="60"></canvas><input type="text" value="100" class="dial" data-readonly="true" data-width="60" data-height="60" data-thickness=".2" data-fgcolor="#009a65" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-size: 12px; line-height: normal; font-family: 'Helvetica Neue', Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background: none;"></div>
+        </label>
+
+      </div>
+          </div>
+          <div class="status-col">
+            <div data-view-cid="view372" data-model-cid="c156"><span class="sr-only">Measure status: </span>
+
+        <span class="status status-pass">pass</span>
+
+
+      </div>
+          </div>
+          <div class="patient-data-col">
+            <span data-view-cid="view373" data-model-cid="c156">
+        <span class="sr-only"></span>
+        <span class="patient-listing">1</span>
+        <span class="fraction">/1</span>
+        <span class="sr-only"> test patients meet expected results</span>
+
+      </span>
+            <a href="#measures/42BF391F-38A3-4C0F-9ECE-DCD47E9609D9/patients/new" class="btn btn-primary pull-right">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              <span class="sr-only">add new patient</span>
+            </a>
+          </div>
+        </div>
+        <div data-view-cid="view153" data-model-cid="c149"><div class="row coverage-summary">
+        
+        
+          <div class="coverage">
+            <label><span class="sr-only">21% logic covered</span>
+              <div style="display: inline; width: 60px; height: 60px;"><canvas width="60" height="60"></canvas><input type="text" value="21" class="dial" data-readonly="true" data-width="60" data-height="60" data-thickness=".2" data-fgcolor="#0075C4" data-inputcolor="#444" data-font="Helvetica Neue, Roboto, Helvetica, Arial, sans-serif" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-size: 12px; line-height: normal; font-family: 'Helvetica Neue', Roboto, Helvetica, Arial, sans-serif; text-align: center; color: rgb(68, 68, 68); padding: 0px; -webkit-appearance: none; background: none;"></div>
+            </label>
+          </div>
+          <div class="coverage-label">
+            <span class="status status-coverage">% COVERAGE</span>
+          </div>
+          <div class="coverage-data">
+            <button class="btn btn-default btn-show-coverage" data-call-method="identifyCoverage" style="display: none;"><i class="fa fa-bar-chart-o" aria-hidden="true"></i> Show</button>
+          </div>
+        
+      </div>
+      </div>
+        <br>
+        <div class="panel panel-default" data-view-cid="view374" data-view-helper="collection"><div class="panel-heading" data-model-cid="c157">
+            <div class="panel-title">
+              <div class="patient row">
+                <div class="patient-status-icon-col status status-pass">
+                  
+                    
+                      
+                        <i class="fa fa-check" aria-hidden="true"></i><span class="sr-only">A PATIENT, patient passing</span>
+                      
+                    
+                  
+                </div>
+                <div class="patient-user-icon-col">
+                  <i class="fa fa-user" aria-hidden="true"></i><span class="sr-only">A PATIENT, patient result</span>
+                </div>
+                <div class="patient-name-col">
+                  <span class="sr-only">patient name: </span>A PATIENT
+                </div>
+                <div class="patient-status-col status status-pass">
+                  <span class="sr-only">A PATIENT, status </span>pass
+                </div>
+                <div class="patient-btn-col">
+                  <button class="close" data-call-method="expandResult"><i class="fa fa-lg fa-angle-right expand-result-icon expand-result-icon-53eb8b135441433b9b8c0300" aria-hidden="true"></i> <span class="sr-only">A PATIENT, Toggle Logic Pass/Fail</span></button>
+                </div>
+              </div>
+            </div>
+          </div><div class="panel-body toggle-result toggle-result-53eb8b135441433b9b8c0300 patient" style="display: none;" data-model-cid="c157">
+            <table class="table table-condensed col-xs-3">
+        <caption><span class="sr-only">Patient population results for A, PATIENT</span></caption>
+        <tbody><tr>
+          <th><span class="sr-only">Status</span></th>
+          <th scope="col">Population</th>
+          <th scope="col" style="text-align: center;">Expected</th>
+          <th scope="col" style="text-align: center;">Actual</th>
+        </tr>
+        
+          <tr>
+            <td style="text-align: center;">
+              
+                <i class="fa fa-check pass" aria-hidden="true"></i><span class="sr-only">passed</span>
+              
+            </td>
+            <td>IPP</td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-check-square-o default" aria-hidden="true"></i><span class="sr-only">checked</span>
+                    
+                  
+                
+              
+            </td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-check-square-o default" aria-hidden="true"></i><span class="sr-only">checked</span>
+                    
+                  
+                
+              
+            </td>
+          </tr>
+        
+          <tr>
+            <td style="text-align: center;">
+              
+                <i class="fa fa-check pass" aria-hidden="true"></i><span class="sr-only">passed</span>
+              
+            </td>
+            <td>DENOM</td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-check-square-o default" aria-hidden="true"></i><span class="sr-only">checked</span>
+                    
+                  
+                
+              
+            </td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-check-square-o default" aria-hidden="true"></i><span class="sr-only">checked</span>
+                    
+                  
+                
+              
+            </td>
+          </tr>
+        
+          <tr>
+            <td style="text-align: center;">
+              
+                <i class="fa fa-check pass" aria-hidden="true"></i><span class="sr-only">passed</span>
+              
+            </td>
+            <td>DENEX</td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-square-o default" aria-hidden="true"></i><span class="sr-only">unchecked</span>
+                    
+                  
+                
+              
+            </td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-square-o default" aria-hidden="true"></i><span class="sr-only">unchecked</span>
+                    
+                  
+                
+              
+            </td>
+          </tr>
+        
+          <tr>
+            <td style="text-align: center;">
+              
+                <i class="fa fa-check pass" aria-hidden="true"></i><span class="sr-only">passed</span>
+              
+            </td>
+            <td>NUMER</td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-square-o default" aria-hidden="true"></i><span class="sr-only">unchecked</span>
+                    
+                  
+                
+              
+            </td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-square-o default" aria-hidden="true"></i><span class="sr-only">unchecked</span>
+                    
+                  
+                
+              
+            </td>
+          </tr>
+        
+          <tr>
+            <td style="text-align: center;">
+              
+                <i class="fa fa-check pass" aria-hidden="true"></i><span class="sr-only">passed</span>
+              
+            </td>
+            <td>DENEXCEP</td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-square-o default" aria-hidden="true"></i><span class="sr-only">unchecked</span>
+                    
+                  
+                
+              
+            </td>
+            <td style="text-align: center;">
+              
+                
+                  
+                    
+                      <i class="fa fa-square-o default" aria-hidden="true"></i><span class="sr-only">unchecked</span>
+                    
+                  
+                
+              
+            </td>
+          </tr>
+        
+      </tbody></table>
+
+            <a class="btn btn-primary" href="#measures/42BF391F-38A3-4C0F-9ECE-DCD47E9609D9/patients/53eb8b135441433b9b8c0300/edit" data-call-method="_anchorClick">EDIT<span class="sr-only"> patient A PATIENT</span></a>
+            <button class="btn btn-primary" data-call-method="clonePatient">CLONE<span class="sr-only"> patient A PATIENT</span></button>
+            <button class="btn btn-danger-inverse" data-call-method="showDelete">
+              <i class="fa fa-minus-circle" aria-hidden="true"></i>
+              <span class="sr-only">A PATIENT, Show Delete</span>
+            </button>
+            <button style="display: none;" class="btn btn-danger delete-53eb8b135441433b9b8c0300" data-call-method="deletePatient">Delete<span class="sr-only"> patient A PATIENT</span></button>
+          </div></div>
+      </div>
+      </div>
+      </div>
+
+      <div class="measure-listing-sidebar" style="display:none;">
+        <div class="measures-title">
+          <span class="short-title pull-left">Measure Listing</span>
+        </div>
+        <span class="measure-listing-header">Select Measure:</span>
+        <div class="list-group">
+          <div data-view-cid="view163" data-view-helper="collection" data-collection-cid="collection3"><a class="list-group-item measure-listing measure-9A031E24-3D9B-11E1-8634-00237D5BF174 disabled" data-model-cid="c27">
+                <div class="row">
+                  <div class="col-sm-6">
+                    CMS2v4
+                  </div>
+                  <div class="col-sm-6">
+                    <button style="display: none;" class="btn btn-default btn-clone-patients btn-clone-9A031E24-3D9B-11E1-8634-00237D5BF174" data-call-method="cloneIntoMeasure">CLONE</button>
+                  </div>
+                </div>
+              </a><div data-model-cid="c5">
+            
+          </div></div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="clonePatientsDialog" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Cloning Patients...</h1>
+            </div>
+            <div class="modal-body">
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-primary clone-patients-progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                  <span class="sr-only">Cloning...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div><div data-view-cid="view390"><div class="modal fade" id="exportPatientsDialog" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Exporting Patients...</h1>
+            </div>
+            <div class="modal-body">
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <span class="sr-only">Exporting...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exportFailedDialog" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Export Failed</h1>
+            </div>
+            <div class="modal-body">
+              An error occured while exporting patients, please try again.
+            </div>
+            <div class="modal-footer">
+              <button data-dismiss="modal" class="btn btn-default" data-call-method="close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div></div></div>
+            
+            <p id="ariaalerts" class="sr-only" role="log" aria-live="polite"></p>
+          </div>      
+      <span style="height: 20px; width: 40px; min-height: 20px; min-width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=);"></span>
+  </body>
 </html>
+
+
+       

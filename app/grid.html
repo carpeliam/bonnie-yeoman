@@ -1,0 +1,172 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="container">
+          <div class="navbar row" role="navigation">
+      <a href="#skip">
+      </a>
+      <div class="navbar row" role="navigation">    
+        <ul class="nav navbar-nav pull-right">
+          <li class=""><a href="http://localhost:9000/index-9.html">Complexity</a></li>
+          <li><a href="http://localhost:9000/size.html">Size</a></li>
+          <li> 
+            <a class="active" href="http://localhost:9000/trend.html">Trends
+            </a>
+          </li>
+          <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
+        </ul>
+        <a class="navbar-brand" href="#">Bonnie</a>
+      </div>
+      <p id="chart"></p>
+
+<!--       <svg width="1000" height="1200">
+        <rect x="500" y="10" height="1000" width="8"
+        style="fill: #cccccc"/>
+        <rect x="10" y="500" height="8" width="1200"
+        style="fill: #cccccc"/>
+        <circle cx="100" cy="80" r="10" style="fill:#d9534f"></circle>
+        <circle cx="100" cy="350" r="10" style="fill:#eca9a7"></circle>
+        <circle cx="100" cy="650" r="10" style="fill:#3391D0"></circle>
+        <circle cx="100" cy="900" r="10" style="fill:#0075C4"></circle>
+
+        <circle cx="500" cy="80" r="40" style="fill:#d9534f"></circle>
+        <circle cx="500" cy="350" r="40" style="fill:#eca9a7"></circle>
+        <circle cx="500" cy="650" r="40" style="fill:#3391D0"></circle>
+        <circle cx="500" cy="900" r="40" style="fill:#0075C4"></circle>
+
+        <circle cx="700" cy="80" r="60" style="fill:#d9534f"></circle>
+        <circle cx="700" cy="350" r="60" style="fill:#eca9a7"></circle>
+        <circle cx="700" cy="650" r="60" style="fill:#3391D0"></circle>
+        <circle cx="700" cy="900" r="60" style="fill:#0075C4"></circle>
+
+        <circle cx="920" cy="80" r="80" style="fill:#d9534f"></circle>
+        <circle cx="920" cy="350" r="80" style="fill:#eca9a7"></circle>
+        <circle cx="920" cy="650" r="80" style="fill:#3391D0"></circle>
+        <circle cx="920" cy="900" r="80" style="fill:#0075C4"></circle>
+      </svg>
+      <div class="trend-plot">
+        <div class="col-md-offset-6">
+          <span class="label-change">change</span>
+        </div>
+        <div class="qtr qtr-1 col-md-6"></div>
+        <div class="qtr qtr-2 col-md-6">
+          <div class="circle xlg-cir lotschange"></div>
+          <div class="circle xlg-cir change"></div>
+          <div class="circle lg-cir lotschange"></div>
+        </div>
+        <div class="qtr qtr-3 col-md-6">
+          <span class="label-simple">simple</span>
+        </div>
+        <div class="qtr qtr-4 col-md-6">
+          <span class="label-complex">complex</span>
+        </div>
+        <div class="col-md-offset-6">
+          <span class="label-unchanged">unchanged</span>
+        </div>
+      </div> -->
+    </div> 
+
+        <!-- build:js scripts/main.js -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+    function grid(id, width, height, square)
+    {
+        var calData = randomData(width, height, square);
+        console.log(calData);
+        var grid = d3.select(id).append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .attr("class", "chart");
+
+        var row = grid.selectAll(".row")
+                      .data(calData)
+                    .enter().append("svg:g")
+                      .attr("class", "row");
+
+        var col = row.selectAll(".cell")
+                     .data(function (d) { return d; })
+                    .enter().append("svg:rect")
+                     .attr("class", "cell")
+                     .attr("x", function(d) { return d.x; })
+                     .attr("y", function(d) { return d.y; })
+                     .attr("width", function(d) { return d.width; })
+                     .attr("height", function(d) { return d.height; })
+                     .on('mouseover', function() {
+                        d3.select(this)
+                            .style('fill', '#f2f2f2');
+                     })
+                     .on('mouseout', function() {
+                        d3.select(this)
+                            .style('fill', '#FFF');
+                     })
+                     .on('click', function() {
+                        d3.select(this)
+                            .style('fill', '#555')
+                            .append("g");
+                        
+                     })
+                     .style("fill", '#FFF')
+                     .style("stroke", '#555');
+    }
+    function randomData(gridWidth, gridHeight, square){
+        var data = new Array();
+        var gridItemWidth = gridWidth / 6;
+        var gridItemHeight = (square) ? gridItemWidth : gridHeight / 6;
+        var startX = gridItemWidth / 2;
+        var startY = gridItemHeight / 2;
+        var stepX = gridItemWidth;
+        var stepY = gridItemHeight;
+        var xpos = startX;
+        var ypos = startY;
+        var newValue = 0;
+        var count = 0;
+
+        for (var index_a = 0; index_a < 16; index_a++)
+        {
+            data.push(new Array());
+            for (var index_b = 0; index_b < 6; index_b++)
+            {
+                newValue = Math.round(Math.random() * (100 - 1) + 1);
+                data[index_a].push({ 
+                                    time: index_b, 
+                                    value: newValue,
+                                    width: gridItemWidth,
+                                    height: gridItemHeight,
+                                    x: xpos,
+                                    y: ypos,
+                                    count: count
+                                });
+                xpos += stepX;
+                count += 1;
+            }
+            xpos = startX;
+            ypos += stepY;
+        }
+        return data;
+    }
+
+    
+    </script>
+    <script type="text/javascript">
+    grid('#chart', 960, 1600, true);
+</script>
+
+
+  </body>
+</html>
