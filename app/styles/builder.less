@@ -1,10 +1,16 @@
 .patient-builder {
+  @time-bar-width: 8px;
+  .time-bar(@color: @gray-lighter) {
+    border-left: @time-bar-width solid @color;
+  }
+  label {
+    text-transform: uppercase;
+  }
   .measure-ribbon {
     .pull-right;
     max-width: 100%;
     overflow: auto;
     white-space: nowrap;
-    margin-bottom: 50px;
     .ribbon-cell {
       display: inline-block;
       margin-left: 3px;
@@ -12,12 +18,11 @@
       height: 50px;
       width: 25px;
       .title {
-        .rotate(-45deg);
+        .rotate(-30deg);
         .transform-origin(top left);
       }
       a {
         cursor: pointer;
-        font-size:8px;
       }
       svg {
         .expectation-success {
@@ -34,15 +39,6 @@
         }
       }
     }
-  }
-
-  @time-bar-width: 8px;
-  .time-bar(@color: @gray-lighter) {
-    border-left: @time-bar-width solid @color;
-  }
-
-  label {
-    text-transform: uppercase;
   }
 
   .col-left {
@@ -70,6 +66,19 @@
       margin-left: 0;
       padding-left: (@grid-gutter-width / 2);
     }
+    .deceased-checkbox {
+      height: 24px;
+      label {
+        text-transform: none;
+      }
+    }
+    .remove-death-date {
+      float: right;
+      padding-top: 8px;
+      padding-right: 8px;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
   }
 
   .col-right {
@@ -94,7 +103,8 @@
     }
     .tab-content {
       padding-bottom: 10px;
-      h2 {
+      h2, h3 {
+        // &:extend(h2);
         margin-top: 0;
         padding-top: 6px;
       }
@@ -103,25 +113,38 @@
         .form-group {
           padding-right: 10px;
           label {
-            font-weight: normcrtal;
+            font-weight: normal;
           }
           input[type=number] {
             display: inline-block;
             width: 40px;
+          }
+          input[name=OBSERV] {
+            width: 45px;
+          }
+          .btn-observ-unit-perc, .btn-observ-unit-mins {
+            opacity: 1.0;
           }
         }
       }
     }
   }
 
-
   .heading-muted {
     background-color: @gray-lighter;
     padding-left: 3px;
   }
+  .submeasure {
+    text-transform: lowercase;
+    font-weight: normal;
+    background-color: @gray-lighter;
+    padding-left: 30px;
+    padding-bottom: 0.25em;
+    margin-top: -15px;
+  }
   .heading-primary {
     .time-bar();
-    background-color: @blue-lightest;
+    background-color: @blue-lighter;
     color: white;
     padding-left: @grid-gutter-width;
   }
@@ -136,8 +159,13 @@
       text-transform: uppercase;
       .panel-icon {
         display: block;
+        .transition(font-size .35s ease);
+        &.opened {
+          display: inline-block;
+        }
       }
       .panel-expander {
+        .transition(font-size .35s ease);
         .pull-right;
         line-height: 2;
       }
@@ -154,6 +182,15 @@
         color: @gray-darker;
       }
 
+      .criteriatype {
+        color: @blue-lighter;
+      }
+
+    }
+    .panel-population {
+      background-color: inherit;
+      color: inherit;
+      padding: 0;
     }
   }
 
@@ -193,6 +230,12 @@
           &.drop-target-highlight, &.drop-target-highlight:before {
             background-color: @blue-lightest;
           }
+          &.highlight-partial, &.highlight-partial:before {
+            background-color: @gray-light;
+          }
+          &.highlight-valid, &.highlight-valid:before {
+            background-color: @state-success-bg;
+          }
           &:before {
             content: ' ';
             background-color: white;
@@ -203,26 +246,13 @@
             left: -(@grid-gutter-width / 4) - 1; // width/2 (-1 to account for border)
             .rotate(45deg);
           }
+
           .clearfix;
           border: 1px solid @gray;
           margin-left: (@grid-gutter-width / 2);
           padding: (@grid-gutter-width / 2);
           position: relative;
-          .control-label {
-            color: @brand-primary;
-          }
-          .toggle-control {
-            .make-row(0);
-            .select-toggle {
-              .make-md-column(3; 0);
-              &> *, & .selectboxit-container .selectboxit {
-                width: 100%;
-              }
-            }
-            .toggle-target {
-              .make-md-column(9; 0);
-            }
-          }
+
           .criteria-tag {
             .pull-right;
             background-color: @gray-lighter;
@@ -244,6 +274,10 @@
             }
 
           }
+
+          .control-label {
+            color: @brand-primary;
+          }
           .datetime-control {
             .make-row(0);
             &> * {
@@ -253,7 +287,7 @@
               border-left: 0;
             }
           }
-          .existing-values, .existing-codes {
+          .existing-values {
             margin-bottom: 10px;
 
             &> span {
@@ -270,7 +304,17 @@
             }
           }
         }
+        .criteria-delete {
+          .clearfix;
+          .criteria-delete-check {
+            .pull-right;
+            margin-left: 5px;
+          }
+        }
       }
     }
   }
+}
+.selectBoxIt-native {
+  height: @input-height-base !important;
 }

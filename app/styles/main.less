@@ -1,18 +1,27 @@
+// Handle non-less assets first with the asset pipeline
+//= require jquery-selectboxit/src/stylesheets/jquery.selectBoxIt
+
+// Import external dependencies
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "../bower_components/bootstrap-datepicker/less/datepicker3.less";
 @import "../bower_components//bootstrap-timepicker/less/timepicker.less";
 
-// Helper classes
-@import "bootstrap3.less";
-@import "mixins.less";
-@import "variables.less";
+// Helper files
+@import "bootstrap3";
+@import "variables";
+@import "mixins";
 
-//individual views
-@import "dashboard";
+// Styles by page
+@import "landing";
+@import "login";
 @import "measures";
-@import "builder.less";
-@import "measure.less";
-@import "login.less";
-@import "measure_calculation.less";
-@import "rationale.less";
+@import "measure";
+@import "measure_calculation";
+@import "rationale";
+@import "builder";
+@import "vsbuilder";
+@import "users";
+@import "matrix";
+@import "complex";
+@import "bank";

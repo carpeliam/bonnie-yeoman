@@ -230,17 +230,94 @@ text {
 	font-weight: 300;
 	font-color: #f2f2f2;
 }
-
 // .pop-chart {
 //   margin-top: 10px;
 //   margin-bottom: 10px;
 //   height: 50px;
 //   width: 165px;
 //   // shrink this down on smaller displays
-//   @media (max-width: $screen-md-max) {
-//     width: 100px;
-//   }
-//   svg {
-//     @include size(100%, 100%);
-//   }
+  // @media (max-width: @screen-md-max) {
+  //   width: 100px;
+  // }
 // }
+  svg {
+    @include size(100%, 100%);
+  }
+
+.visible-sm {
+  .responsive-invisibility();
+  &.visible-xs {
+    @media (max-width: @screen-xs-max) {
+      .responsive-visibility();
+    }
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-visibility();
+  }
+  &.visible-md {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      .responsive-visibility();
+    }
+  }
+  &.visible-lg {
+    @media (min-width: @screen-lg-min) {
+      .responsive-visibility();
+    }
+  }
+}
+.visible-md {
+  .responsive-invisibility();
+  &.visible-xs {
+    @media (max-width: @screen-xs-max) {
+      .responsive-visibility();
+    }
+  }
+  &.visible-sm {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .responsive-visibility();
+    }
+  }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-visibility();
+  }
+  &.visible-lg {
+    @media (min-width: @screen-lg-min) {
+      .responsive-visibility();
+    }
+  }
+}
+.visible-lg {
+  .responsive-invisibility();
+  &.visible-xs {
+    @media (max-width: @screen-xs-max) {
+      .responsive-visibility();
+    }
+  }
+  &.visible-sm {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .responsive-visibility();
+    }
+  }
+  &.visible-md {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      .responsive-visibility();
+    }
+  }
+  @media (min-width: @screen-lg-min) {
+    .responsive-visibility();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

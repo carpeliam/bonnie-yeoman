@@ -1,0 +1,243 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="container">
+          <div class="navbar row" role="navigation">
+      <a href="#skip">
+      </a>
+      <div class="navbar row" role="navigation">    
+        <ul class="nav navbar-nav pull-right">
+          <li class="active"><a href="http://localhost:9000/#">Complexity</a></li>
+
+          <li><a href="http://localhost:9000/size.html">Size</a></li>
+          <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a></li>
+        </ul>
+        <a class="navbar-brand" href="#">Bonnie</a>
+      </div>
+      <button class="btn btn-default">GRID</button>
+      <button class="btn btn-primary" href="/graph.html">GRAPH</button>
+      <div class="row">
+        <div class="col-md-2 col-xs-4  col-sm-3 col-xs-4 grid">
+          <div class="circle xlg-cir lotschange"></div>
+          <h2><span class="subtle">CMS</span>146<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle xlg-cir change"></div>
+          <h2><span class="subtle">CMS</span>155<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle lg-cir lotschange"></div>
+          <h2><span class="subtle">CMS</span>153<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle md-cir change"></div>
+          <h2><span class="subtle">CMS</span>126<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle lg-cir lotschange"></div>
+          <h2><span class="subtle">CMS</span>117<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle xlg-cir nochange"></div>
+           <h2><span class="subtle">CMS</span>154<span class="subtle">v1</span></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle xsm-cir lotschange"></div>
+          <h2><span class="subtle">CMS</span>146<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle md-cir change"></div>
+          <h2><span class="subtle">CMS</span>155<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle xlg-cir change"></div>
+          <h2><span class="subtle">CMS</span>153<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle sm-cir change"></div>
+          <h2><span class="subtle">CMS</span>126<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle md-cir nochange"></div>
+          <h2><span class="subtle">CMS</span>117<span class="subtle">v1</span></h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle sm-cir nochange"></div>
+           <h2><span class="subtle">CMS</span>154<span class="subtle">v1</span></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle md-cir nochange"></div>
+          <h2><span class="subtle">CMS</span>146v1</h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle md-cir nochange"></div>
+          <h2><span class="subtle">CMS</span>155v1</h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle lg-cir nochange"></div>
+          <h2><span class="subtle">CMS</span>153v1</h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle md-cir nochange"></div>
+          <h2><span class="subtle">CMS</span>126v1</h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle sm-cir nochange"></div>
+          <h2><span class="subtle">CMS</span>117v1</h2>
+        </div>
+        <div class="col-md-2 col-xs-4  grid">
+          <div class="circle xsm-cir nochange"></div>
+           <h2><span class="subtle">CMS</span>154v1</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="drill-in">
+            <div class="sub-circle sm-cir change"></div>
+            <div class="sub-circle xsm-cir change"></div>
+            <div class="sub-circle xsm-cir change"></div>
+            <div class="circle lg-cir lotschange"></div>
+          </div>
+      </div>
+    </div>
+
+        <!-- build:js scripts/main.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jQuery-Knob/js/jquery.knob.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/hello.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/bootstrap.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+        <script>
+          $('#update').popover({
+              html: true, content: $('#template').text()
+            });
+          $('.dial').knob();
+        </script>
+            <script type="text/javascript">
+      var margin = { top: 100, right: 0, bottom: 100, left: 120 },
+          width = 1000- margin.left - margin.right,
+          height = 430 - margin.top - margin.bottom,
+          gridSize = Math.floor(width / 24),
+          legendElementWidth = gridSize*2,
+          buckets = 9,
+          colors = ["#ffffff", "#ccebe0", "#edd8d0"], // alternatively colorbrewer.YlGnBu[9]
+          patients = ["Patient 1", "Patient ischemic", "Patient 3", "Patient 4", "Patient 5", "Patient 6", "Patient 7"],
+          measures = ["cms 123", "cms 143", "cms 155", "cms 127", "cms 196", "cms 215", "cms 452"];
+
+
+      d3.tsv("data.tsv",
+        function(d) {
+          return {
+            patient: +d.patient,
+            measure: +d.measure,
+            value: +d.value
+          };
+        },
+        function(error, data) {
+          var colorScale = d3.scale.quantile()
+              .domain([0, buckets - 1, d3.max(data, function (d) { return d.value; })])
+              .range(colors);
+
+          var svg = d3.select("#matrix").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          var patientLabels = svg.selectAll(".patientLabel")
+              .data(patients)
+              .enter().append("text")
+                .text(function (d) { return d; })
+                .attr("x", 0)
+                .attr("y", function (d, i) { return i * gridSize; })
+                .style("text-anchor", "end")
+                .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+                // .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+                .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "patientLabel mono axis axis-patient" : "patientLabel mono axis"); });
+
+          var measureLabels = svg.selectAll(".measureLabel")
+              .data(measures)
+              .enter().append("text")
+                .text(function(d) { return d; })
+                .attr("x", function(d, i) { return i * gridSize; })
+                .attr("y", 0)
+                .style("text-anchor", "middle")
+                .attr("transform", function(d, i) { 
+                  return "translate(" + gridSize / 2 + ", -35)" +
+                    "rotate(-45 "+ ((i + 0.5) * gridSize) + " " + (-6) +")";
+                })
+                .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "measureLabel mono axis axis-measure" : "measureLabel mono axis"); });
+
+          var heatMap = svg.selectAll(".measure")
+              .data(data)
+              .enter().append("rect")
+              .attr("x", function(d) { return (d.measure - 1) * gridSize; })
+              .attr("y", function(d) { return (d.patient - 1) * gridSize; })
+              .attr("rx", 4)
+              .attr("ry", 4)
+              .attr("class", "measure bordered")
+              .attr("width", gridSize)
+              .attr("height", gridSize)
+              .style("fill", colors[0]);
+
+              heatMap.transition().duration(1000)
+                  .style("fill", function(d) { return colorScale(d.value); });
+
+              heatMap.append("title").text(function(d) { return d.value; 
+          });
+              
+          // var legend = svg.selectAll(".legend")
+          //     .data([0].concat(colorScale.quantiles()), function(d) { return d; })
+          //     .enter().append("g")
+          //     .attr("class", "legend");
+
+          // legend.append("rect")
+          //   .attr("x", function(d, i) { return legendElementWidth * i; })
+          //   .attr("y", height)
+          //   .attr("width", legendElementWidth)
+          //   .attr("height", gridSize / 2)
+          //   .style("fill", function(d, i) { return colors[i]; });
+
+          // legend.append("text")
+          //   .attr("class", "mono")
+          //   .text(function(d) { return "≥ " + Math.round(d); })
+          //   .attr("x", function(d, i) { return legendElementWidth * i; })
+          //   .attr("y", height + gridSize);
+      });
+    </script>
+  </body>
+</html>

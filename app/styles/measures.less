@@ -1,12 +1,60 @@
 // Dashboard - Measures View
 
+// measurement period header
+.measure-period {
+  display: inline-block;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: bold;
+  color: @gray-darker;
+
+  .year {
+    font-size: 1.4em;
+    font-weight: 100;
+  }
+}
+
+// navigation indicator
+.indicator {
+  .indicator-circle {
+    float: left;
+    background: @gray-lighter;
+    width: @indicator-size;
+    height: @indicator-size;
+    border-radius: 50%;
+    border: 2px solid @gray-lighter;
+  }
+  .indicator-bar {
+    float: left;
+    background: @gray-lighter;
+    width: @indicator-size / 2;
+    height: @indicator-size / 4;
+    margin-top: @indicator-size / 2 - @indicator-size / 8;
+  }
+  .active {
+    background: @brand-primary;
+  }
+}
+
 // For entire page
 .measure-col {
   .make-xs-column(7);
+  position: relative;
+  .measure-title {
+    .clearfix;
+    a {
+      .make-md-column(10; 0);
+    }
+    .nqf-listing {
+      .make-md-column(2; 0);
+    }
+  }
   .btn-wrapper {
-    line-height: 1;
     border-left: 5px white solid;
     border-right: 5px white solid;
+    line-height: 1;
+    position: absolute;
+    top: 0; right: 15px;
   }
 }
 
@@ -21,6 +69,12 @@
 
 .patient-listing-col {
   .make-xs-column(2);
+  position: relative;
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 // Just the heading
@@ -92,5 +146,16 @@
     .btn {
       padding: 6px 6px 5px 6px;
     }
+  }
+}
+
+.vsac-registration {
+  padding-left: 15px;
+}
+
+.effective-date {
+  padding-left: 0;
+  .effective-date-picker {
+    padding-right: 0;
   }
 }

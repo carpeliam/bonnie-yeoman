@@ -1,11 +1,11 @@
 // Displays colors according to patient results on the measure logic
 
 .rationale {
-  .true_eval, .false_eval, .bad_specifics {
+  .eval-true, .eval-false, .eval-bad-specifics, .eval-coverage {
     font-weight: 500;
-    padding: 2px;
+    padding: 2px 0px;
   }
-  .true_eval {
+  .eval-true {
     background-color: @state-success-bg;
     color: @state-success-text;
     &:before {
@@ -13,7 +13,7 @@
       font-family: FontAwesome;
     }
   }
-  .false_eval {
+  .eval-false {
     background-color: @state-danger-bg;
     color: @state-danger-text;
     &:before {
@@ -21,7 +21,7 @@
       font-family: FontAwesome;
     }
   }
-  .bad_specifics {
+  .eval-bad-specifics {
     background-color: @state-danger-bg;
     color: @state-danger-text;
     &:before {
@@ -29,7 +29,31 @@
       font-family: FontAwesome;
     }
   }
-  .no_eval {
-    background-color: @body-bg;
+  .eval-coverage {
+    background-color: @blue-lightest;
+    color: @blue-darker;
+    // FIXME: Back out this change when pophealth logic viz is integrated; intended as short-term fix for coverage
+    li {
+      background-color: white;
+      color: black;
+      font-weight: 400;
+    }
+  }
+  .panel {
+    padding: 5px 0;
+    .panel-heading {
+      background-color: white;
+      border: 1px solid gray;
+      padding: 10px 15px;
+    }
+    .eval-panel-true {
+      background-color: @state-success-bg;
+    }
+    .eval-panel-false {
+      background-color: @state-danger-bg;
+    }
+    .eval-panel-bad-specifics {
+      background-color: @state-danger-bg;
+    }
   }
 }

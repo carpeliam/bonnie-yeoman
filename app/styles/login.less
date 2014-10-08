@@ -1,23 +1,22 @@
-@header-font: 86px;
-@form-width: 285px;
-
 .auth {
   .login {
     // center horizontally, give it some breathing room across the top
     margin-top: 200px;
-    .make-sm-column-offset(4);
+
+    .center-block;
+
     width: @form-width;
 
     header h1 {
-      color: @brand-primary;
       font-size: @header-font;
       font-weight: 100;
       line-height: 1.2;
       text-transform: uppercase;
+      color: @brand-primary;
       text-align: center;
     }
     header h2 {
-      font-size: @header-font/4.5;
+      font-size: @header-font / 4.5;
       text-align: center;
       margin-bottom: 20px;
     }
@@ -48,5 +47,16 @@
     .required {
       .form-control-validation(@brand-primary; @brand-primary; @input-bg);
     }
+    // override brand-primary styling on input fields with errors
+    .field_with_errors {
+      .has-error;
+    }
+  }
+}
+
+.field_with_errors {
+  .has-error;
+  input {
+    .input-lg;
   }
 }

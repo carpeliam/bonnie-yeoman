@@ -27,43 +27,42 @@
 
   // Create the SVG container and set the origin.
   var svg = d3.select("#chart").append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   // Add the x-axis.
   svg.append("g")
-      .attr("id", "xAxis")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
-
+    .attr("id", "xAxis")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
   // Add the y-axis.
   svg.append("g")
-      .attr("id", "yAxis")
-      .attr("class", "y axis")
-      .call(yAxis);
+    .attr("id", "yAxis")
+    .attr("class", "y axis")
+    .call(yAxis);
 
   // Add an x-axis label.
   svg.append("text")
-      .attr("id", "xLabel")
-      .attr("class", "x label")
-      .attr("text-anchor", "end")
-      .attr("x", width)
-      .attr("y", height - 6)
-      .text("complexity");
+    .attr("id", "xLabel")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height - 6)
+    .text("complexity");
 
   // Add a y-axis label.
   svg.append("text")
     .attr("id", "yLabel")
-      .attr("class", "y label")
-      .attr("text-anchor", "end")
-      .attr("y", 6)
-      .attr("dy", ".75em")
-      .attr("transform", "rotate(-90)")
-      .text("change in complexity");
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("change in complexity");
 
   // Load the data.
   d3.json("cms.json", function(cms) {
@@ -84,7 +83,6 @@
     .enter()
     .append("text");
 
-
   // Add CMS label
   var textLabels = text
     .attr("class", "cmsLabel")
@@ -104,16 +102,19 @@
     return radius(b) - radius(a);
   }
 });
- // Defines interaction for pressing grid button
+
+  //Defines interaction for pressing grid button
 var button = d3.select("#grid");
   button.on("click", function() {
   d3.selectAll(".dot").transition()
     .attr("cx", function(d, i) { return i * 125 + 100; })
     .attr("cy", function(d, i) { return d.cy; })
+  
   //label transistion
   d3.selectAll(".cmsLabel").transition()
     .attr("x", function(d, i) { return i * 125 + 75; })
     .attr("y", function(d, i) { return 75; })
+
   //Add the axis
   var active   = xAxis.active ? false : true ,
     newOpacity = active ? 0 : 1
